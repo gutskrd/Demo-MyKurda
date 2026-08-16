@@ -123,10 +123,10 @@ const translations = {
             "ئێمە شتێکی جوان<br>دروست دەکەین.",
 
         description:
-            "مای کوردە هێشتا لە دروستکردندایە. لە پشت پەردەوە بە دڵ و گیان کار دەکەین بۆ دروستکردنی شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور و کۆمەڵگەی کوردی.",
+            "MyKurda هێشتا لە قۆناغی دروستکردندایە. لە پشت پەردەوە بە دڵ و گیان کار دەکەین بۆ دروستکردنی شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور و کۆمەڵگەی کوردی.",
 
         description2:
-            "سوپاس بۆ سەردانکردنت. مای کوردە بە زووانە دەکرێتەوە. تکایە دواتر دووبارە سەردانمان بکە.",
+            "سوپاس بۆ سەردانەکەت. MyKurda بە زووانە دەکرێتەوە. تکایە دواتر دووبارە سەردانمان بکە.",
 
         tagline:
             "بە کوردی، بۆ کوردان.",
@@ -135,7 +135,7 @@ const translations = {
             "پەیوەندی",
 
         footer:
-            "© 2026 مای کوردە. هەموو مافەکان پارێزراون."
+            "© 2026 MyKurda. هەموو مافەکان پارێزراون."
 
     },
 
@@ -219,7 +219,7 @@ const translations = {
             "Danke für deinen Besuch. MyKurda wird bald starten. Schau später gerne wieder vorbei.",
 
         tagline:
-            "Auf Kurdisch, für Kurdinnen und Kurden.",
+            "Auf Kurdisch, für Kurden.",
 
         contact:
             "Kontakt",
@@ -270,13 +270,13 @@ const translations = {
             "قريبًا",
 
         title:
-            "نحن نبني<br>شيئًا جميلًا.",
+            "نبني<br>شيئًا جميلًا.",
 
         description:
-            "ماي كوردا قيد الإنشاء حاليًا. نعمل خلف الكواليس لإنشاء مساحة جديدة للغة والثقافة والمجتمع الكردي.",
+            "MyKurda قيد الإنشاء حاليًا. نعمل خلف الكواليس لإنشاء مساحة جديدة للغة والثقافة والمجتمع الكردي.",
 
         description2:
-            "شكرًا لزيارتك. سيتم إطلاق ماي كوردا قريبًا. يرجى العودة مرة أخرى لاحقًا.",
+            "شكرًا لزيارتك. سيتم إطلاق MyKurda قريبًا. يُرجى العودة لزيارتنا لاحقًا.",
 
         tagline:
             "بالكردية، من أجل الكرد.",
@@ -285,7 +285,7 @@ const translations = {
             "تواصل معنا",
 
         footer:
-            "© 2026 ماي كوردا. جميع الحقوق محفوظة."
+            "© 2026 MyKurda. جميع الحقوق محفوظة."
 
     },
 
@@ -338,13 +338,14 @@ document
             const translation =
                 translations[language];
 
-
             if (!translation) {
                 return;
             }
 
 
-            // Update translated elements
+            // =================================
+            // UPDATE TRANSLATED ELEMENTS
+            // =================================
 
             document
                 .querySelectorAll("[data-i18n]")
@@ -368,19 +369,25 @@ document
                 });
 
 
-            // Update selected language
+            // =================================
+            // UPDATE SELECTED LANGUAGE
+            // =================================
 
             currentLanguage.textContent =
                 languageNames[language];
 
 
-            // Update document language
+            // =================================
+            // UPDATE DOCUMENT LANGUAGE
+            // =================================
 
             document.documentElement.lang =
                 language;
 
 
-            // RTL languages
+            // =================================
+            // RTL / LTR
+            // =================================
 
             if (
                 language === "ar" ||
@@ -398,7 +405,9 @@ document
             }
 
 
-            // Close menu
+            // =================================
+            // CLOSE LANGUAGE MENU
+            // =================================
 
             languageSelector.classList.remove(
                 "open"
