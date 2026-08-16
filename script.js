@@ -42,6 +42,10 @@ const languageNames = {
 
 const translations = {
 
+    // =====================================
+    // KURMANJI
+    // =====================================
+
     ku: {
 
         eyebrow: "Di nêzîk de tê",
@@ -62,19 +66,16 @@ const translations = {
             "Têkilî",
 
         previewEyebrow:
-            "MYKURDA PREVIEW",
+            "PÊŞDÎTIYA MYKURDA",
 
         previewTitle:
-            "Helbestek binivîse.",
+            "Çîrokek parve bike.",
 
         previewDescription:
-            "Dengê xwe parve bike û bibîne ka MyKurda çawa dixebite.",
+            "Çîroka xwe parve bike û bibîne ka MyKurda çawa dixebite.",
 
         from:
             "Ji",
-
-        to:
-            "Ji bo",
 
         public:
             "Giştî",
@@ -89,22 +90,22 @@ const translations = {
             "NOBETA TE YE",
 
         createTitle:
-            "Tu çi dibêjî?",
+            "Çîroka te çi ye?",
 
         senderLabel:
             "Ji kê?",
 
-        receiverLabel:
-            "Ji bo kê?",
+        storyTitleLabel:
+            "Sernavê çîrokê",
 
-        receiverPlaceholder:
-            "Navê kesê...",
+        storyTitlePlaceholder:
+            "Sernavê çîrokê...",
 
-        poemLabel:
-            "Helbesta xwe binivîse",
+        storyLabel:
+            "Çîroka xwe binivîse",
 
-        poemPlaceholder:
-            "Helbesta xwe li vir binivîse...",
+        storyPlaceholder:
+            "Çîroka xwe li vir binivîse...",
 
         visibilityLabel:
             "Kî dikare bibîne?",
@@ -122,25 +123,104 @@ const translations = {
             "Binivîse",
 
         featureOneText:
-            "Dengê xwe parve bike.",
+            "Çîroka xwe parve bike.",
 
         featureTwoTitle:
             "Deng bidê",
 
         featureTwoText:
-            "Helbestên ku hez dikî hilbijêre.",
+            "Çîrokên ku hez dikî hilbijêre.",
 
         featureThreeTitle:
             "Zêr bistîne",
 
         featureThreeText:
-            "Ji bo upvote û çalakiyên xwe xelat bistîne.",
+            "Ji bo dengdan û çalakiyên xwe xelat bistîne.",
+
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "LÎSTIKÊN MYKURDA",
+
+        gamesDescription:
+            "Fêr bibe, lîz bike û Kurdî bi awayekî nû biceribîne.",
+
+        multipleChoice:
+            "HILBIJARTINA ÇENDAN",
+
+        quizTitle:
+            "Tu dikarî vê peyvê nas bikî?",
+
+        nextQuestion:
+            "Pirsê din →",
+
+        quizCorrect:
+            "Rast e! Tu +1 Zêr wergirt.",
+
+        quizWrong:
+            "Ne rast e. Dîsa biceribîne.",
+
+        fiveLetterWord:
+            "PEYVA 5 TÎPAN",
+
+        wordleTitle:
+            "Peyvê 5 tîpan bibîne.",
+
+        wordleDescription:
+            "Peyvekî Kurdî ya pênc tîpan biceribîne.",
+
+        wordlePlaceholder:
+            "Peyv...",
+
+        guess:
+            "Biceribîne →",
+
+        wordleFiveLetters:
+            "Ji kerema xwe peyvekî 5 tîpan binivîse.",
+
+        wordleSuccess:
+            "Serkeftin! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "Dîsa biceribîne.",
+
+        wordleGameOver:
+            "Lîstik qediya. Peyv: ",
+
+        whyMyKurda:
+            "ÇIMA MYKURDA?",
+
+        motivationTitle:
+            "Ziman jî dikare bê winda kirin.",
+
+        motivationText:
+            "MyKurda ji bo ku ciwanên Kurd bikaribin zimanê xwe fêr bibin, bi hev re parve bikin û bi serbilindî bijîn tê çêkirin.",
+
+        earned:
+            "wergirtî",
 
         footer:
-            "© 2026 MyKurda. Hemû maf parastî ne."
+            "© 2026 MyKurda. Hemû maf parastî ne.",
+
+        featuredStoryTitle:
+            "Rojek li gundê me",
+
+        featuredStoryText:
+            "Rojekê li gundê me baran dibariya.<br><br>Ez û bavê min li derve meşiyan. Her ku em diçûn, bêdengiya gund tenê bi dengê baranê têk diçû.<br><br>Ew roj ji bo min bû bîranînek ku ez ê tu carî ji bîr nekim.",
+
+        downvote:
+            "Dengê neyînî",
+
+        upvote:
+            "Dengê erênî"
 
     },
 
+
+    // =====================================
+    // SORANI
+    // =====================================
 
     ckb: {
 
@@ -166,16 +246,13 @@ const translations = {
             "پێشبینینی MYKURDA",
 
         previewTitle:
-            "هۆنراوەیەک بنووسە.",
+            "چیرۆکێک هاوبەش بکە.",
 
         previewDescription:
-            "دەنگی خۆت بڵاو بکەرەوە و ببینە MyKurda چۆن کار دەکات.",
+            "چیرۆکەکەت هاوبەش بکە و ببینە MyKurda چۆن کار دەکات.",
 
         from:
             "لە",
-
-        to:
-            "بۆ",
 
         public:
             "گشتی",
@@ -190,22 +267,22 @@ const translations = {
             "نۆرەی تۆیە",
 
         createTitle:
-            "تۆ چی دەڵێیت؟",
+            "چیرۆکەکەت چییە؟",
 
         senderLabel:
             "لە کێ؟",
 
-        receiverLabel:
-            "بۆ کێیە؟",
+        storyTitleLabel:
+            "ناونیشانی چیرۆک",
 
-        receiverPlaceholder:
-            "ناوی کەسەکە...",
+        storyTitlePlaceholder:
+            "ناونیشانی چیرۆک...",
 
-        poemLabel:
-            "هۆنراوەکەت بنووسە",
+        storyLabel:
+            "چیرۆکەکەت بنووسە",
 
-        poemPlaceholder:
-            "هۆنراوەکەت لێرە بنووسە...",
+        storyPlaceholder:
+            "چیرۆکەکەت لێرە بنووسە...",
 
         visibilityLabel:
             "کێ دەتوانێت بیبینێت؟",
@@ -220,16 +297,16 @@ const translations = {
             "ئەمە تەنها دیمۆیە. زێڕەکانی لێرە تەنها بۆ تاقیکردنەوەن.",
 
         featureOneTitle:
-            "بینووسە",
+            "بنووسە",
 
         featureOneText:
-            "دەنگی خۆت بڵاو بکەرەوە.",
+            "چیرۆکەکەت هاوبەش بکە.",
 
         featureTwoTitle:
             "دەنگ بدە",
 
         featureTwoText:
-            "هۆنراوەکانی دڵخوازت هەڵبژێرە.",
+            "ئەو چیرۆکانە هەڵبژێرە کە حەزت لێیە.",
 
         featureThreeTitle:
             "زێڕ بەدەست بهێنە",
@@ -237,11 +314,90 @@ const translations = {
         featureThreeText:
             "بۆ دەنگدان و چالاکییەکانت خەڵات بەدەست بهێنە.",
 
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "یارییەکانی MYKURDA",
+
+        gamesDescription:
+            "فێربە، یاری بکە و کوردی بە شێوازێکی نوێ تاقی بکەرەوە.",
+
+        multipleChoice:
+            "هەڵبژاردن لە چەند وەڵامێک",
+
+        quizTitle:
+            "دەتوانیت ئەم وشەیە بناسیتەوە؟",
+
+        nextQuestion:
+            "پرسیاری داهاتوو →",
+
+        quizCorrect:
+            "ڕاستە! +1 زێڕت بەدەستهێنا.",
+
+        quizWrong:
+            "هەڵەیە. دووبارە هەوڵ بدەرەوە.",
+
+        fiveLetterWord:
+            "وشەی ٥ پیت",
+
+        wordleTitle:
+            "وشەیەکی ٥ پیتی بدۆزەرەوە.",
+
+        wordleDescription:
+            "وشەیەکی کوردیی پێنج پیتی تاقی بکەرەوە.",
+
+        wordlePlaceholder:
+            "وشە...",
+
+        guess:
+            "تاقی بکەرەوە →",
+
+        wordleFiveLetters:
+            "تکایە وشەیەکی ٥ پیتی بنووسە.",
+
+        wordleSuccess:
+            "سەرکەوتوویت! +5 زێڕ 🎉",
+
+        wordleTryAgain:
+            "دووبارە هەوڵ بدەرەوە.",
+
+        wordleGameOver:
+            "یارییەکە کۆتایی هات. وشەکە: ",
+
+        whyMyKurda:
+            "بۆچی MYKURDA؟",
+
+        motivationTitle:
+            "زمانیش دەتوانێت لەدەست بچێت.",
+
+        motivationText:
+            "MyKurda دروست دەکرێت بۆ ئەوەی گەنجانی کورد بتوانن زمانی خۆیان فێرببن، لەگەڵ یەکتر هاوبەشی بکەن و بە شانازییەوە بژین.",
+
+        earned:
+            "بەدەستهێنرا",
+
         footer:
-            "© 2026 MyKurda. هەموو مافەکان پارێزراون."
+            "© 2026 MyKurda. هەموو مافەکان پارێزراون.",
+
+        featuredStoryTitle:
+            "ڕۆژێک لە گوندەکەمان",
+
+        featuredStoryText:
+            "ڕۆژێک لە گوندەکەمان باران دەباری.<br><br>من و باوکم لە دەرەوە دەڕۆیشتین. هەرچی دەڕۆیشتین، بێدەنگیی گوند تەنها بە دەنگی باران دەشکایەوە.<br><br>ئەو ڕۆژە بۆ من بوو بە یادەوەرییەک کە هەرگیز لەبیرم ناکرێت.",
+
+        downvote:
+            "دەنگی نەرێنی",
+
+        upvote:
+            "دەنگی ئەرێنی"
 
     },
 
+
+    // =====================================
+    // ENGLISH
+    // =====================================
 
     en: {
 
@@ -252,7 +408,7 @@ const translations = {
             "We're building<br>something beautiful.",
 
         description:
-            "MyKurda is currently under construction. We're working behind the scenes to create a new place for Kurdish language, culture and community.",
+            "MyKurda is currently under construction. We're working behind the scenes to create a new place for the Kurdish language, culture, and community.",
 
         description2:
             "Thank you for visiting. MyKurda will be launching soon. Please check back later.",
@@ -267,16 +423,13 @@ const translations = {
             "MYKURDA PREVIEW",
 
         previewTitle:
-            "Write a poem.",
+            "Share a story.",
 
         previewDescription:
-            "Share your voice and get a taste of how MyKurda works.",
+            "Share your story and get a glimpse of how MyKurda works.",
 
         from:
             "From",
-
-        to:
-            "For",
 
         public:
             "Public",
@@ -291,22 +444,22 @@ const translations = {
             "YOUR TURN",
 
         createTitle:
-            "What would you say?",
+            "What's your story?",
 
         senderLabel:
             "From whom?",
 
-        receiverLabel:
-            "Who is it for?",
+        storyTitleLabel:
+            "Story title",
 
-        receiverPlaceholder:
-            "Their name...",
+        storyTitlePlaceholder:
+            "Story title...",
 
-        poemLabel:
-            "Write your poem",
+        storyLabel:
+            "Write your story",
 
-        poemPlaceholder:
-            "Write your poem here...",
+        storyPlaceholder:
+            "Write your story here...",
 
         visibilityLabel:
             "Who can see it?",
@@ -318,19 +471,19 @@ const translations = {
             "Try it yourself",
 
         demoNotice:
-            "This is a demo. Zêr earned here is only for demonstration.",
+            "This is only a demo. Zêr earned here is for demonstration purposes only.",
 
         featureOneTitle:
             "Write",
 
         featureOneText:
-            "Share your voice.",
+            "Share your story.",
 
         featureTwoTitle:
             "Vote",
 
         featureTwoText:
-            "Support the poems you love.",
+            "Support the stories you enjoy.",
 
         featureThreeTitle:
             "Earn Zêr",
@@ -338,11 +491,90 @@ const translations = {
         featureThreeText:
             "Get rewarded for your votes and activity.",
 
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "MYKURDA GAMES",
+
+        gamesDescription:
+            "Learn, play, and experience Kurdish in a new way.",
+
+        multipleChoice:
+            "MULTIPLE CHOICE",
+
+        quizTitle:
+            "Can you recognize this word?",
+
+        nextQuestion:
+            "Next question →",
+
+        quizCorrect:
+            "Correct! You earned +1 Zêr.",
+
+        quizWrong:
+            "Not quite. Try again.",
+
+        fiveLetterWord:
+            "5-LETTER WORD",
+
+        wordleTitle:
+            "Find the 5-letter word.",
+
+        wordleDescription:
+            "Try to guess a five-letter Kurdish word.",
+
+        wordlePlaceholder:
+            "Word...",
+
+        guess:
+            "Guess →",
+
+        wordleFiveLetters:
+            "Please enter a 5-letter word.",
+
+        wordleSuccess:
+            "You got it! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "Try again.",
+
+        wordleGameOver:
+            "Game over. The word was: ",
+
+        whyMyKurda:
+            "WHY MYKURDA",
+
+        motivationTitle:
+            "A language can be lost too.",
+
+        motivationText:
+            "MyKurda is being built so Kurdish youth can learn their language, share it with one another, and live with pride.",
+
+        earned:
+            "earned",
+
         footer:
-            "© 2026 MyKurda. All rights reserved."
+            "© 2026 MyKurda. All rights reserved.",
+
+        featuredStoryTitle:
+            "A Day in Our Village",
+
+        featuredStoryText:
+            "One day, it was raining in our village.<br><br>My father and I went for a walk outside. As we walked, the silence of the village was broken only by the sound of the rain.<br><br>That day became a memory I would never forget.",
+
+        downvote:
+            "Downvote",
+
+        upvote:
+            "Upvote"
 
     },
 
+
+    // =====================================
+    // DUTCH
+    // =====================================
 
     nl: {
 
@@ -356,7 +588,7 @@ const translations = {
             "MyKurda is momenteel in ontwikkeling. Achter de schermen werken we aan een nieuwe plek voor de Koerdische taal, cultuur en gemeenschap.",
 
         description2:
-            "Bedankt voor je bezoek. MyKurda wordt binnenkort gelanceerd. Kom later nog eens terug.",
+            "Bedankt voor je bezoek. MyKurda wordt binnenkort gelanceerd. Kom later gerust nog eens terug.",
 
         tagline:
             "In het Koerdisch, voor Koerden.",
@@ -365,19 +597,16 @@ const translations = {
             "Contact",
 
         previewEyebrow:
-            "MYKURDA PREVIEW",
+            "MYKURDA VOORPROEFJE",
 
         previewTitle:
-            "Schrijf een gedicht.",
+            "Deel een verhaal.",
 
         previewDescription:
-            "Deel je stem en ontdek alvast hoe MyKurda werkt.",
+            "Deel je verhaal en ontdek alvast hoe MyKurda werkt.",
 
         from:
             "Van",
-
-        to:
-            "Voor",
 
         public:
             "Openbaar",
@@ -392,22 +621,22 @@ const translations = {
             "JIJ BENT AAN DE BEURT",
 
         createTitle:
-            "Wat zou jij zeggen?",
+            "Wat is jouw verhaal?",
 
         senderLabel:
             "Van wie?",
 
-        receiverLabel:
-            "Voor wie is het?",
+        storyTitleLabel:
+            "Titel van het verhaal",
 
-        receiverPlaceholder:
-            "Naam van de persoon...",
+        storyTitlePlaceholder:
+            "Titel van het verhaal...",
 
-        poemLabel:
-            "Schrijf je gedicht",
+        storyLabel:
+            "Schrijf je verhaal",
 
-        poemPlaceholder:
-            "Schrijf hier je gedicht...",
+        storyPlaceholder:
+            "Schrijf hier je verhaal...",
 
         visibilityLabel:
             "Wie kan het zien?",
@@ -419,31 +648,110 @@ const translations = {
             "Probeer het zelf",
 
         demoNotice:
-            "Dit is een demo. Zêr die je hier verdient is alleen voor de demonstratie.",
+            "Dit is alleen een demo. Zêr die je hier verdient is uitsluitend voor demonstratiedoeleinden.",
 
         featureOneTitle:
             "Schrijf",
 
         featureOneText:
-            "Deel je stem.",
+            "Deel je verhaal.",
 
         featureTwoTitle:
             "Stem",
 
         featureTwoText:
-            "Steun de gedichten die je mooi vindt.",
+            "Steun de verhalen die je mooi vindt.",
 
         featureThreeTitle:
             "Verdien Zêr",
 
         featureThreeText:
-            "Word beloond voor je stemmen en activiteit.",
+            "Ontvang beloningen voor je stemmen en activiteit.",
+
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "MYKURDA-SPELLEN",
+
+        gamesDescription:
+            "Leer, speel en ontdek het Koerdisch op een nieuwe manier.",
+
+        multipleChoice:
+            "MEERKEUZE",
+
+        quizTitle:
+            "Herken jij dit woord?",
+
+        nextQuestion:
+            "Volgende vraag →",
+
+        quizCorrect:
+            "Goed! Je hebt +1 Zêr verdiend.",
+
+        quizWrong:
+            "Niet helemaal. Probeer het opnieuw.",
+
+        fiveLetterWord:
+            "WOORD VAN 5 LETTERS",
+
+        wordleTitle:
+            "Vind het woord van 5 letters.",
+
+        wordleDescription:
+            "Probeer een Koerdisch woord van vijf letters te raden.",
+
+        wordlePlaceholder:
+            "Woord...",
+
+        guess:
+            "Raden →",
+
+        wordleFiveLetters:
+            "Voer een woord van 5 letters in.",
+
+        wordleSuccess:
+            "Goed geraden! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "Probeer het opnieuw.",
+
+        wordleGameOver:
+            "Game over. Het woord was: ",
+
+        whyMyKurda:
+            "WAAROM MYKURDA?",
+
+        motivationTitle:
+            "Ook een taal kan verloren gaan.",
+
+        motivationText:
+            "MyKurda wordt gebouwd zodat Koerdische jongeren hun taal kunnen leren, met elkaar kunnen delen en er met trots mee kunnen leven.",
+
+        earned:
+            "verdiend",
 
         footer:
-            "© 2026 MyKurda. Alle rechten voorbehouden."
+            "© 2026 MyKurda. Alle rechten voorbehouden.",
+
+        featuredStoryTitle:
+            "Een dag in ons dorp",
+
+        featuredStoryText:
+            "Op een dag regende het in ons dorp.<br><br>Mijn vader en ik gingen buiten wandelen. Terwijl we liepen, werd de stilte van het dorp alleen doorbroken door het geluid van de regen.<br><br>Die dag werd een herinnering die ik nooit zou vergeten.",
+
+        downvote:
+            "Negatieve stem",
+
+        upvote:
+            "Positieve stem"
 
     },
 
+
+    // =====================================
+    // GERMAN
+    // =====================================
 
     de: {
 
@@ -457,7 +765,7 @@ const translations = {
             "MyKurda befindet sich derzeit im Aufbau. Hinter den Kulissen arbeiten wir an einem neuen Ort für die kurdische Sprache, Kultur und Gemeinschaft.",
 
         description2:
-            "Danke für deinen Besuch. MyKurda wird bald starten. Schau später gerne wieder vorbei.",
+            "Danke für deinen Besuch. MyKurda startet bald. Schau später gerne wieder vorbei.",
 
         tagline:
             "Auf Kurdisch, für Kurden.",
@@ -466,19 +774,16 @@ const translations = {
             "Kontakt",
 
         previewEyebrow:
-            "MYKURDA VORSCHAU",
+            "MYKURDA-VORSCHAU",
 
         previewTitle:
-            "Schreib ein Gedicht.",
+            "Teile eine Geschichte.",
 
         previewDescription:
-            "Teile deine Stimme und erlebe, wie MyKurda funktioniert.",
+            "Teile deine Geschichte und entdecke, wie MyKurda funktioniert.",
 
         from:
             "Von",
-
-        to:
-            "Für",
 
         public:
             "Öffentlich",
@@ -493,25 +798,25 @@ const translations = {
             "DU BIST DRAN",
 
         createTitle:
-            "Was würdest du sagen?",
+            "Was ist deine Geschichte?",
 
         senderLabel:
             "Von wem?",
 
-        receiverLabel:
-            "Für wen ist es?",
+        storyTitleLabel:
+            "Titel der Geschichte",
 
-        receiverPlaceholder:
-            "Name der Person...",
+        storyTitlePlaceholder:
+            "Titel der Geschichte...",
 
-        poemLabel:
-            "Schreib dein Gedicht",
+        storyLabel:
+            "Schreib deine Geschichte",
 
-        poemPlaceholder:
-            "Schreib dein Gedicht hier...",
+        storyPlaceholder:
+            "Schreib deine Geschichte hier...",
 
         visibilityLabel:
-            "Wer kann es sehen?",
+            "Wer kann sie sehen?",
 
         post:
             "Veröffentlichen",
@@ -520,19 +825,19 @@ const translations = {
             "Selbst ausprobieren",
 
         demoNotice:
-            "Dies ist eine Demo. Hier verdientes Zêr dient nur zur Veranschaulichung.",
+            "Dies ist nur eine Demo. Hier verdientes Zêr dient ausschließlich zu Demonstrationszwecken.",
 
         featureOneTitle:
             "Schreiben",
 
         featureOneText:
-            "Teile deine Stimme.",
+            "Teile deine Geschichte.",
 
         featureTwoTitle:
             "Abstimmen",
 
         featureTwoText:
-            "Unterstütze die Gedichte, die dir gefallen.",
+            "Unterstütze die Geschichten, die dir gefallen.",
 
         featureThreeTitle:
             "Zêr verdienen",
@@ -540,11 +845,90 @@ const translations = {
         featureThreeText:
             "Erhalte Belohnungen für deine Stimmen und Aktivitäten.",
 
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "MYKURDA-SPIELE",
+
+        gamesDescription:
+            "Lerne, spiele und entdecke die kurdische Sprache auf eine neue Art.",
+
+        multipleChoice:
+            "MULTIPLE CHOICE",
+
+        quizTitle:
+            "Kannst du dieses Wort erkennen?",
+
+        nextQuestion:
+            "Nächste Frage →",
+
+        quizCorrect:
+            "Richtig! Du hast +1 Zêr verdient.",
+
+        quizWrong:
+            "Nicht ganz. Versuch es noch einmal.",
+
+        fiveLetterWord:
+            "WORT MIT 5 BUCHSTABEN",
+
+        wordleTitle:
+            "Finde das Wort mit 5 Buchstaben.",
+
+        wordleDescription:
+            "Versuche, ein kurdisches Wort mit fünf Buchstaben zu erraten.",
+
+        wordlePlaceholder:
+            "Wort...",
+
+        guess:
+            "Raten →",
+
+        wordleFiveLetters:
+            "Bitte gib ein Wort mit 5 Buchstaben ein.",
+
+        wordleSuccess:
+            "Geschafft! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "Versuch es noch einmal.",
+
+        wordleGameOver:
+            "Spiel vorbei. Das Wort war: ",
+
+        whyMyKurda:
+            "WARUM MYKURDA?",
+
+        motivationTitle:
+            "Auch eine Sprache kann verloren gehen.",
+
+        motivationText:
+            "MyKurda entsteht, damit kurdische Jugendliche ihre Sprache lernen, miteinander teilen und mit Stolz leben können.",
+
+        earned:
+            "verdient",
+
         footer:
-            "© 2026 MyKurda. Alle Rechte vorbehalten."
+            "© 2026 MyKurda. Alle Rechte vorbehalten.",
+
+        featuredStoryTitle:
+            "Ein Tag in unserem Dorf",
+
+        featuredStoryText:
+            "Eines Tages regnete es in unserem Dorf.<br><br>Mein Vater und ich gingen draußen spazieren. Während wir liefen, wurde die Stille des Dorfes nur vom Geräusch des Regens unterbrochen.<br><br>Dieser Tag wurde zu einer Erinnerung, die ich nie vergessen würde.",
+
+        downvote:
+            "Ablehnen",
+
+        upvote:
+            "Upvote"
 
     },
 
+
+    // =====================================
+    // FRENCH
+    // =====================================
 
     fr: {
 
@@ -570,16 +954,13 @@ const translations = {
             "APERÇU DE MYKURDA",
 
         previewTitle:
-            "Écrivez un poème.",
+            "Partagez une histoire.",
 
         previewDescription:
-            "Partagez votre voix et découvrez comment MyKurda fonctionnera.",
+            "Partagez votre histoire et découvrez comment MyKurda fonctionne.",
 
         from:
             "De",
-
-        to:
-            "Pour",
 
         public:
             "Public",
@@ -594,25 +975,25 @@ const translations = {
             "À VOUS DE JOUER",
 
         createTitle:
-            "Que diriez-vous ?",
+            "Quelle est votre histoire ?",
 
         senderLabel:
             "De qui ?",
 
-        receiverLabel:
-            "Pour qui est-il ?",
+        storyTitleLabel:
+            "Titre de l'histoire",
 
-        receiverPlaceholder:
-            "Nom de la personne...",
+        storyTitlePlaceholder:
+            "Titre de l'histoire...",
 
-        poemLabel:
-            "Écrivez votre poème",
+        storyLabel:
+            "Écrivez votre histoire",
 
-        poemPlaceholder:
-            "Écrivez votre poème ici...",
+        storyPlaceholder:
+            "Écrivez votre histoire ici...",
 
         visibilityLabel:
-            "Qui peut le voir ?",
+            "Qui peut la voir ?",
 
         post:
             "Publier",
@@ -621,19 +1002,19 @@ const translations = {
             "Essayez vous-même",
 
         demoNotice:
-            "Ceci est une démo. Les Zêr gagnés ici sont uniquement destinés à la démonstration.",
+            "Ceci est uniquement une démo. Les Zêr gagnés ici sont destinés à la démonstration uniquement.",
 
         featureOneTitle:
             "Écrire",
 
         featureOneText:
-            "Partagez votre voix.",
+            "Partagez votre histoire.",
 
         featureTwoTitle:
             "Voter",
 
         featureTwoText:
-            "Soutenez les poèmes que vous aimez.",
+            "Soutenez les histoires que vous aimez.",
 
         featureThreeTitle:
             "Gagner des Zêr",
@@ -641,11 +1022,90 @@ const translations = {
         featureThreeText:
             "Recevez des récompenses pour vos votes et votre activité.",
 
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "JEUX MYKURDA",
+
+        gamesDescription:
+            "Apprenez, jouez et découvrez le kurde autrement.",
+
+        multipleChoice:
+            "QCM",
+
+        quizTitle:
+            "Pouvez-vous reconnaître ce mot ?",
+
+        nextQuestion:
+            "Question suivante →",
+
+        quizCorrect:
+            "Bonne réponse ! Vous avez gagné +1 Zêr.",
+
+        quizWrong:
+            "Pas tout à fait. Réessayez.",
+
+        fiveLetterWord:
+            "MOT DE 5 LETTRES",
+
+        wordleTitle:
+            "Trouvez le mot de 5 lettres.",
+
+        wordleDescription:
+            "Essayez de deviner un mot kurde de cinq lettres.",
+
+        wordlePlaceholder:
+            "Mot...",
+
+        guess:
+            "Deviner →",
+
+        wordleFiveLetters:
+            "Veuillez entrer un mot de 5 lettres.",
+
+        wordleSuccess:
+            "Bravo ! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "Réessayez.",
+
+        wordleGameOver:
+            "Partie terminée. Le mot était : ",
+
+        whyMyKurda:
+            "POURQUOI MYKURDA ?",
+
+        motivationTitle:
+            "Une langue peut aussi disparaître.",
+
+        motivationText:
+            "MyKurda est créé pour permettre aux jeunes Kurdes d'apprendre leur langue, de la partager entre eux et de la vivre avec fierté.",
+
+        earned:
+            "gagnés",
+
         footer:
-            "© 2026 MyKurda. Tous droits réservés."
+            "© 2026 MyKurda. Tous droits réservés.",
+
+        featuredStoryTitle:
+            "Un jour dans notre village",
+
+        featuredStoryText:
+            "Un jour, il pleuvait dans notre village.<br><br>Mon père et moi sommes sortis nous promener. Au fil de notre marche, le silence du village n'était interrompu que par le bruit de la pluie.<br><br>Cette journée est devenue un souvenir que je n'oublierais jamais.",
+
+        downvote:
+            "Vote négatif",
+
+        upvote:
+            "Vote positif"
 
     },
 
+
+    // =====================================
+    // ARABIC
+    // =====================================
 
     ar: {
 
@@ -671,16 +1131,13 @@ const translations = {
             "معاينة MYKURDA",
 
         previewTitle:
-            "اكتب قصيدة.",
+            "شارك قصة.",
 
         previewDescription:
-            "شارك صوتك واكتشف كيف سيعمل MyKurda.",
+            "شارك قصتك واكتشف كيف يعمل MyKurda.",
 
         from:
             "من",
-
-        to:
-            "إلى",
 
         public:
             "عام",
@@ -695,22 +1152,22 @@ const translations = {
             "دورك الآن",
 
         createTitle:
-            "ماذا ستقول؟",
+            "ما قصتك؟",
 
         senderLabel:
             "من؟",
 
-        receiverLabel:
-            "لمن هي؟",
+        storyTitleLabel:
+            "عنوان القصة",
 
-        receiverPlaceholder:
-            "اسم الشخص...",
+        storyTitlePlaceholder:
+            "عنوان القصة...",
 
-        poemLabel:
-            "اكتب قصيدتك",
+        storyLabel:
+            "اكتب قصتك",
 
-        poemPlaceholder:
-            "اكتب قصيدتك هنا...",
+        storyPlaceholder:
+            "اكتب قصتك هنا...",
 
         visibilityLabel:
             "من يمكنه رؤيتها؟",
@@ -728,13 +1185,13 @@ const translations = {
             "اكتب",
 
         featureOneText:
-            "شارك صوتك.",
+            "شارك قصتك.",
 
         featureTwoTitle:
             "صوّت",
 
         featureTwoText:
-            "ادعم القصائد التي تعجبك.",
+            "ادعم القصص التي تعجبك.",
 
         featureThreeTitle:
             "اكسب Zêr",
@@ -742,11 +1199,90 @@ const translations = {
         featureThreeText:
             "احصل على مكافآت مقابل تصويتاتك ونشاطك.",
 
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "ألعاب MYKURDA",
+
+        gamesDescription:
+            "تعلّم والعب واكتشف اللغة الكردية بطريقة جديدة.",
+
+        multipleChoice:
+            "اختيار من متعدد",
+
+        quizTitle:
+            "هل يمكنك التعرّف على هذه الكلمة؟",
+
+        nextQuestion:
+            "السؤال التالي →",
+
+        quizCorrect:
+            "صحيح! حصلت على +1 Zêr.",
+
+        quizWrong:
+            "ليست الإجابة الصحيحة. حاول مرة أخرى.",
+
+        fiveLetterWord:
+            "كلمة من 5 أحرف",
+
+        wordleTitle:
+            "اعثر على الكلمة المكوّنة من 5 أحرف.",
+
+        wordleDescription:
+            "حاول تخمين كلمة كردية مكوّنة من خمسة أحرف.",
+
+        wordlePlaceholder:
+            "كلمة...",
+
+        guess:
+            "خمن →",
+
+        wordleFiveLetters:
+            "يرجى إدخال كلمة مكوّنة من 5 أحرف.",
+
+        wordleSuccess:
+            "أحسنت! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "حاول مرة أخرى.",
+
+        wordleGameOver:
+            "انتهت اللعبة. الكلمة هي: ",
+
+        whyMyKurda:
+            "لماذا MYKURDA؟",
+
+        motivationTitle:
+            "حتى اللغة يمكن أن تضيع.",
+
+        motivationText:
+            "يُبنى MyKurda ليتمكن الشباب الكردي من تعلّم لغتهم ومشاركتها مع بعضهم البعض والعيش بها بفخر.",
+
+        earned:
+            "تم الحصول عليها",
+
         footer:
-            "© 2026 MyKurda. جميع الحقوق محفوظة."
+            "© 2026 MyKurda. جميع الحقوق محفوظة.",
+
+        featuredStoryTitle:
+            "يوم في قريتنا",
+
+        featuredStoryText:
+            "في أحد الأيام، كانت السماء تمطر في قريتنا.<br><br>خرجت أنا ووالدي لنتمشى. وبينما كنا نسير، لم يكن يكسر صمت القرية سوى صوت المطر.<br><br>أصبح ذلك اليوم ذكرى لن أنساها أبدًا.",
+
+        downvote:
+            "تصويت سلبي",
+
+        upvote:
+            "تصويت إيجابي"
 
     },
 
+
+    // =====================================
+    // TURKISH
+    // =====================================
 
     tr: {
 
@@ -772,16 +1308,13 @@ const translations = {
             "MYKURDA ÖN İZLEME",
 
         previewTitle:
-            "Bir şiir yaz.",
+            "Bir hikâye paylaş.",
 
         previewDescription:
-            "Sesini paylaş ve MyKurda'nın nasıl çalışacağını keşfet.",
+            "Hikâyeni paylaş ve MyKurda'nın nasıl çalıştığını keşfet.",
 
         from:
             "Gönderen",
-
-        to:
-            "Alıcı",
 
         public:
             "Herkese açık",
@@ -796,22 +1329,22 @@ const translations = {
             "SIRA SENDE",
 
         createTitle:
-            "Sen ne söylerdin?",
+            "Senin hikâyen ne?",
 
         senderLabel:
             "Kimden?",
 
-        receiverLabel:
-            "Kimin için?",
+        storyTitleLabel:
+            "Hikâye başlığı",
 
-        receiverPlaceholder:
-            "Kişinin adı...",
+        storyTitlePlaceholder:
+            "Hikâye başlığı...",
 
-        poemLabel:
-            "Şiirini yaz",
+        storyLabel:
+            "Hikâyeni yaz",
 
-        poemPlaceholder:
-            "Şiirini buraya yaz...",
+        storyPlaceholder:
+            "Hikâyeni buraya yaz...",
 
         visibilityLabel:
             "Kim görebilir?",
@@ -823,19 +1356,19 @@ const translations = {
             "Kendin dene",
 
         demoNotice:
-            "Bu bir demodur. Burada kazanılan Zêr yalnızca gösterim amaçlıdır.",
+            "Bu yalnızca bir demodur. Burada kazanılan Zêr sadece gösterim amaçlıdır.",
 
         featureOneTitle:
             "Yaz",
 
         featureOneText:
-            "Sesini paylaş.",
+            "Hikâyeni paylaş.",
 
         featureTwoTitle:
             "Oy ver",
 
         featureTwoText:
-            "Beğendiğin şiirleri destekle.",
+            "Beğendiğin hikâyeleri destekle.",
 
         featureThreeTitle:
             "Zêr kazan",
@@ -843,8 +1376,83 @@ const translations = {
         featureThreeText:
             "Oyların ve etkinliklerin için ödüller kazan.",
 
+        gamesEyebrow:
+            "MYKURDA",
+
+        gamesTitle:
+            "MYKURDA OYUNLARI",
+
+        gamesDescription:
+            "Öğren, oyna ve Kürtçeyi yeni bir şekilde keşfet.",
+
+        multipleChoice:
+            "ÇOKTAN SEÇMELİ",
+
+        quizTitle:
+            "Bu kelimeyi tanıyabilir misin?",
+
+        nextQuestion:
+            "Sonraki soru →",
+
+        quizCorrect:
+            "Doğru! +1 Zêr kazandın.",
+
+        quizWrong:
+            "Tam olarak değil. Tekrar dene.",
+
+        fiveLetterWord:
+            "5 HARFLİ KELİME",
+
+        wordleTitle:
+            "5 harfli kelimeyi bul.",
+
+        wordleDescription:
+            "Beş harfli bir Kürtçe kelimeyi tahmin etmeye çalış.",
+
+        wordlePlaceholder:
+            "Kelime...",
+
+        guess:
+            "Tahmin et →",
+
+        wordleFiveLetters:
+            "Lütfen 5 harfli bir kelime gir.",
+
+        wordleSuccess:
+            "Bildin! +5 Zêr 🎉",
+
+        wordleTryAgain:
+            "Tekrar dene.",
+
+        wordleGameOver:
+            "Oyun bitti. Kelime: ",
+
+        whyMyKurda:
+            "NEDEN MYKURDA?",
+
+        motivationTitle:
+            "Bir dil de kaybolabilir.",
+
+        motivationText:
+            "MyKurda, Kürt gençlerinin kendi dillerini öğrenmeleri, birbirleriyle paylaşmaları ve dilleriyle gurur duyarak yaşamaları için oluşturuluyor.",
+
+        earned:
+            "kazanıldı",
+
         footer:
-            "© 2026 MyKurda. Tüm hakları saklıdır."
+            "© 2026 MyKurda. Tüm hakları saklıdır.",
+
+        featuredStoryTitle:
+            "Köyümüzde Bir Gün",
+
+        featuredStoryText:
+            "Bir gün köyümüzde yağmur yağıyordu.<br><br>Babamla birlikte dışarıda yürüyüşe çıktık. Yürüdükçe köyün sessizliğini yalnızca yağmurun sesi bozuyordu.<br><br>O gün, benim için asla unutmayacağım bir anıya dönüştü.",
+
+        downvote:
+            "Olumsuz oy",
+
+        upvote:
+            "Olumlu oy"
 
     }
 
@@ -855,10 +1463,7 @@ const translations = {
 // LANGUAGE MENU
 // =========================================
 
-if (
-    languageButton &&
-    languageSelector
-) {
+if (languageButton && languageSelector) {
 
     languageButton.addEventListener(
         "click",
@@ -882,15 +1487,9 @@ if (
         "click",
         event => {
 
-            if (
-                !languageSelector.contains(
-                    event.target
-                )
-            ) {
+            if (!languageSelector.contains(event.target)) {
 
-                languageSelector.classList.remove(
-                    "open"
-                );
+                languageSelector.classList.remove("open");
 
                 languageButton.setAttribute(
                     "aria-expanded",
@@ -906,7 +1505,136 @@ if (
 
 
 // =========================================
-// LANGUAGE SWITCHING
+// CURRENT LANGUAGE
+// =========================================
+
+let activeLanguage =
+    localStorage.getItem("mykurda-language") || "ku";
+
+
+// =========================================
+// TRANSLATE PAGE
+// =========================================
+
+function translatePage(language) {
+
+    const translation =
+        translations[language] || translations.ku;
+
+    activeLanguage =
+        translations[language]
+            ? language
+            : "ku";
+
+
+    // Normal text
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.dataset.i18n;
+
+            if (
+                Object.prototype.hasOwnProperty.call(
+                    translation,
+                    key
+                )
+            ) {
+
+                element.innerHTML =
+                    translation[key];
+
+            }
+
+        });
+
+
+    // Placeholders
+
+    document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach(element => {
+
+            const key =
+                element.dataset.i18nPlaceholder;
+
+            if (
+                Object.prototype.hasOwnProperty.call(
+                    translation,
+                    key
+                )
+            ) {
+
+                element.placeholder =
+                    translation[key];
+
+            }
+
+        });
+
+
+    // Aria labels
+
+    document
+        .querySelectorAll("[data-i18n-aria-label]")
+        .forEach(element => {
+
+            const key =
+                element.dataset.i18nAriaLabel;
+
+            if (
+                Object.prototype.hasOwnProperty.call(
+                    translation,
+                    key
+                )
+            ) {
+
+                element.setAttribute(
+                    "aria-label",
+                    translation[key]
+                );
+
+            }
+
+        });
+
+
+    if (currentLanguage) {
+
+        currentLanguage.textContent =
+            languageNames[activeLanguage];
+
+    }
+
+
+    document.documentElement.lang =
+        activeLanguage;
+
+
+    document.documentElement.dir =
+        activeLanguage === "ar" ||
+        activeLanguage === "ckb"
+            ? "rtl"
+            : "ltr";
+
+
+    localStorage.setItem(
+        "mykurda-language",
+        activeLanguage
+    );
+
+
+    updateQuizLanguage();
+
+    updateWordleLanguage();
+
+}
+
+
+// =========================================
+// LANGUAGE BUTTONS
 // =========================================
 
 document
@@ -920,77 +1648,11 @@ document
                 const language =
                     button.dataset.language;
 
-                const translation =
-                    translations[language];
-
-                if (!translation) {
+                if (!translations[language]) {
                     return;
                 }
 
-
-                document
-                    .querySelectorAll("[data-i18n]")
-                    .forEach(element => {
-
-                        const key =
-                            element.dataset.i18n;
-
-                        if (
-                            Object.prototype.hasOwnProperty.call(
-                                translation,
-                                key
-                            )
-                        ) {
-
-                            element.innerHTML =
-                                translation[key];
-
-                        }
-
-                    });
-
-
-                document
-                    .querySelectorAll(
-                        "[data-i18n-placeholder]"
-                    )
-                    .forEach(element => {
-
-                        const key =
-                            element.dataset.i18nPlaceholder;
-
-                        if (
-                            Object.prototype.hasOwnProperty.call(
-                                translation,
-                                key
-                            )
-                        ) {
-
-                            element.placeholder =
-                                translation[key];
-
-                        }
-
-                    });
-
-
-                if (currentLanguage) {
-
-                    currentLanguage.textContent =
-                        languageNames[language];
-
-                }
-
-
-                document.documentElement.lang =
-                    language;
-
-
-                document.documentElement.dir =
-                    language === "ar" ||
-                    language === "ckb"
-                        ? "rtl"
-                        : "ltr";
+                translatePage(language);
 
 
                 if (languageSelector) {
@@ -1018,8 +1680,14 @@ document
 
 
 // =========================================
+// INITIAL LANGUAGE
+// =========================================
+
+translatePage(activeLanguage);
+
+
+// =========================================
 // GLASS LIGHT EFFECT
-// DESKTOP + MOBILE
 // =========================================
 
 const lightCards =
@@ -1035,10 +1703,7 @@ function moveLight(card, x, y) {
     const rect =
         card.getBoundingClientRect();
 
-    if (
-        !rect.width ||
-        !rect.height
-    ) {
+    if (!rect.width || !rect.height) {
         return;
     }
 
@@ -1058,9 +1723,7 @@ function moveLight(card, x, y) {
         `${relativeY}%`
     );
 
-    card.classList.add(
-        "mouse-active"
-    );
+    card.classList.add("mouse-active");
 
 }
 
@@ -1262,23 +1925,18 @@ function showZer(amount = 10) {
     strong.textContent =
         `+${amount} Zêr`;
 
-    zerPopup.classList.remove(
-        "show"
-    );
+
+    zerPopup.classList.remove("show");
 
     void zerPopup.offsetWidth;
 
-    zerPopup.classList.add(
-        "show"
-    );
+    zerPopup.classList.add("show");
 
 
     setTimeout(
         () => {
 
-            zerPopup.classList.remove(
-                "show"
-            );
+            zerPopup.classList.remove("show");
 
         },
         1800
@@ -1288,7 +1946,7 @@ function showZer(amount = 10) {
 
 
 // =========================================
-// POEM VOTING
+// FEATURED STORY VOTING
 // =========================================
 
 const upvoteButton =
@@ -1330,10 +1988,7 @@ function updateVotes() {
 }
 
 
-if (
-    upvoteButton &&
-    downvoteButton
-) {
+if (upvoteButton && downvoteButton) {
 
     upvoteButton.addEventListener(
         "click",
@@ -1468,36 +2123,34 @@ visibilityButtons.forEach(button => {
 
 
 // =========================================
-// CHARACTER COUNT
+// STORY INPUT
 // =========================================
 
-const poemInput =
-    document.getElementById("poemInput");
+const storyInput =
+    document.getElementById("storyInput");
+
+const storyTitleInput =
+    document.getElementById("storyTitleInput");
 
 const characterCount =
-    document.getElementById(
-        "characterCount"
-    );
+    document.getElementById("characterCount");
 
 
 function updateCharacterCount() {
 
-    if (
-        !poemInput ||
-        !characterCount
-    ) {
+    if (!storyInput || !characterCount) {
         return;
     }
 
     characterCount.textContent =
-        poemInput.value.length;
+        storyInput.value.length;
 
 }
 
 
-if (poemInput) {
+if (storyInput) {
 
-    poemInput.addEventListener(
+    storyInput.addEventListener(
         "input",
         updateCharacterCount
     );
@@ -1512,9 +2165,7 @@ if (poemInput) {
 // =========================================
 
 const previewButton =
-    document.getElementById(
-        "previewButton"
-    );
+    document.getElementById("previewButton");
 
 
 if (previewButton) {
@@ -1541,8 +2192,8 @@ if (previewButton) {
             setTimeout(
                 () => {
 
-                    if (poemInput) {
-                        poemInput.focus();
+                    if (storyInput) {
+                        storyInput.focus();
                     }
 
                 },
@@ -1573,37 +2224,32 @@ function escapeHTML(text) {
 
 
 // =========================================
-// NEW POEM VOTING
+// NEW STORY VOTING
 // =========================================
 
-function setupNewPoemVoting(poemCard) {
+function setupNewStoryVoting(storyCard) {
 
-    if (!poemCard) {
+    if (!storyCard) {
         return;
     }
 
+
     const upButton =
-        poemCard.querySelector(
-            ".new-upvote"
-        );
+        storyCard.querySelector(".new-upvote");
 
     const downButton =
-        poemCard.querySelector(
-            ".vote-button:not(.new-upvote)"
-        );
+        storyCard.querySelector(".new-downvote");
+
 
     const upCount =
         upButton
-            ? upButton.querySelector(
-                ".vote-count"
-            )
+            ? upButton.querySelector(".vote-count")
             : null;
+
 
     const downCount =
         downButton
-            ? downButton.querySelector(
-                ".vote-count"
-            )
+            ? downButton.querySelector(".vote-count")
             : null;
 
 
@@ -1612,10 +2258,7 @@ function setupNewPoemVoting(poemCard) {
     let localVote = null;
 
 
-    if (
-        !upButton ||
-        !downButton
-    ) {
+    if (!upButton || !downButton) {
         return;
     }
 
@@ -1725,28 +2368,25 @@ function setupNewPoemVoting(poemCard) {
 
 
 // =========================================
-// CREATE DEMO POEM
+// CREATE DEMO STORY
 // =========================================
 
 const sender =
     document.getElementById("sender");
 
-const receiver =
-    document.getElementById("receiver");
-
 const postButton =
     document.getElementById("postButton");
 
-const poemFeed =
-    document.getElementById("poemFeed");
+const storyFeed =
+    document.getElementById("storyFeed");
 
 
 if (
     postButton &&
     sender &&
-    receiver &&
-    poemInput &&
-    poemFeed
+    storyTitleInput &&
+    storyInput &&
+    storyFeed
 ) {
 
     postButton.addEventListener(
@@ -1756,27 +2396,25 @@ if (
             const senderName =
                 sender.value.trim() || "me";
 
-            const receiverName =
-                receiver.value.trim();
+            const title =
+                storyTitleInput.value.trim();
 
-            const poem =
-                poemInput.value.trim();
+            const story =
+                storyInput.value.trim();
 
 
-            if (
-                !receiverName ||
-                !poem
-            ) {
+            if (!title) {
 
-                if (!receiverName) {
+                storyTitleInput.focus();
 
-                    receiver.focus();
+                return;
 
-                } else {
+            }
 
-                    poemInput.focus();
 
-                }
+            if (!story) {
+
+                storyInput.focus();
 
                 return;
 
@@ -1784,13 +2422,12 @@ if (
 
 
             const language =
-                document.documentElement.lang ||
-                "ku";
+                document.documentElement.lang || "ku";
 
 
             const translation =
                 translations[language] ||
-                translations.en;
+                translations.ku;
 
 
             const visibilityText =
@@ -1799,23 +2436,21 @@ if (
                     : translation.private;
 
 
-            const newPoem =
-                document.createElement(
-                    "article"
-                );
+            const newStory =
+                document.createElement("article");
 
 
-            newPoem.className =
-                "poem-card light-card new-poem";
+            newStory.className =
+                "story-card light-card new-story";
 
 
-            newPoem.innerHTML = `
+            newStory.innerHTML = `
 
-                <div class="poem-top">
+                <div class="story-top">
 
-                    <div>
+                    <div class="story-author">
 
-                        <div class="poem-label">
+                        <div class="story-label">
 
                             <span>
                                 ${translation.from}
@@ -1827,57 +2462,42 @@ if (
 
                         </div>
 
-
-                        <div class="poem-label">
-
-                            <span>
-                                ${translation.to}
-                            </span>
-
-                            <strong>
-                                ${escapeHTML(receiverName)}
-                            </strong>
-
-                        </div>
-
                     </div>
 
 
                     <span class="visibility-badge">
-
                         ${visibilityText}
-
                     </span>
 
                 </div>
 
 
-                <div class="poem-text">
+                <h3 class="story-title">
+                    ${escapeHTML(title)}
+                </h3>
 
-                    ${escapeHTML(poem).replace(
+
+                <div class="story-text">
+                    ${escapeHTML(story).replace(
                         /\n/g,
                         "<br>"
                     )}
-
                 </div>
 
 
-                <div class="poem-bottom">
+                <div class="story-bottom">
 
                     <div class="vote-group">
 
                         <button
-                            class="vote-button"
+                            class="vote-button new-downvote"
                             type="button"
+                            aria-label="${translation.downvote}"
                         >
 
-                            <span
-                                class="vote-arrow down"
-                            ></span>
+                            <span class="vote-arrow down"></span>
 
-                            <span
-                                class="vote-count"
-                            >
+                            <span class="vote-count">
                                 0
                             </span>
 
@@ -1887,15 +2507,12 @@ if (
                         <button
                             class="vote-button new-upvote"
                             type="button"
+                            aria-label="${translation.upvote}"
                         >
 
-                            <span
-                                class="vote-arrow up"
-                            ></span>
+                            <span class="vote-arrow up"></span>
 
-                            <span
-                                class="vote-count"
-                            >
+                            <span class="vote-count">
                                 0
                             </span>
 
@@ -1911,7 +2528,7 @@ if (
                         </span>
 
                         <span>
-                            Zêr
+                            ${translation.zer}
                         </span>
 
                     </div>
@@ -1921,25 +2538,22 @@ if (
             `;
 
 
-            poemFeed.after(
-                newPoem
+            storyFeed.appendChild(
+                newStory
             );
 
 
-            // Make the new poem interactive.
-            setupNewPoemVoting(
-                newPoem
+            setupNewStoryVoting(
+                newStory
             );
 
 
-            // Make the light effect work
-            // on the new card as well.
-            newPoem.addEventListener(
+            newStory.addEventListener(
                 "mousemove",
                 event => {
 
                     moveLight(
-                        newPoem,
+                        newStory,
                         event.clientX,
                         event.clientY
                     );
@@ -1948,11 +2562,11 @@ if (
             );
 
 
-            newPoem.addEventListener(
+            newStory.addEventListener(
                 "mouseleave",
                 () => {
 
-                    newPoem.classList.remove(
+                    newStory.classList.remove(
                         "mouse-active"
                     );
 
@@ -1983,22 +2597,20 @@ if (
             sender.value =
                 "me";
 
-            receiver.value =
-                "MyKurda";
+
+            storyTitleInput.value =
+                translation.featuredStoryTitle;
 
 
-            poemInput.value =
-`Kurdî zimanê me ye,
-dengê bav û kalên me ye.
-
-Bila em bi hev re hîn bibin,
-bila dengê me her tim bijî.`;
+            storyInput.value =
+                translation.featuredStoryText
+                    .replace(/<br>/g, "\n");
 
 
             updateCharacterCount();
 
 
-            newPoem.scrollIntoView({
+            newStory.scrollIntoView({
                 behavior: "smooth",
                 block: "center"
             });
@@ -2027,7 +2639,6 @@ const quizQuestions = [
         ]
     },
 
-
     {
         question:
             "“Roj” çi ye?",
@@ -2039,7 +2650,6 @@ const quizQuestions = [
             ["Water", "wrong"]
         ]
     },
-
 
     {
         question:
@@ -2062,24 +2672,34 @@ let quizAnswered = false;
 
 
 const quizOptions =
-    document.getElementById(
-        "quizOptions"
-    );
+    document.getElementById("quizOptions");
 
 const quizFeedback =
-    document.getElementById(
-        "quizFeedback"
-    );
+    document.getElementById("quizFeedback");
 
 const nextQuiz =
-    document.getElementById(
-        "nextQuiz"
-    );
+    document.getElementById("nextQuiz");
 
 const quizQuestion =
-    document.querySelector(
-        ".game-question"
-    );
+    document.querySelector(".game-question");
+
+
+function getQuizTranslation() {
+
+    const translation =
+        translations[activeLanguage] ||
+        translations.ku;
+
+    return translation;
+
+}
+
+
+function updateQuizLanguage() {
+
+    loadQuiz();
+
+}
 
 
 function loadQuiz() {
@@ -2097,6 +2717,10 @@ function loadQuiz() {
         quizQuestions[quizIndex];
 
 
+    const translation =
+        getQuizTranslation();
+
+
     quizAnswered = false;
 
 
@@ -2112,20 +2736,80 @@ function loadQuiz() {
         "";
 
 
+    const translatedAnswers = {
+
+        0: {
+            ku: "Nan",
+            ckb: "نان",
+            en: "Bread",
+            nl: "Brood",
+            de: "Brot",
+            fr: "Pain",
+            ar: "خبز",
+            tr: "Ekmek"
+        },
+
+        1: {
+            ku: "Av",
+            ckb: "ئاو",
+            en: "Water",
+            nl: "Water",
+            de: "Wasser",
+            fr: "Eau",
+            ar: "ماء",
+            tr: "Su"
+        },
+
+        2: {
+            ku: "Roj",
+            ckb: "ڕۆژ",
+            en: "Sun / Day",
+            nl: "Zon / Dag",
+            de: "Sonne / Tag",
+            fr: "Soleil / Jour",
+            ar: "شمس / يوم",
+            tr: "Güneş / Gün"
+        },
+
+        3: {
+            ku: "Mal",
+            ckb: "ماڵ",
+            en: "House",
+            nl: "Huis",
+            de: "Haus",
+            fr: "Maison",
+            ar: "منزل",
+            tr: "Ev"
+        }
+
+    };
+
+
     question.answers.forEach(
-        answer => {
+        (answer, index) => {
 
             const button =
-                document.createElement(
-                    "button"
-                );
+                document.createElement("button");
 
 
             button.type =
                 "button";
 
 
+            const answerKey =
+                answer[0] === "Nan"
+                    ? 0
+                    : answer[0] === "Water"
+                        ? 1
+                        : answer[0] === "Roj"
+                            ? 2
+                            : 3;
+
+
             button.textContent =
+                translatedAnswers[
+                    answerKey
+                ][activeLanguage] ||
                 answer[0];
 
 
@@ -2157,7 +2841,7 @@ function loadQuiz() {
 
 
                         quizFeedback.textContent =
-                            "Rast e! Tu +1 Zêr wergirt.";
+                            translation.quizCorrect;
 
 
                         showZer(1);
@@ -2170,7 +2854,7 @@ function loadQuiz() {
 
 
                         quizFeedback.textContent =
-                            "Ne rast e. Dîsa biceribîne.";
+                            translation.quizWrong;
 
                     }
 
@@ -2196,17 +2880,14 @@ if (nextQuiz) {
 
             quizIndex++;
 
-
             if (
                 quizIndex >=
                 quizQuestions.length
             ) {
 
-                quizIndex =
-                    0;
+                quizIndex = 0;
 
             }
-
 
             loadQuiz();
 
@@ -2220,45 +2901,35 @@ loadQuiz();
 
 
 // =========================================
-// WORDLE GAME
+// WORDLE
 // =========================================
-
-const wordleWords = [
-
-    "avdar",
-    "rojda",
-    "hevî"
-
-];
-
 
 const wordleAnswer =
     "rojda";
 
-
-let wordleRow =
-    0;
+let wordleRow = 0;
 
 
 const wordleInput =
-    document.getElementById(
-        "wordleInput"
-    );
+    document.getElementById("wordleInput");
 
 const wordleButton =
-    document.getElementById(
-        "wordleButton"
-    );
+    document.getElementById("wordleButton");
 
 const wordleFeedback =
-    document.getElementById(
-        "wordleFeedback"
-    );
+    document.getElementById("wordleFeedback");
 
 const wordleRows =
-    document.querySelectorAll(
-        ".wordle-row"
-    );
+    document.querySelectorAll(".wordle-row");
+
+
+function updateWordleLanguage() {
+
+    if (wordleFeedback) {
+        wordleFeedback.textContent = "";
+    }
+
+}
 
 
 function submitWordle() {
@@ -2286,13 +2957,18 @@ function submitWordle() {
             .toLowerCase();
 
 
+    const translation =
+        translations[activeLanguage] ||
+        translations.ku;
+
+
     if (
         guess.length !==
         wordleAnswer.length
     ) {
 
         wordleFeedback.textContent =
-            "Ji kerema xwe peyvekî 5 tîpan binivîse.";
+            translation.wordleFiveLetters;
 
         return;
 
@@ -2309,17 +2985,7 @@ function submitWordle() {
 
 
     const letters =
-        row.querySelectorAll(
-            "span"
-        );
-
-
-    if (
-        letters.length <
-        wordleAnswer.length
-    ) {
-        return;
-    }
+        row.querySelectorAll("span");
 
 
     for (
@@ -2330,7 +2996,6 @@ function submitWordle() {
 
         letters[i].textContent =
             guess[i];
-
 
         letters[i].className =
             "";
@@ -2375,7 +3040,7 @@ function submitWordle() {
     ) {
 
         wordleFeedback.textContent =
-            "Serkeftin! +5 Zêr 🎉";
+            translation.wordleSuccess;
 
 
         showZer(5);
@@ -2384,10 +3049,8 @@ function submitWordle() {
         wordleButton.disabled =
             true;
 
-
         wordleInput.disabled =
             true;
-
 
         return;
 
@@ -2400,12 +3063,12 @@ function submitWordle() {
     ) {
 
         wordleFeedback.textContent =
-            `Game over. Peyv: ${wordleAnswer}`;
+            translation.wordleGameOver +
+            wordleAnswer;
 
 
         wordleButton.disabled =
             true;
-
 
         wordleInput.disabled =
             true;
@@ -2413,12 +3076,11 @@ function submitWordle() {
     } else {
 
         wordleFeedback.textContent =
-            "Dîsa biceribîne.";
+            translation.wordleTryAgain;
 
 
         wordleInput.value =
             "";
-
 
         wordleInput.focus();
 
@@ -2443,10 +3105,7 @@ if (wordleInput) {
         "keydown",
         event => {
 
-            if (
-                event.key ===
-                "Enter"
-            ) {
+            if (event.key === "Enter") {
 
                 event.preventDefault();
 
