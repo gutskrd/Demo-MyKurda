@@ -106,7 +106,10 @@
     </div>
 
 
-    <div class="eyebrow" data-i18n="eyebrow">
+    <div
+        class="eyebrow"
+        data-i18n="eyebrow"
+    >
         Di nêzîk de tê
     </div>
 
@@ -231,8 +234,6 @@
         id="featuredStory"
     >
 
-        <!-- TOP -->
-
         <div class="story-top">
 
             <div class="story-author">
@@ -263,22 +264,20 @@
 
 
 
-        <!-- TITLE -->
-
         <h3
             class="story-title"
             id="featuredStoryTitle"
+            data-i18n="featuredStoryTitle"
         >
             Rojek li gundê me
         </h3>
 
 
 
-        <!-- STORY -->
-
         <div
             class="story-text"
             id="featuredStoryText"
+            data-i18n="featuredStoryText"
         >
 
             Rojekê li gundê me baran dibariya.
@@ -299,8 +298,6 @@
 
 
 
-        <!-- BOTTOM -->
-
         <div class="story-bottom">
 
             <div class="vote-group">
@@ -309,6 +306,7 @@
                     class="vote-button downvote"
                     type="button"
                     aria-label="Downvote"
+                    data-i18n-aria-label="downvote"
                 >
 
                     <span class="vote-arrow down"></span>
@@ -324,6 +322,7 @@
                     class="vote-button upvote"
                     type="button"
                     aria-label="Upvote"
+                    data-i18n-aria-label="upvote"
                 >
 
                     <span class="vote-arrow up"></span>
@@ -343,7 +342,7 @@
                     +1
                 </span>
 
-                <span>
+                <span data-i18n="zer">
                     Zêr
                 </span>
 
@@ -352,8 +351,6 @@
         </div>
 
 
-
-        <!-- POINTING HAND -->
 
         <div
             class="finger finger-story"
@@ -420,8 +417,6 @@
 
 
 
-        <!-- AUTHOR -->
-
         <label
             class="field-label"
             for="sender"
@@ -440,8 +435,6 @@
         >
 
 
-
-        <!-- STORY TITLE -->
 
         <label
             class="field-label"
@@ -463,8 +456,6 @@
         >
 
 
-
-        <!-- STORY -->
 
         <label
             class="field-label"
@@ -499,8 +490,6 @@ ku ez ê tu carî ji bîr nekim.</textarea>
         </div>
 
 
-
-        <!-- VISIBILITY -->
 
         <div class="visibility-row">
 
@@ -538,8 +527,6 @@ ku ez ê tu carî ji bîr nekim.</textarea>
         </div>
 
 
-
-        <!-- POST -->
 
         <button
             class="post-button"
@@ -650,7 +637,7 @@ ku ez ê tu carî ji bîr nekim.</textarea>
                 </strong>
 
                 <span data-i18n="featureThreeText">
-                    Ji bo upvote û çalakiyên xwe xelat bistîne.
+                    Ji bo dengdan û çalakiyên xwe xelat bistîne.
                 </span>
 
             </div>
@@ -671,15 +658,18 @@ ku ez ê tu carî ji bîr nekim.</textarea>
 
     <div class="section-heading">
 
-        <span class="section-eyebrow">
+        <span
+            class="section-eyebrow"
+            data-i18n="gamesEyebrow"
+        >
             MYKURDA
         </span>
 
-        <h2>
-            MYKURDA GAMES
+        <h2 data-i18n="gamesTitle">
+            LÎSTIKÊN MYKURDA
         </h2>
 
-        <p>
+        <p data-i18n="gamesDescription">
             Fêr bibe, lîz bike û Kurdî bi awayekî nû biceribîne.
         </p>
 
@@ -700,14 +690,17 @@ ku ez ê tu carî ji bîr nekim.</textarea>
                     01
                 </span>
 
-                <span class="game-type">
-                    MULTIPLE CHOICE
+                <span
+                    class="game-type"
+                    data-i18n="multipleChoice"
+                >
+                    HILBIJARTINA ÇENDAN
                 </span>
 
             </div>
 
 
-            <h3>
+            <h3 data-i18n="quizTitle">
                 Tu dikarî vê peyvê nas bikî?
             </h3>
 
@@ -720,37 +713,7 @@ ku ez ê tu carî ji bîr nekim.</textarea>
             <div
                 class="quiz-options"
                 id="quizOptions"
-            >
-
-                <button
-                    type="button"
-                    data-answer="wrong"
-                >
-                    Nan
-                </button>
-
-                <button
-                    type="button"
-                    data-answer="correct"
-                >
-                    Water
-                </button>
-
-                <button
-                    type="button"
-                    data-answer="wrong"
-                >
-                    Roj
-                </button>
-
-                <button
-                    type="button"
-                    data-answer="wrong"
-                >
-                    Mal
-                </button>
-
-            </div>
+            ></div>
 
 
             <div
@@ -764,7 +727,11 @@ ku ez ê tu carî ji bîr nekim.</textarea>
                 id="nextQuiz"
                 type="button"
             >
-                Next question →
+
+                <span data-i18n="nextQuestion">
+                    Pirsê din →
+                </span>
+
             </button>
 
         </article>
@@ -781,19 +748,25 @@ ku ez ê tu carî ji bîr nekim.</textarea>
                     02
                 </span>
 
-                <span class="game-type">
-                    5 LETTER WORD
+                <span
+                    class="game-type"
+                    data-i18n="fiveLetterWord"
+                >
+                    PEYVA 5 TÎPAN
                 </span>
 
             </div>
 
 
-            <h3>
+            <h3 data-i18n="wordleTitle">
                 Peyvê 5 tîpan bibîne.
             </h3>
 
 
-            <p class="wordle-description">
+            <p
+                class="wordle-description"
+                data-i18n="wordleDescription"
+            >
                 Peyvekî Kurdî ya pênc tîpan biceribîne.
             </p>
 
@@ -851,6 +824,7 @@ ku ez ê tu carî ji bîr nekim.</textarea>
                 class="glass-input wordle-input"
                 maxlength="5"
                 autocomplete="off"
+                data-i18n-placeholder="wordlePlaceholder"
                 placeholder="Peyv..."
             >
 
@@ -860,7 +834,11 @@ ku ez ê tu carî ji bîr nekim.</textarea>
                 id="wordleButton"
                 type="button"
             >
-                Guess →
+
+                <span data-i18n="guess">
+                    Biceribîne →
+                </span>
+
             </button>
 
 
@@ -887,17 +865,20 @@ ku ez ê tu carî ji bîr nekim.</textarea>
 
         <div class="motivation-content">
 
-            <span class="section-eyebrow">
+            <span
+                class="section-eyebrow"
+                data-i18n="whyMyKurda"
+            >
                 WHY MYKURDA
             </span>
 
 
-            <h2>
+            <h2 data-i18n="motivationTitle">
                 Ziman jî dikare bê winda kirin.
             </h2>
 
 
-            <p>
+            <p data-i18n="motivationText">
                 MyKurda ji bo ku ciwanên Kurd bikaribin
                 zimanê xwe fêr bibin, bi hev re parve bikin
                 û bi serbilindî bijîn tê çêkirin.
@@ -941,8 +922,8 @@ ku ez ê tu carî ji bîr nekim.</textarea>
         +10 Zêr
     </strong>
 
-    <span>
-        earned
+    <span data-i18n="earned">
+        wergirtî
     </span>
 
 </div>
