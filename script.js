@@ -13,6 +13,41 @@ const currentLanguage =
 
 
 // =========================================
+// OPEN / CLOSE LANGUAGE MENU
+// =========================================
+
+languageButton.addEventListener("click", (event) => {
+
+    event.stopPropagation();
+
+    const isOpen =
+        languageSelector.classList.toggle("open");
+
+    languageButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+
+});
+
+
+document.addEventListener("click", (event) => {
+
+    if (!languageSelector.contains(event.target)) {
+
+        languageSelector.classList.remove("open");
+
+        languageButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+});
+
+
+// =========================================
 // LANGUAGE NAMES
 // =========================================
 
@@ -49,7 +84,7 @@ const translations = {
             "Em ê tiştekî<br>bedew ava bikin.",
 
         description:
-            "MyKurda hîn di çêkirinê de ye. Em li pişt perdeyê bi dil û can dixebitin da ku cîhekî nû ji bo ziman, çand, afirînerî û civaka Kurdî ava bikin.",
+            "MyKurda hîn di çêkirinê de ye. Em li pişt perdeyê bi dil û can dixebitin da ku cîhekî nû ji bo ziman, çand û civaka Kurdî ava bikin.",
 
         description2:
             "Spas ji bo serdana te. MyKurda di nêzîk de dê were vekirin. Ji kerema xwe paşê dîsa serdana me bike.",
@@ -60,92 +95,47 @@ const translations = {
         contact:
             "Têkilî",
 
-        discoverEyebrow:
-            "Hîn bêtir",
-
-        discoverTitle:
+        aboutTitle:
             "MyKurda çi ye?",
 
-        discoverText:
-            "Cîhekî nû ji bo zimanê Kurdî, çand, afirînerî û civakê.",
+        aboutIntro:
+            "Cîhekî nû ji bo ziman, çand, afirînerî û civaka Kurdî.",
 
-        createTitle:
-            "Binivîse û parve bike",
+        featurePoemsTitle:
+            "Helbest û gotin",
 
-        createText:
-            "Helbest û gotinên xwe binivîse, wan ji bo kesekî bi taybetî bişîne an jî wan bi civakê re parve bike.",
+        featurePoems:
+            "Helbestên xwe binivîse, wan ji kesekî re bişîne û dengê xwe bi civakê re parve bike.",
 
-        playTitle:
-            "Bilîze û pêşbaziyê bike",
+        featureGamesTitle:
+            "Lîstikên Kurdî",
 
-        playText:
-            "Di lîstikên zimanê Kurdî de li dijî kesên din pêşbaziyê bike.",
+        featureGames:
+            "Di lîstikên zimanî de li dijî kesên din bilîze û jêhatîbûna xwe biceribîne.",
 
-        learnTitle:
-            "Fêr bibe",
+        featureLearnTitle:
+            "Fêrbûna Kurdî",
 
-        learnText:
-            "Bi ders û lîstikan Kurdî hîn bibe, XP bi dest bixe û di lîgayan de bilind bibe.",
+        featureLearn:
+            "Kurdî hîn bibe, XP bi dest bixe û di lîgên MyKurda de pêş bikeve.",
 
-        socialTitle:
-            "Bi hev re girêdayî be",
+        featureSocialTitle:
+            "Civak",
 
-        socialText:
-            "Bi hevalên xwe re biaxive, hev nas bike û beşdarî civaka Kurdî bibe.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "Bi hevalên xwe re biaxive û bi civaka Kurdî re girêdanên nû ava bike.",
 
         zerTitle:
-            "Ji çalakiyên xwe qezenc bike.",
+            "Zêr",
 
         zerText:
-            "Bi afirandina naverokê, lîstin û fêrbûnê Zêr bi dest bixe û wan di Shopê de bi kar bîne.",
+            "Bi çalakiyên xwe Zêr bi dest bixe û di MyKurda de bikar bîne.",
 
-        tryEyebrow:
-            "Biceribîne",
+        comingFeature:
+            "Ev tenê destpêk e.",
 
-        tryTitle:
-            "MyKurda di çalakiyê de.",
-
-        tryText:
-            "Çend tiştên ku dê bikaribî di MyKurda de bikî.",
-
-        poemDemoTitle:
-            "Helbestekê binivîse",
-
-        for:
-            "ji bo",
-
-        sendPoem:
-            "Ji bo kesekî bişîne",
-
-        wordGameTitle:
-            "Lîstika peyvan",
-
-        gameQuestion:
-            "Kîjan peyv rast e?",
-
-        wordleText:
-            "Peyvekî pênc tîpan bibîne.",
-
-        wordleHint:
-            "Kesk = cihê rast · Zer = di peyvê de ye",
-
-        leagueTitle:
-            "Lîga",
-
-        leagueText:
-            "Fêr bibe, XP bistîne û di lîgayê de bilind bibe.",
-
-        visionEyebrow:
-            "Tiştekî nû tê",
-
-        visionTitle:
-            "Fêr bibe. Biafirîne.<br>Bilîze. Girêdayî be.",
-
-        visionText:
-            "Hemû di cîhekî de.",
+        bottomTagline:
+            "Bi Kurdî, ji bo Kurdan.",
 
         footer:
             "© 2026 MyKurda. Hemû maf parastî ne."
@@ -166,7 +156,7 @@ const translations = {
             "ئێمە شتێکی جوان<br>دروست دەکەین.",
 
         description:
-            "MyKurda هێشتا لە قۆناغی دروستکردندایە. لە پشت پەردەوە بە دڵ و گیان کار دەکەین بۆ دروستکردنی شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور، داهێنان و کۆمەڵگەی کوردی.",
+            "MyKurda هێشتا لە قۆناغی دروستکردندایە. لە پشت پەردەوە بە دڵ و گیان کار دەکەین بۆ دروستکردنی شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور و کۆمەڵگەی کوردی.",
 
         description2:
             "سوپاس بۆ سەردانەکەت. MyKurda بە زووانە دەکرێتەوە. تکایە دواتر دووبارە سەردانمان بکە.",
@@ -177,92 +167,47 @@ const translations = {
         contact:
             "پەیوەندی",
 
-        discoverEyebrow:
-            "زیاتر بزانە",
-
-        discoverTitle:
+        aboutTitle:
             "MyKurda چییە؟",
 
-        discoverText:
-            "شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور، داهێنان و کۆمەڵگا.",
+        aboutIntro:
+            "شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور، داهێنان و کۆمەڵگەی کوردی.",
 
-        createTitle:
-            "بنووسە و بڵاوی بکەرەوە",
+        featurePoemsTitle:
+            "هۆنراوە و وتەکان",
 
-        createText:
-            "هۆنراوە و وتەکانت بنووسە، بۆ کەسێکی دیاریکراو بیاننێرە یان لەگەڵ کۆمەڵگا بڵاویان بکەرەوە.",
+        featurePoems:
+            "هۆنراوەی خۆت بنووسە، بۆ کەسێک بنێرە و دەنگی خۆت لەگەڵ کۆمەڵگەدا هاوبەش بکە.",
 
-        playTitle:
-            "یاری بکە و پێشبڕکێ بکە",
+        featureGamesTitle:
+            "یارییە کوردییەکان",
 
-        playText:
-            "لە یارییەکانی زمانی کوردیدا لەگەڵ کەسانی تر پێشبڕکێ بکە.",
+        featureGames:
+            "لە یارییەکانی زمانی کوردیدا دژی کەسانی تر یاری بکە و تواناکانت تاقی بکەرەوە.",
 
-        learnTitle:
-            "فێربە",
+        featureLearnTitle:
+            "فێربوونی کوردی",
 
-        learnText:
-            "بە وانە و یارییەکان کوردی فێربە، XP بەدەست بهێنە و لە لیگەکاندا بەرز ببەوە.",
+        featureLearn:
+            "کوردی فێربە، XP بەدەست بهێنە و لە لیگەکانی MyKurda پێش بکەوە.",
 
-        socialTitle:
-            "پەیوەندی دروست بکە",
+        featureSocialTitle:
+            "کۆمەڵگە",
 
-        socialText:
-            "لەگەڵ هاوڕێکانت گفتوگۆ بکە، کەسانی تر بناسە و ببە بەشێک لە کۆمەڵگەی کوردی.",
-
-        zerEyebrow:
-            "زێڕ",
+        featureSocial:
+            "لەگەڵ هاوڕێکانت گفتوگۆ بکە و پەیوەندیی نوێ لەگەڵ کۆمەڵگەی کوردی دروست بکە.",
 
         zerTitle:
-            "لە چالاکییەکانت قازانج بکە.",
+            "Zêr",
 
         zerText:
-            "بە دروستکردنی ناوەڕۆک، یاریکردن و فێربوون زێڕ بەدەست بهێنە و لە فرۆشگاکەدا بەکاری بهێنە.",
+            "لە ڕێگەی چالاکییەکانتەوە Zêr بەدەست بهێنە و لە MyKurda بەکاری بهێنە.",
 
-        tryEyebrow:
-            "تاقی بکەرەوە",
+        comingFeature:
+            "ئەمە تەنها دەستپێکە.",
 
-        tryTitle:
-            "MyKurda لە چالاکیدا.",
-
-        tryText:
-            "هەندێک لەو شتانەی کە دەتوانیت لە MyKurda بکەیت.",
-
-        poemDemoTitle:
-            "هۆنراوەیەک بنووسە",
-
-        for:
-            "بۆ",
-
-        sendPoem:
-            "بۆ کەسێک بینێرە",
-
-        wordGameTitle:
-            "یاریی وشە",
-
-        gameQuestion:
-            "کام وشە دروستە؟",
-
-        wordleText:
-            "وشەیەکی پێنج پیت بدۆزەرەوە.",
-
-        wordleHint:
-            "سەوز = شوێنی دروست · زەرد = لە وشەکەدایە",
-
-        leagueTitle:
-            "لیگ",
-
-        leagueText:
-            "فێربە، XP بەدەست بهێنە و لە لیگەکەدا بەرز ببەوە.",
-
-        visionEyebrow:
-            "شتێکی نوێ دێت",
-
-        visionTitle:
-            "فێربە. داهێنان بکە.<br>یاری بکە. پەیوەندی دروست بکە.",
-
-        visionText:
-            "هەمووی لە یەک شوێندا.",
+        bottomTagline:
+            "بە کوردی، بۆ کوردان.",
 
         footer:
             "© 2026 MyKurda. هەموو مافەکان پارێزراون."
@@ -283,7 +228,7 @@ const translations = {
             "We're building<br>something beautiful.",
 
         description:
-            "MyKurda is currently under construction. We're working behind the scenes to create a new place for Kurdish language, culture, creativity and community.",
+            "MyKurda is currently under construction. We're working behind the scenes to create a new place for Kurdish language, culture and community.",
 
         description2:
             "Thank you for visiting. MyKurda will be launching soon. Please check back later.",
@@ -294,92 +239,47 @@ const translations = {
         contact:
             "Contact",
 
-        discoverEyebrow:
-            "Discover more",
-
-        discoverTitle:
+        aboutTitle:
             "What is MyKurda?",
 
-        discoverText:
+        aboutIntro:
             "A new place for Kurdish language, culture, creativity and community.",
 
-        createTitle:
-            "Create & share",
+        featurePoemsTitle:
+            "Poems & sayings",
 
-        createText:
-            "Write poems and sayings, address them to someone special or share them with the community.",
+        featurePoems:
+            "Write poems, address them to someone, share them with the community and earn Zêr from appreciation.",
 
-        playTitle:
-            "Play & compete",
+        featureGamesTitle:
+            "Kurdish games",
 
-        playText:
-            "Challenge other people in Kurdish language games and 1v1 battles.",
+        featureGames:
+            "Challenge other players in Kurdish language games and put your skills to the test.",
 
-        learnTitle:
+        featureLearnTitle:
             "Learn Kurdish",
 
-        learnText:
-            "Learn through lessons and games, earn XP and climb the leagues.",
+        featureLearn:
+            "Learn Kurdish, earn XP and climb the MyKurda leagues.",
 
-        socialTitle:
-            "Connect",
+        featureSocialTitle:
+            "Community",
 
-        socialText:
-            "Chat with your friends, meet others and become part of the Kurdish community.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "Chat with your friends and build new connections within the Kurdish community.",
 
         zerTitle:
-            "Earn from what you do.",
+            "Zêr",
 
         zerText:
-            "Earn Zêr through creating, playing and learning, then use it in the Shop.",
+            "Earn Zêr through your activities and use it throughout MyKurda.",
 
-        tryEyebrow:
-            "Try it",
+        comingFeature:
+            "This is only the beginning.",
 
-        tryTitle:
-            "A glimpse of MyKurda.",
-
-        tryText:
-            "Here are some of the things you will be able to do in MyKurda.",
-
-        poemDemoTitle:
-            "Write a poem",
-
-        for:
-            "for",
-
-        sendPoem:
-            "Send to someone",
-
-        wordGameTitle:
-            "Word game",
-
-        gameQuestion:
-            "Which word is correct?",
-
-        wordleText:
-            "Guess a five-letter word.",
-
-        wordleHint:
-            "Green = correct place · Yellow = in the word",
-
-        leagueTitle:
-            "League",
-
-        leagueText:
-            "Learn, earn XP and climb the league.",
-
-        visionEyebrow:
-            "Something new is coming",
-
-        visionTitle:
-            "Learn. Create.<br>Play. Connect.",
-
-        visionText:
-            "All in one place.",
+        bottomTagline:
+            "In Kurdish, for Kurds.",
 
         footer:
             "© 2026 MyKurda. All rights reserved."
@@ -400,7 +300,7 @@ const translations = {
             "We bouwen aan<br>iets moois.",
 
         description:
-            "MyKurda is momenteel in ontwikkeling. Achter de schermen werken we aan een nieuwe plek voor de Koerdische taal, cultuur, creativiteit en gemeenschap.",
+            "MyKurda is momenteel in ontwikkeling. Achter de schermen werken we aan een nieuwe plek voor de Koerdische taal, cultuur en gemeenschap.",
 
         description2:
             "Bedankt voor je bezoek. MyKurda wordt binnenkort gelanceerd. Kom later nog eens terug.",
@@ -411,92 +311,47 @@ const translations = {
         contact:
             "Contact",
 
-        discoverEyebrow:
-            "Ontdek meer",
-
-        discoverTitle:
+        aboutTitle:
             "Wat is MyKurda?",
 
-        discoverText:
+        aboutIntro:
             "Een nieuwe plek voor de Koerdische taal, cultuur, creativiteit en gemeenschap.",
 
-        createTitle:
-            "Maak & deel",
+        featurePoemsTitle:
+            "Gedichten & uitspraken",
 
-        createText:
-            "Schrijf gedichten en uitspraken, draag ze op aan iemand of deel ze met de community.",
+        featurePoems:
+            "Schrijf gedichten, draag ze aan iemand op, deel ze met de gemeenschap en verdien Zêr met waardering.",
 
-        playTitle:
-            "Speel & strijd",
+        featureGamesTitle:
+            "Koerdische spellen",
 
-        playText:
-            "Daag anderen uit in Koerdische taalspelletjes en 1-tegen-1-gevechten.",
+        featureGames:
+            "Neem het in Koerdische taalspellen op tegen andere spelers en test je vaardigheden.",
 
-        learnTitle:
-            "Leer Koerdisch",
+        featureLearnTitle:
+            "Koerdisch leren",
 
-        learnText:
-            "Leer met lessen en spelletjes, verdien XP en klim omhoog in de competities.",
+        featureLearn:
+            "Leer Koerdisch, verdien XP en klim omhoog in de MyKurda-competities.",
 
-        socialTitle:
-            "Maak contact",
+        featureSocialTitle:
+            "Gemeenschap",
 
-        socialText:
-            "Chat met je vrienden, ontmoet anderen en word onderdeel van de Koerdische community.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "Chat met je vrienden en maak nieuwe contacten binnen de Koerdische gemeenschap.",
 
         zerTitle:
-            "Verdien door actief te zijn.",
+            "Zêr",
 
         zerText:
-            "Verdien Zêr door te creëren, spelen en leren en gebruik het vervolgens in de Shop.",
+            "Verdien Zêr met je activiteiten en gebruik het binnen MyKurda.",
 
-        tryEyebrow:
-            "Probeer het",
+        comingFeature:
+            "Dit is nog maar het begin.",
 
-        tryTitle:
-            "Een voorproefje van MyKurda.",
-
-        tryText:
-            "Dit zijn enkele dingen die je straks in MyKurda kunt doen.",
-
-        poemDemoTitle:
-            "Schrijf een gedicht",
-
-        for:
-            "voor",
-
-        sendPoem:
-            "Stuur naar iemand",
-
-        wordGameTitle:
-            "Woordspel",
-
-        gameQuestion:
-            "Welk woord is juist?",
-
-        wordleText:
-            "Raad een woord van vijf letters.",
-
-        wordleHint:
-            "Groen = juiste plek · Geel = zit in het woord",
-
-        leagueTitle:
-            "Competitie",
-
-        leagueText:
-            "Leer, verdien XP en klim omhoog in de competitie.",
-
-        visionEyebrow:
-            "Er komt iets nieuws aan",
-
-        visionTitle:
-            "Leer. Creëer.<br>Speel. Verbind.",
-
-        visionText:
-            "Alles op één plek.",
+        bottomTagline:
+            "In het Koerdisch, voor Koerden.",
 
         footer:
             "© 2026 MyKurda. Alle rechten voorbehouden."
@@ -517,7 +372,7 @@ const translations = {
             "Wir bauen<br>etwas Schönes.",
 
         description:
-            "MyKurda befindet sich derzeit im Aufbau. Hinter den Kulissen arbeiten wir an einem neuen Ort für die kurdische Sprache, Kultur, Kreativität und Gemeinschaft.",
+            "MyKurda befindet sich derzeit im Aufbau. Hinter den Kulissen arbeiten wir an einem neuen Ort für die kurdische Sprache, Kultur und Gemeinschaft.",
 
         description2:
             "Danke für deinen Besuch. MyKurda wird bald starten. Schau später gerne wieder vorbei.",
@@ -528,92 +383,47 @@ const translations = {
         contact:
             "Kontakt",
 
-        discoverEyebrow:
-            "Mehr entdecken",
-
-        discoverTitle:
+        aboutTitle:
             "Was ist MyKurda?",
 
-        discoverText:
+        aboutIntro:
             "Ein neuer Ort für die kurdische Sprache, Kultur, Kreativität und Gemeinschaft.",
 
-        createTitle:
-            "Erstellen & teilen",
+        featurePoemsTitle:
+            "Gedichte & Sprüche",
 
-        createText:
-            "Schreibe Gedichte und Sprüche, widme sie jemandem oder teile sie mit der Community.",
+        featurePoems:
+            "Schreibe Gedichte, widme sie jemandem, teile sie mit der Gemeinschaft und verdiene Zêr durch Anerkennung.",
 
-        playTitle:
-            "Spielen & antreten",
+        featureGamesTitle:
+            "Kurdische Spiele",
 
-        playText:
-            "Fordere andere in kurdischen Sprachspielen und 1-gegen-1-Duellen heraus.",
+        featureGames:
+            "Fordere andere Spieler in kurdischen Sprachspielen heraus und stelle dein Können unter Beweis.",
 
-        learnTitle:
+        featureLearnTitle:
             "Kurdisch lernen",
 
-        learnText:
-            "Lerne mit Lektionen und Spielen, sammle XP und steige in den Ligen auf.",
+        featureLearn:
+            "Lerne Kurdisch, sammle XP und steige in den MyKurda-Ligen auf.",
 
-        socialTitle:
-            "Verbinden",
+        featureSocialTitle:
+            "Gemeinschaft",
 
-        socialText:
-            "Chatte mit deinen Freunden, lerne andere kennen und werde Teil der kurdischen Community.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "Chatte mit deinen Freunden und knüpfe neue Kontakte innerhalb der kurdischen Gemeinschaft.",
 
         zerTitle:
-            "Verdiene mit deinen Aktivitäten.",
+            "Zêr",
 
         zerText:
-            "Verdiene Zêr durch Erstellen, Spielen und Lernen und gib es anschließend im Shop aus.",
+            "Verdiene Zêr durch deine Aktivitäten und nutze es innerhalb von MyKurda.",
 
-        tryEyebrow:
-            "Ausprobieren",
+        comingFeature:
+            "Das ist erst der Anfang.",
 
-        tryTitle:
-            "Ein Einblick in MyKurda.",
-
-        tryText:
-            "Das sind einige Dinge, die du später in MyKurda machen kannst.",
-
-        poemDemoTitle:
-            "Schreibe ein Gedicht",
-
-        for:
-            "für",
-
-        sendPoem:
-            "Jemandem schicken",
-
-        wordGameTitle:
-            "Wortspiel",
-
-        gameQuestion:
-            "Welches Wort ist richtig?",
-
-        wordleText:
-            "Errate ein Wort mit fünf Buchstaben.",
-
-        wordleHint:
-            "Grün = richtige Stelle · Gelb = im Wort enthalten",
-
-        leagueTitle:
-            "Liga",
-
-        leagueText:
-            "Lerne, sammle XP und steige in der Liga auf.",
-
-        visionEyebrow:
-            "Etwas Neues kommt",
-
-        visionTitle:
-            "Lernen. Erstellen.<br>Spielen. Verbinden.",
-
-        visionText:
-            "Alles an einem Ort.",
+        bottomTagline:
+            "Auf Kurdisch, für Kurden.",
 
         footer:
             "© 2026 MyKurda. Alle Rechte vorbehalten."
@@ -634,7 +444,7 @@ const translations = {
             "Nous construisons<br>quelque chose de beau.",
 
         description:
-            "MyKurda est actuellement en construction. Nous travaillons en coulisses pour créer un nouvel espace dédié à la langue, à la culture, à la créativité et à la communauté kurdes.",
+            "MyKurda est actuellement en construction. Nous travaillons en coulisses pour créer un nouvel espace dédié à la langue, à la culture et à la communauté kurdes.",
 
         description2:
             "Merci pour votre visite. MyKurda sera bientôt disponible. Revenez nous voir prochainement.",
@@ -645,92 +455,47 @@ const translations = {
         contact:
             "Contact",
 
-        discoverEyebrow:
-            "En savoir plus",
-
-        discoverTitle:
+        aboutTitle:
             "Qu'est-ce que MyKurda ?",
 
-        discoverText:
-            "Un nouvel espace pour la langue kurde, la culture, la créativité et la communauté.",
+        aboutIntro:
+            "Un nouvel espace dédié à la langue kurde, à la culture, à la créativité et à la communauté.",
 
-        createTitle:
-            "Créer & partager",
+        featurePoemsTitle:
+            "Poèmes & textes",
 
-        createText:
-            "Écrivez des poèmes et des textes, dédiez-les à quelqu'un ou partagez-les avec la communauté.",
+        featurePoems:
+            "Écrivez des poèmes, dédiez-les à quelqu'un, partagez-les avec la communauté et gagnez des Zêr grâce aux réactions.",
 
-        playTitle:
-            "Jouer & se défier",
+        featureGamesTitle:
+            "Jeux kurdes",
 
-        playText:
-            "Affrontez d'autres personnes dans des jeux de langue kurde et des duels en 1 contre 1.",
+        featureGames:
+            "Affrontez d'autres joueurs dans des jeux autour de la langue kurde et mettez vos connaissances à l'épreuve.",
 
-        learnTitle:
+        featureLearnTitle:
             "Apprendre le kurde",
 
-        learnText:
-            "Apprenez grâce aux leçons et aux jeux, gagnez de l'XP et progressez dans les ligues.",
+        featureLearn:
+            "Apprenez le kurde, gagnez de l'XP et progressez dans les ligues MyKurda.",
 
-        socialTitle:
-            "Se connecter",
+        featureSocialTitle:
+            "Communauté",
 
-        socialText:
-            "Discutez avec vos amis, rencontrez d'autres personnes et rejoignez la communauté kurde.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "Discutez avec vos amis et créez de nouveaux liens au sein de la communauté kurde.",
 
         zerTitle:
-            "Gagnez grâce à vos activités.",
+            "Zêr",
 
         zerText:
-            "Gagnez des Zêr en créant, en jouant et en apprenant, puis utilisez-les dans la boutique.",
+            "Gagnez des Zêr grâce à vos activités et utilisez-les sur MyKurda.",
 
-        tryEyebrow:
-            "Essayez",
+        comingFeature:
+            "Ce n'est que le début.",
 
-        tryTitle:
-            "Un aperçu de MyKurda.",
-
-        tryText:
-            "Voici quelques-unes des choses que vous pourrez faire sur MyKurda.",
-
-        poemDemoTitle:
-            "Écrire un poème",
-
-        for:
-            "pour",
-
-        sendPoem:
-            "Envoyer à quelqu'un",
-
-        wordGameTitle:
-            "Jeu de mots",
-
-        gameQuestion:
-            "Quel mot est correct ?",
-
-        wordleText:
-            "Devinez un mot de cinq lettres.",
-
-        wordleHint:
-            "Vert = bonne position · Jaune = présent dans le mot",
-
-        leagueTitle:
-            "Ligue",
-
-        leagueText:
-            "Apprenez, gagnez de l'XP et progressez dans la ligue.",
-
-        visionEyebrow:
-            "Quelque chose de nouveau arrive",
-
-        visionTitle:
-            "Apprendre. Créer.<br>Jouer. Se connecter.",
-
-        visionText:
-            "Tout au même endroit.",
+        bottomTagline:
+            "En kurde, pour les Kurdes.",
 
         footer:
             "© 2026 MyKurda. Tous droits réservés."
@@ -748,10 +513,10 @@ const translations = {
             "قريبًا",
 
         title:
-            "نبني<br>شيئًا جميلًا.",
+            "نحن نبني<br>شيئًا جميلًا.",
 
         description:
-            "MyKurda قيد الإنشاء حاليًا. نعمل خلف الكواليس لإنشاء مساحة جديدة للغة والثقافة والإبداع والمجتمع الكردي.",
+            "MyKurda قيد الإنشاء حاليًا. نعمل خلف الكواليس لإنشاء مساحة جديدة للغة والثقافة والمجتمع الكردي.",
 
         description2:
             "شكرًا لزيارتك. سيتم إطلاق MyKurda قريبًا. يُرجى العودة لزيارتنا لاحقًا.",
@@ -762,92 +527,47 @@ const translations = {
         contact:
             "تواصل معنا",
 
-        discoverEyebrow:
-            "اكتشف المزيد",
-
-        discoverTitle:
+        aboutTitle:
             "ما هو MyKurda؟",
 
-        discoverText:
+        aboutIntro:
             "مساحة جديدة للغة الكردية والثقافة والإبداع والمجتمع.",
 
-        createTitle:
-            "أنشئ وشارك",
+        featurePoemsTitle:
+            "القصائد والأقوال",
 
-        createText:
-            "اكتب القصائد والعبارات، وأهدها إلى شخص معيّن أو شاركها مع المجتمع.",
+        featurePoems:
+            "اكتب قصائدك، وأهدها إلى شخص ما، وشاركها مع المجتمع واكسب Zêr من التفاعل معها.",
 
-        playTitle:
-            "العب وتنافس",
+        featureGamesTitle:
+            "ألعاب كردية",
 
-        playText:
-            "تحدَّ الآخرين في ألعاب اللغة الكردية والمواجهات الفردية.",
+        featureGames:
+            "تحدَّ لاعبين آخرين في ألعاب تعتمد على اللغة الكردية واختبر مهاراتك.",
 
-        learnTitle:
+        featureLearnTitle:
             "تعلّم الكردية",
 
-        learnText:
-            "تعلّم من خلال الدروس والألعاب، واكسب XP وتقدّم في الدوريات.",
+        featureLearn:
+            "تعلّم الكردية، واكسب XP، وتقدّم في دوريات MyKurda.",
 
-        socialTitle:
-            "تواصل",
+        featureSocialTitle:
+            "المجتمع",
 
-        socialText:
-            "تحدث مع أصدقائك، وتعرّف على أشخاص آخرين وكن جزءًا من المجتمع الكردي.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "تحدث مع أصدقائك وابنِ علاقات جديدة داخل المجتمع الكردي.",
 
         zerTitle:
-            "اكسب من خلال ما تفعله.",
+            "Zêr",
 
         zerText:
-            "اكسب Zêr من خلال الإبداع واللعب والتعلّم، ثم استخدمها في المتجر.",
+            "اكسب Zêr من خلال أنشطتك واستخدمه داخل MyKurda.",
 
-        tryEyebrow:
-            "جرّب",
+        comingFeature:
+            "هذه مجرد البداية.",
 
-        tryTitle:
-            "لمحة عن MyKurda.",
-
-        tryText:
-            "إليك بعض الأشياء التي ستتمكن من القيام بها في MyKurda.",
-
-        poemDemoTitle:
-            "اكتب قصيدة",
-
-        for:
-            "إلى",
-
-        sendPoem:
-            "أرسلها إلى شخص",
-
-        wordGameTitle:
-            "لعبة الكلمات",
-
-        gameQuestion:
-            "أي كلمة صحيحة؟",
-
-        wordleText:
-            "خمن كلمة من خمسة أحرف.",
-
-        wordleHint:
-            "الأخضر = المكان الصحيح · الأصفر = موجود في الكلمة",
-
-        leagueTitle:
-            "الدوري",
-
-        leagueText:
-            "تعلّم، واكسب XP وتقدّم في الدوري.",
-
-        visionEyebrow:
-            "شيء جديد قادم",
-
-        visionTitle:
-            "تعلّم. أبدع.<br>العب. تواصل.",
-
-        visionText:
-            "كل ذلك في مكان واحد.",
+        bottomTagline:
+            "بالكردية، من أجل الكرد.",
 
         footer:
             "© 2026 MyKurda. جميع الحقوق محفوظة."
@@ -868,7 +588,7 @@ const translations = {
             "Güzel bir şey<br>inşa ediyoruz.",
 
         description:
-            "MyKurda şu anda yapım aşamasında. Kürt dili, kültürü, yaratıcılığı ve topluluğu için yeni bir alan oluşturmak üzere perde arkasında çalışıyoruz.",
+            "MyKurda şu anda yapım aşamasında. Kürt dili, kültürü ve toplumu için yeni bir alan oluşturmak üzere perde arkasında çalışıyoruz.",
 
         description2:
             "Ziyaretiniz için teşekkür ederiz. MyKurda çok yakında hizmete girecek. Lütfen daha sonra tekrar ziyaret edin.",
@@ -879,92 +599,47 @@ const translations = {
         contact:
             "İletişim",
 
-        discoverEyebrow:
-            "Daha fazlasını keşfet",
-
-        discoverTitle:
+        aboutTitle:
             "MyKurda nedir?",
 
-        discoverText:
+        aboutIntro:
             "Kürt dili, kültürü, yaratıcılığı ve topluluğu için yeni bir alan.",
 
-        createTitle:
-            "Oluştur ve paylaş",
+        featurePoemsTitle:
+            "Şiirler ve sözler",
 
-        createText:
-            "Şiirler ve sözler yaz, onları birine ithaf et veya toplulukla paylaş.",
+        featurePoems:
+            "Şiirlerini yaz, birine ithaf et, toplulukla paylaş ve beğenilerden Zêr kazan.",
 
-        playTitle:
-            "Oyna ve yarış",
+        featureGamesTitle:
+            "Kürtçe oyunlar",
 
-        playText:
-            "Kürtçe dil oyunlarında ve bire bir mücadelelerde başkalarına meydan oku.",
+        featureGames:
+            "Kürtçe dil oyunlarında diğer oyunculara karşı yarış ve becerilerini test et.",
 
-        learnTitle:
+        featureLearnTitle:
             "Kürtçe öğren",
 
-        learnText:
-            "Dersler ve oyunlarla öğren, XP kazan ve liglerde yüksel.",
+        featureLearn:
+            "Kürtçe öğren, XP kazan ve MyKurda liglerinde yüksel.",
 
-        socialTitle:
-            "Bağlantı kur",
+        featureSocialTitle:
+            "Topluluk",
 
-        socialText:
-            "Arkadaşlarınla sohbet et, yeni insanlarla tanış ve Kürt topluluğunun bir parçası ol.",
-
-        zerEyebrow:
-            "Zêr",
+        featureSocial:
+            "Arkadaşlarınla sohbet et ve Kürt topluluğu içinde yeni bağlantılar kur.",
 
         zerTitle:
-            "Yaptıklarından kazan.",
+            "Zêr",
 
         zerText:
-            "Üreterek, oynayarak ve öğrenerek Zêr kazan; ardından bunları Mağaza'da kullan.",
+            "Etkinliklerin üzerinden Zêr kazan ve MyKurda içinde kullan.",
 
-        tryEyebrow:
-            "Dene",
+        comingFeature:
+            "Bu sadece başlangıç.",
 
-        tryTitle:
-            "MyKurda'ya bir bakış.",
-
-        tryText:
-            "MyKurda'da yapabileceğin şeylerden bazıları.",
-
-        poemDemoTitle:
-            "Bir şiir yaz",
-
-        for:
-            "için",
-
-        sendPoem:
-            "Birine gönder",
-
-        wordGameTitle:
-            "Kelime oyunu",
-
-        gameQuestion:
-            "Hangi kelime doğru?",
-
-        wordleText:
-            "Beş harfli bir kelimeyi tahmin et.",
-
-        wordleHint:
-            "Yeşil = doğru yer · Sarı = kelimede var",
-
-        leagueTitle:
-            "Lig",
-
-        leagueText:
-            "Öğren, XP kazan ve ligde yüksel.",
-
-        visionEyebrow:
-            "Yeni bir şey geliyor",
-
-        visionTitle:
-            "Öğren. Üret.<br>Oyna. Bağlan.",
-
-        visionText:
-            "Hepsi tek bir yerde.",
+        bottomTagline:
+            "Kürtçe, Kürtler için.",
 
         footer:
             "© 2026 MyKurda. Tüm hakları saklıdır."
@@ -972,41 +647,6 @@ const translations = {
     }
 
 };
-
-
-// =========================================
-// OPEN / CLOSE LANGUAGE MENU
-// =========================================
-
-languageButton.addEventListener("click", (event) => {
-
-    event.stopPropagation();
-
-    const isOpen =
-        languageSelector.classList.toggle("open");
-
-    languageButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-    );
-
-});
-
-
-document.addEventListener("click", (event) => {
-
-    if (!languageSelector.contains(event.target)) {
-
-        languageSelector.classList.remove("open");
-
-        languageButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-});
 
 
 // =========================================
@@ -1091,23 +731,45 @@ document
 
 
 // =========================================
-// MOUSE FOLLOWING GLASS LIGHT
+// ABOUT SECTION
 // =========================================
 
-const glassCards =
-    document.querySelectorAll(
-        ".glass-card, .glass-card-small, .feature-card, .demo-card"
+const aboutToggle =
+    document.getElementById("aboutToggle");
+
+const aboutSection =
+    document.querySelector(".about-section");
+
+
+aboutToggle.addEventListener("click", () => {
+
+    const isOpen =
+        aboutSection.classList.toggle("open");
+
+    aboutToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
     );
 
+});
 
-glassCards.forEach(card => {
 
-    card.addEventListener(
+// =========================================
+// MOUSE-FOLLOWING GLASS LIGHT
+// =========================================
+
+const glassCard =
+    document.querySelector(".glass-card");
+
+
+if (glassCard) {
+
+    glassCard.addEventListener(
         "mousemove",
-        event => {
+        (event) => {
 
             const rect =
-                card.getBoundingClientRect();
+                glassCard.getBoundingClientRect();
 
             const x =
                 ((event.clientX - rect.left) /
@@ -1117,199 +779,43 @@ glassCards.forEach(card => {
                 ((event.clientY - rect.top) /
                     rect.height) * 100;
 
-            card.style.setProperty(
+            glassCard.style.setProperty(
                 "--mouse-x",
                 `${x}%`
             );
 
-            card.style.setProperty(
+            glassCard.style.setProperty(
                 "--mouse-y",
                 `${y}%`
             );
 
+            glassCard.classList.add(
+                "mouse-active"
+            );
+
         }
     );
 
-});
 
-
-// =========================================
-// UPVOTE / DOWNVOTE DEMO
-// =========================================
-
-const upvoteButton =
-    document.getElementById("upvoteButton");
-
-const downvoteButton =
-    document.getElementById("downvoteButton");
-
-const upvoteCount =
-    document.getElementById("upvoteCount");
-
-const downvoteCount =
-    document.getElementById("downvoteCount");
-
-const zerEarned =
-    document.getElementById("zerEarned");
-
-
-let upvotes = 24;
-let downvotes = 2;
-
-
-upvoteButton.addEventListener(
-    "click",
-    () => {
-
-        upvotes++;
-
-        upvoteCount.textContent =
-            upvotes;
-
-        zerEarned.classList.add(
-            "show"
-        );
-
-        setTimeout(() => {
-
-            zerEarned.classList.remove(
-                "show"
-            );
-
-        }, 1600);
-
-    }
-);
-
-
-downvoteButton.addEventListener(
-    "click",
-    () => {
-
-        downvotes++;
-
-        downvoteCount.textContent =
-            downvotes;
-
-    }
-);
-
-
-// =========================================
-// SEND POEM DEMO
-// =========================================
-
-const sendPoemButton =
-    document.getElementById(
-        "sendPoemButton"
-    );
-
-
-sendPoemButton.addEventListener(
-    "click",
-    () => {
-
-        sendPoemButton.classList.add(
-            "sent"
-        );
-
-        sendPoemButton.textContent =
-            "✓ Sent";
-
-        setTimeout(() => {
-
-            sendPoemButton.classList.remove(
-                "sent"
-            );
-
-            sendPoemButton.textContent =
-                "Ji bo kesekî bişîne";
-
-        }, 1800);
-
-    }
-);
-
-
-// =========================================
-// WORD GAME
-// =========================================
-
-const answerButtons =
-    document.querySelectorAll(
-        ".answer-button"
-    );
-
-const gameResult =
-    document.getElementById(
-        "gameResult"
-    );
-
-
-answerButtons.forEach(button => {
-
-    button.addEventListener(
-        "click",
+    glassCard.addEventListener(
+        "mouseleave",
         () => {
 
-            answerButtons.forEach(
-                item => {
-
-                    item.classList.remove(
-                        "correct",
-                        "wrong"
-                    );
-
-                }
+            glassCard.classList.remove(
+                "mouse-active"
             );
 
+            glassCard.style.setProperty(
+                "--mouse-x",
+                "50%"
+            );
 
-            if (
-                button.textContent.trim() ===
-                "Roj"
-            ) {
-
-                button.classList.add(
-                    "correct"
-                );
-
-                gameResult.textContent =
-                    "✓ +10 Zêr";
-
-            } else {
-
-                button.classList.add(
-                    "wrong"
-                );
-
-                gameResult.textContent =
-                    "Try again";
-
-            }
-
-
-            gameResult.classList.add(
-                "show"
+            glassCard.style.setProperty(
+                "--mouse-y",
+                "50%"
             );
 
         }
-    );
-
-});
-
-
-// =========================================
-// REDUCED MOTION
-// =========================================
-
-if (
-    window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches
-) {
-
-    document.documentElement.classList.add(
-        "reduced-motion"
     );
 
 }
