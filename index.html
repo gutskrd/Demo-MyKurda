@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ku" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MyKurda — Cîhekî nû ji bo ziman, çand û civaka Kurdî."
+    >
+
+    <title>MyKurda — Di nêzîk de tê</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         LANGUAGE SELECTOR
+    ========================================== -->
+
+    <div class="language-selector">
+
+        <button
+            class="language-button"
+            id="languageButton"
+            type="button"
+            aria-label="Choose language"
+            aria-expanded="false"
+        >
+
+            <span class="language-symbol">文</span>
+
+            <span id="currentLanguage">
+                Kurmancî
+            </span>
+
+            <span class="arrow"></span>
+
+        </button>
+
+
+        <div
+            class="language-menu"
+            id="languageMenu"
+        >
+
+            <button
+                type="button"
+                data-language="ku"
+            >
+                Kurmancî
+            </button>
+
+            <button
+                type="button"
+                data-language="ckb"
+            >
+                سۆرانی
+            </button>
+
+            <button
+                type="button"
+                data-language="en"
+            >
+                English
+            </button>
+
+            <button
+                type="button"
+                data-language="nl"
+            >
+                Nederlands
+            </button>
+
+            <button
+                type="button"
+                data-language="de"
+            >
+                Deutsch
+            </button>
+
+            <button
+                type="button"
+                data-language="fr"
+            >
+                Français
+            </button>
+
+            <button
+                type="button"
+                data-language="ar"
+            >
+                العربية
+            </button>
+
+            <button
+                type="button"
+                data-language="tr"
+            >
+                Türkçe
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="page">
+
+        <section class="glass-card">
+
+
+            <!-- Logo -->
+
+            <div class="logo">
+                MyKurda<span>.</span>
+            </div>
+
+
+            <!-- Eyebrow -->
+
+            <div
+                class="eyebrow"
+                data-i18n="eyebrow"
+            >
+                Di nêzîk de tê
+            </div>
+
+
+            <!-- Main title -->
+
+            <h1 data-i18n="title">
+                Em ê tiştekî<br>
+                bedew ava bikin.
+            </h1>
+
+
+            <!-- First paragraph -->
+
+            <p
+                class="description"
+                data-i18n="description"
+            >
+                MyKurda hîn di çêkirinê de ye.
+                Em li pişt perdeyê bi dil û can dixebitin
+                da ku cîhekî nû ji bo ziman, çand û civaka Kurdî ava bikin.
+            </p>
+
+
+            <!-- Second paragraph -->
+
+            <p
+                class="description second"
+                data-i18n="description2"
+            >
+                Spas ji bo serdana te.
+                MyKurda di nêzîk de dê were vekirin.
+                Ji kerema xwe paşê dîsa serdana me bike.
+            </p>
+
+
+            <!-- Tagline -->
+
+            <p
+                class="tagline"
+                data-i18n="tagline"
+            >
+                Bi Kurdî, ji bo Kurdan.
+            </p>
+
+
+            <!-- =========================================
+                 CONTACT BUTTONS
+            ========================================== -->
+
+            <div class="buttons">
+
+                <!-- Email -->
+
+                <a
+                    class="button"
+                    href="mailto:hello@mykurda.com"
+                >
+
+                    <img
+                        src="img/mail_logo.png"
+                        alt=""
+                        class="button-icon"
+                    >
+
+                    <span data-i18n="contact">
+                        Têkilî
+                    </span>
+
+                </a>
+
+
+                <!-- Instagram -->
+
+                <a
+                    class="button"
+                    href="https://www.instagram.com/kehskoh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img
+                        src="img/instagram_logo.png"
+                        alt=""
+                        class="button-icon"
+                    >
+
+                    <span>
+                        Instagram
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <footer data-i18n="footer">
+                © 2026 MyKurda. Hemû maf parastî ne.
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
