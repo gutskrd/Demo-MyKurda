@@ -1,4 +1,10 @@
 // =========================================
+// MYKURDA DEMO
+// MAIN JAVASCRIPT
+// =========================================
+
+
+// =========================================
 // LANGUAGE SELECTOR
 // =========================================
 
@@ -10,41 +16,6 @@ const languageSelector =
 
 const currentLanguage =
     document.getElementById("currentLanguage");
-
-
-// =========================================
-// OPEN / CLOSE LANGUAGE MENU
-// =========================================
-
-languageButton.addEventListener("click", (event) => {
-
-    event.stopPropagation();
-
-    const isOpen =
-        languageSelector.classList.toggle("open");
-
-    languageButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-    );
-
-});
-
-
-document.addEventListener("click", (event) => {
-
-    if (!languageSelector.contains(event.target)) {
-
-        languageSelector.classList.remove("open");
-
-        languageButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-});
 
 
 // =========================================
@@ -71,14 +42,9 @@ const languageNames = {
 
 const translations = {
 
-    // =====================================
-    // KURMANCÎ
-    // =====================================
-
     ku: {
 
-        eyebrow:
-            "Di nêzîk de tê",
+        eyebrow: "Di nêzîk de tê",
 
         title:
             "Em ê tiştekî<br>bedew ava bikin.",
@@ -95,57 +61,86 @@ const translations = {
         contact:
             "Têkilî",
 
-        aboutTitle:
-            "MyKurda çi ye?",
+        previewEyebrow:
+            "MYKURDA PREVIEW",
 
-        aboutIntro:
-            "Cîhekî nû ji bo ziman, çand, afirînerî û civaka Kurdî.",
+        previewTitle:
+            "Helbestek binivîse.",
 
-        featurePoemsTitle:
-            "Helbest û gotin",
+        previewDescription:
+            "Dengê xwe parve bike û bibîne ka MyKurda çawa dixebite.",
 
-        featurePoems:
-            "Helbestên xwe binivîse, wan ji kesekî re bişîne û dengê xwe bi civakê re parve bike.",
+        from:
+            "Ji",
 
-        featureGamesTitle:
-            "Lîstikên Kurdî",
+        to:
+            "Ji bo",
 
-        featureGames:
-            "Di lîstikên zimanî de li dijî kesên din bilîze û jêhatîbûna xwe biceribîne.",
+        public:
+            "Giştî",
 
-        featureLearnTitle:
-            "Fêrbûna Kurdî",
+        private:
+            "Taybet",
 
-        featureLearn:
-            "Kurdî hîn bibe, XP bi dest bixe û di lîgên MyKurda de pêş bikeve.",
-
-        featureSocialTitle:
-            "Civak",
-
-        featureSocial:
-            "Bi hevalên xwe re biaxive û bi civaka Kurdî re girêdanên nû ava bike.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "Bi çalakiyên xwe Zêr bi dest bixe û di MyKurda de bikar bîne.",
+        createEyebrow:
+            "NOBETA TE YE",
 
-        comingFeature:
-            "Ev tenê destpêk e.",
+        createTitle:
+            "Tu çi dibêjî?",
 
-        bottomTagline:
-            "Bi Kurdî, ji bo Kurdan.",
+        senderLabel:
+            "Ji kê?",
+
+        receiverLabel:
+            "Ji bo kê?",
+
+        receiverPlaceholder:
+            "Navê kesê...",
+
+        poemLabel:
+            "Helbesta xwe binivîse",
+
+        poemPlaceholder:
+            "Helbesta xwe li vir binivîse...",
+
+        visibilityLabel:
+            "Kî dikare bibîne?",
+
+        post:
+            "Bişîne",
+
+        tryPreview:
+            "Tu jî biceribîne",
+
+        demoNotice:
+            "Ev tenê demo ye. Zêrên li vir tenê ji bo ceribandinê ne.",
+
+        featureOneTitle:
+            "Binivîse",
+
+        featureOneText:
+            "Dengê xwe parve bike.",
+
+        featureTwoTitle:
+            "Deng bidê",
+
+        featureTwoText:
+            "Helbestên ku hez dikî hilbijêre.",
+
+        featureThreeTitle:
+            "Zêr bistîne",
+
+        featureThreeText:
+            "Ji bo upvote û çalakiyên xwe xelat bistîne.",
 
         footer:
             "© 2026 MyKurda. Hemû maf parastî ne."
 
     },
 
-
-    // =====================================
-    // SORANI
-    // =====================================
 
     ckb: {
 
@@ -167,57 +162,86 @@ const translations = {
         contact:
             "پەیوەندی",
 
-        aboutTitle:
-            "MyKurda چییە؟",
+        previewEyebrow:
+            "پێشبینینی MYKURDA",
 
-        aboutIntro:
-            "شوێنێکی نوێ بۆ زمانی کوردی، کەلتوور، داهێنان و کۆمەڵگەی کوردی.",
+        previewTitle:
+            "هۆنراوەیەک بنووسە.",
 
-        featurePoemsTitle:
-            "هۆنراوە و وتەکان",
+        previewDescription:
+            "دەنگی خۆت بڵاو بکەرەوە و ببینە MyKurda چۆن کار دەکات.",
 
-        featurePoems:
-            "هۆنراوەی خۆت بنووسە، بۆ کەسێک بنێرە و دەنگی خۆت لەگەڵ کۆمەڵگەدا هاوبەش بکە.",
+        from:
+            "لە",
 
-        featureGamesTitle:
-            "یارییە کوردییەکان",
+        to:
+            "بۆ",
 
-        featureGames:
-            "لە یارییەکانی زمانی کوردیدا دژی کەسانی تر یاری بکە و تواناکانت تاقی بکەرەوە.",
+        public:
+            "گشتی",
 
-        featureLearnTitle:
-            "فێربوونی کوردی",
+        private:
+            "تایبەت",
 
-        featureLearn:
-            "کوردی فێربە، XP بەدەست بهێنە و لە لیگەکانی MyKurda پێش بکەوە.",
+        zer:
+            "زێڕ",
 
-        featureSocialTitle:
-            "کۆمەڵگە",
+        createEyebrow:
+            "نۆرەی تۆیە",
 
-        featureSocial:
-            "لەگەڵ هاوڕێکانت گفتوگۆ بکە و پەیوەندیی نوێ لەگەڵ کۆمەڵگەی کوردی دروست بکە.",
+        createTitle:
+            "تۆ چی دەڵێیت؟",
 
-        zerTitle:
-            "Zêr",
+        senderLabel:
+            "لە کێ؟",
 
-        zerText:
-            "لە ڕێگەی چالاکییەکانتەوە Zêr بەدەست بهێنە و لە MyKurda بەکاری بهێنە.",
+        receiverLabel:
+            "بۆ کێیە؟",
 
-        comingFeature:
-            "ئەمە تەنها دەستپێکە.",
+        receiverPlaceholder:
+            "ناوی کەسەکە...",
 
-        bottomTagline:
-            "بە کوردی، بۆ کوردان.",
+        poemLabel:
+            "هۆنراوەکەت بنووسە",
+
+        poemPlaceholder:
+            "هۆنراوەکەت لێرە بنووسە...",
+
+        visibilityLabel:
+            "کێ دەتوانێت بیبینێت؟",
+
+        post:
+            "بینێرە",
+
+        tryPreview:
+            "تۆش تاقی بکەرەوە",
+
+        demoNotice:
+            "ئەمە تەنها دیمۆیە. زێڕەکانی لێرە تەنها بۆ تاقیکردنەوەن.",
+
+        featureOneTitle:
+            "بینووسە",
+
+        featureOneText:
+            "دەنگی خۆت بڵاو بکەرەوە.",
+
+        featureTwoTitle:
+            "دەنگ بدە",
+
+        featureTwoText:
+            "هۆنراوەکانی دڵخوازت هەڵبژێرە.",
+
+        featureThreeTitle:
+            "زێڕ بەدەست بهێنە",
+
+        featureThreeText:
+            "بۆ دەنگدان و چالاکییەکانت خەڵات بەدەست بهێنە.",
 
         footer:
             "© 2026 MyKurda. هەموو مافەکان پارێزراون."
 
     },
 
-
-    // =====================================
-    // ENGLISH
-    // =====================================
 
     en: {
 
@@ -239,57 +263,86 @@ const translations = {
         contact:
             "Contact",
 
-        aboutTitle:
-            "What is MyKurda?",
+        previewEyebrow:
+            "MYKURDA PREVIEW",
 
-        aboutIntro:
-            "A new place for Kurdish language, culture, creativity and community.",
+        previewTitle:
+            "Write a poem.",
 
-        featurePoemsTitle:
-            "Poems & sayings",
+        previewDescription:
+            "Share your voice and get a taste of how MyKurda works.",
 
-        featurePoems:
-            "Write poems, address them to someone, share them with the community and earn Zêr from appreciation.",
+        from:
+            "From",
 
-        featureGamesTitle:
-            "Kurdish games",
+        to:
+            "For",
 
-        featureGames:
-            "Challenge other players in Kurdish language games and put your skills to the test.",
+        public:
+            "Public",
 
-        featureLearnTitle:
-            "Learn Kurdish",
+        private:
+            "Private",
 
-        featureLearn:
-            "Learn Kurdish, earn XP and climb the MyKurda leagues.",
-
-        featureSocialTitle:
-            "Community",
-
-        featureSocial:
-            "Chat with your friends and build new connections within the Kurdish community.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "Earn Zêr through your activities and use it throughout MyKurda.",
+        createEyebrow:
+            "YOUR TURN",
 
-        comingFeature:
-            "This is only the beginning.",
+        createTitle:
+            "What would you say?",
 
-        bottomTagline:
-            "In Kurdish, for Kurds.",
+        senderLabel:
+            "From whom?",
+
+        receiverLabel:
+            "Who is it for?",
+
+        receiverPlaceholder:
+            "Their name...",
+
+        poemLabel:
+            "Write your poem",
+
+        poemPlaceholder:
+            "Write your poem here...",
+
+        visibilityLabel:
+            "Who can see it?",
+
+        post:
+            "Post",
+
+        tryPreview:
+            "Try it yourself",
+
+        demoNotice:
+            "This is a demo. Zêr earned here is only for demonstration.",
+
+        featureOneTitle:
+            "Write",
+
+        featureOneText:
+            "Share your voice.",
+
+        featureTwoTitle:
+            "Vote",
+
+        featureTwoText:
+            "Support the poems you love.",
+
+        featureThreeTitle:
+            "Earn Zêr",
+
+        featureThreeText:
+            "Get rewarded for your votes and activity.",
 
         footer:
             "© 2026 MyKurda. All rights reserved."
 
     },
 
-
-    // =====================================
-    // DUTCH
-    // =====================================
 
     nl: {
 
@@ -311,57 +364,86 @@ const translations = {
         contact:
             "Contact",
 
-        aboutTitle:
-            "Wat is MyKurda?",
+        previewEyebrow:
+            "MYKURDA PREVIEW",
 
-        aboutIntro:
-            "Een nieuwe plek voor de Koerdische taal, cultuur, creativiteit en gemeenschap.",
+        previewTitle:
+            "Schrijf een gedicht.",
 
-        featurePoemsTitle:
-            "Gedichten & uitspraken",
+        previewDescription:
+            "Deel je stem en ontdek alvast hoe MyKurda werkt.",
 
-        featurePoems:
-            "Schrijf gedichten, draag ze aan iemand op, deel ze met de gemeenschap en verdien Zêr met waardering.",
+        from:
+            "Van",
 
-        featureGamesTitle:
-            "Koerdische spellen",
+        to:
+            "Voor",
 
-        featureGames:
-            "Neem het in Koerdische taalspellen op tegen andere spelers en test je vaardigheden.",
+        public:
+            "Openbaar",
 
-        featureLearnTitle:
-            "Koerdisch leren",
+        private:
+            "Privé",
 
-        featureLearn:
-            "Leer Koerdisch, verdien XP en klim omhoog in de MyKurda-competities.",
-
-        featureSocialTitle:
-            "Gemeenschap",
-
-        featureSocial:
-            "Chat met je vrienden en maak nieuwe contacten binnen de Koerdische gemeenschap.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "Verdien Zêr met je activiteiten en gebruik het binnen MyKurda.",
+        createEyebrow:
+            "JIJ BENT AAN DE BEURT",
 
-        comingFeature:
-            "Dit is nog maar het begin.",
+        createTitle:
+            "Wat zou jij zeggen?",
 
-        bottomTagline:
-            "In het Koerdisch, voor Koerden.",
+        senderLabel:
+            "Van wie?",
+
+        receiverLabel:
+            "Voor wie is het?",
+
+        receiverPlaceholder:
+            "Naam van de persoon...",
+
+        poemLabel:
+            "Schrijf je gedicht",
+
+        poemPlaceholder:
+            "Schrijf hier je gedicht...",
+
+        visibilityLabel:
+            "Wie kan het zien?",
+
+        post:
+            "Plaatsen",
+
+        tryPreview:
+            "Probeer het zelf",
+
+        demoNotice:
+            "Dit is een demo. Zêr die je hier verdient is alleen voor de demonstratie.",
+
+        featureOneTitle:
+            "Schrijf",
+
+        featureOneText:
+            "Deel je stem.",
+
+        featureTwoTitle:
+            "Stem",
+
+        featureTwoText:
+            "Steun de gedichten die je mooi vindt.",
+
+        featureThreeTitle:
+            "Verdien Zêr",
+
+        featureThreeText:
+            "Word beloond voor je stemmen en activiteit.",
 
         footer:
             "© 2026 MyKurda. Alle rechten voorbehouden."
 
     },
 
-
-    // =====================================
-    // GERMAN
-    // =====================================
 
     de: {
 
@@ -383,57 +465,86 @@ const translations = {
         contact:
             "Kontakt",
 
-        aboutTitle:
-            "Was ist MyKurda?",
+        previewEyebrow:
+            "MYKURDA VORSCHAU",
 
-        aboutIntro:
-            "Ein neuer Ort für die kurdische Sprache, Kultur, Kreativität und Gemeinschaft.",
+        previewTitle:
+            "Schreib ein Gedicht.",
 
-        featurePoemsTitle:
-            "Gedichte & Sprüche",
+        previewDescription:
+            "Teile deine Stimme und erlebe, wie MyKurda funktioniert.",
 
-        featurePoems:
-            "Schreibe Gedichte, widme sie jemandem, teile sie mit der Gemeinschaft und verdiene Zêr durch Anerkennung.",
+        from:
+            "Von",
 
-        featureGamesTitle:
-            "Kurdische Spiele",
+        to:
+            "Für",
 
-        featureGames:
-            "Fordere andere Spieler in kurdischen Sprachspielen heraus und stelle dein Können unter Beweis.",
+        public:
+            "Öffentlich",
 
-        featureLearnTitle:
-            "Kurdisch lernen",
+        private:
+            "Privat",
 
-        featureLearn:
-            "Lerne Kurdisch, sammle XP und steige in den MyKurda-Ligen auf.",
-
-        featureSocialTitle:
-            "Gemeinschaft",
-
-        featureSocial:
-            "Chatte mit deinen Freunden und knüpfe neue Kontakte innerhalb der kurdischen Gemeinschaft.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "Verdiene Zêr durch deine Aktivitäten und nutze es innerhalb von MyKurda.",
+        createEyebrow:
+            "DU BIST DRAN",
 
-        comingFeature:
-            "Das ist erst der Anfang.",
+        createTitle:
+            "Was würdest du sagen?",
 
-        bottomTagline:
-            "Auf Kurdisch, für Kurden.",
+        senderLabel:
+            "Von wem?",
+
+        receiverLabel:
+            "Für wen ist es?",
+
+        receiverPlaceholder:
+            "Name der Person...",
+
+        poemLabel:
+            "Schreib dein Gedicht",
+
+        poemPlaceholder:
+            "Schreib dein Gedicht hier...",
+
+        visibilityLabel:
+            "Wer kann es sehen?",
+
+        post:
+            "Veröffentlichen",
+
+        tryPreview:
+            "Selbst ausprobieren",
+
+        demoNotice:
+            "Dies ist eine Demo. Hier verdientes Zêr dient nur zur Veranschaulichung.",
+
+        featureOneTitle:
+            "Schreiben",
+
+        featureOneText:
+            "Teile deine Stimme.",
+
+        featureTwoTitle:
+            "Abstimmen",
+
+        featureTwoText:
+            "Unterstütze die Gedichte, die dir gefallen.",
+
+        featureThreeTitle:
+            "Zêr verdienen",
+
+        featureThreeText:
+            "Erhalte Belohnungen für deine Stimmen und Aktivitäten.",
 
         footer:
             "© 2026 MyKurda. Alle Rechte vorbehalten."
 
     },
 
-
-    // =====================================
-    // FRENCH
-    // =====================================
 
     fr: {
 
@@ -455,47 +566,80 @@ const translations = {
         contact:
             "Contact",
 
-        aboutTitle:
-            "Qu'est-ce que MyKurda ?",
+        previewEyebrow:
+            "APERÇU DE MYKURDA",
 
-        aboutIntro:
-            "Un nouvel espace dédié à la langue kurde, à la culture, à la créativité et à la communauté.",
+        previewTitle:
+            "Écrivez un poème.",
 
-        featurePoemsTitle:
-            "Poèmes & textes",
+        previewDescription:
+            "Partagez votre voix et découvrez comment MyKurda fonctionnera.",
 
-        featurePoems:
-            "Écrivez des poèmes, dédiez-les à quelqu'un, partagez-les avec la communauté et gagnez des Zêr grâce aux réactions.",
+        from:
+            "De",
 
-        featureGamesTitle:
-            "Jeux kurdes",
+        to:
+            "Pour",
 
-        featureGames:
-            "Affrontez d'autres joueurs dans des jeux autour de la langue kurde et mettez vos connaissances à l'épreuve.",
+        public:
+            "Public",
 
-        featureLearnTitle:
-            "Apprendre le kurde",
+        private:
+            "Privé",
 
-        featureLearn:
-            "Apprenez le kurde, gagnez de l'XP et progressez dans les ligues MyKurda.",
-
-        featureSocialTitle:
-            "Communauté",
-
-        featureSocial:
-            "Discutez avec vos amis et créez de nouveaux liens au sein de la communauté kurde.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "Gagnez des Zêr grâce à vos activités et utilisez-les sur MyKurda.",
+        createEyebrow:
+            "À VOUS DE JOUER",
 
-        comingFeature:
-            "Ce n'est que le début.",
+        createTitle:
+            "Que diriez-vous ?",
 
-        bottomTagline:
-            "En kurde, pour les Kurdes.",
+        senderLabel:
+            "De qui ?",
+
+        receiverLabel:
+            "Pour qui est-il ?",
+
+        receiverPlaceholder:
+            "Nom de la personne...",
+
+        poemLabel:
+            "Écrivez votre poème",
+
+        poemPlaceholder:
+            "Écrivez votre poème ici...",
+
+        visibilityLabel:
+            "Qui peut le voir ?",
+
+        post:
+            "Publier",
+
+        tryPreview:
+            "Essayez vous-même",
+
+        demoNotice:
+            "Ceci est une démo. Les Zêr gagnés ici sont uniquement destinés à la démonstration.",
+
+        featureOneTitle:
+            "Écrire",
+
+        featureOneText:
+            "Partagez votre voix.",
+
+        featureTwoTitle:
+            "Voter",
+
+        featureTwoText:
+            "Soutenez les poèmes que vous aimez.",
+
+        featureThreeTitle:
+            "Gagner des Zêr",
+
+        featureThreeText:
+            "Recevez des récompenses pour vos votes et votre activité.",
 
         footer:
             "© 2026 MyKurda. Tous droits réservés."
@@ -503,17 +647,13 @@ const translations = {
     },
 
 
-    // =====================================
-    // ARABIC
-    // =====================================
-
     ar: {
 
         eyebrow:
             "قريبًا",
 
         title:
-            "نحن نبني<br>شيئًا جميلًا.",
+            "نبني<br>شيئًا جميلًا.",
 
         description:
             "MyKurda قيد الإنشاء حاليًا. نعمل خلف الكواليس لإنشاء مساحة جديدة للغة والثقافة والمجتمع الكردي.",
@@ -527,57 +667,86 @@ const translations = {
         contact:
             "تواصل معنا",
 
-        aboutTitle:
-            "ما هو MyKurda؟",
+        previewEyebrow:
+            "معاينة MYKURDA",
 
-        aboutIntro:
-            "مساحة جديدة للغة الكردية والثقافة والإبداع والمجتمع.",
+        previewTitle:
+            "اكتب قصيدة.",
 
-        featurePoemsTitle:
-            "القصائد والأقوال",
+        previewDescription:
+            "شارك صوتك واكتشف كيف سيعمل MyKurda.",
 
-        featurePoems:
-            "اكتب قصائدك، وأهدها إلى شخص ما، وشاركها مع المجتمع واكسب Zêr من التفاعل معها.",
+        from:
+            "من",
 
-        featureGamesTitle:
-            "ألعاب كردية",
+        to:
+            "إلى",
 
-        featureGames:
-            "تحدَّ لاعبين آخرين في ألعاب تعتمد على اللغة الكردية واختبر مهاراتك.",
+        public:
+            "عام",
 
-        featureLearnTitle:
-            "تعلّم الكردية",
+        private:
+            "خاص",
 
-        featureLearn:
-            "تعلّم الكردية، واكسب XP، وتقدّم في دوريات MyKurda.",
-
-        featureSocialTitle:
-            "المجتمع",
-
-        featureSocial:
-            "تحدث مع أصدقائك وابنِ علاقات جديدة داخل المجتمع الكردي.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "اكسب Zêr من خلال أنشطتك واستخدمه داخل MyKurda.",
+        createEyebrow:
+            "دورك الآن",
 
-        comingFeature:
-            "هذه مجرد البداية.",
+        createTitle:
+            "ماذا ستقول؟",
 
-        bottomTagline:
-            "بالكردية، من أجل الكرد.",
+        senderLabel:
+            "من؟",
+
+        receiverLabel:
+            "لمن هي؟",
+
+        receiverPlaceholder:
+            "اسم الشخص...",
+
+        poemLabel:
+            "اكتب قصيدتك",
+
+        poemPlaceholder:
+            "اكتب قصيدتك هنا...",
+
+        visibilityLabel:
+            "من يمكنه رؤيتها؟",
+
+        post:
+            "نشر",
+
+        tryPreview:
+            "جرّب بنفسك",
+
+        demoNotice:
+            "هذه مجرد معاينة. عملة Zêr التي تكسبها هنا مخصصة للعرض فقط.",
+
+        featureOneTitle:
+            "اكتب",
+
+        featureOneText:
+            "شارك صوتك.",
+
+        featureTwoTitle:
+            "صوّت",
+
+        featureTwoText:
+            "ادعم القصائد التي تعجبك.",
+
+        featureThreeTitle:
+            "اكسب Zêr",
+
+        featureThreeText:
+            "احصل على مكافآت مقابل تصويتاتك ونشاطك.",
 
         footer:
             "© 2026 MyKurda. جميع الحقوق محفوظة."
 
     },
 
-
-    // =====================================
-    // TURKISH
-    // =====================================
 
     tr: {
 
@@ -599,47 +768,80 @@ const translations = {
         contact:
             "İletişim",
 
-        aboutTitle:
-            "MyKurda nedir?",
+        previewEyebrow:
+            "MYKURDA ÖN İZLEME",
 
-        aboutIntro:
-            "Kürt dili, kültürü, yaratıcılığı ve topluluğu için yeni bir alan.",
+        previewTitle:
+            "Bir şiir yaz.",
 
-        featurePoemsTitle:
-            "Şiirler ve sözler",
+        previewDescription:
+            "Sesini paylaş ve MyKurda'nın nasıl çalışacağını keşfet.",
 
-        featurePoems:
-            "Şiirlerini yaz, birine ithaf et, toplulukla paylaş ve beğenilerden Zêr kazan.",
+        from:
+            "Gönderen",
 
-        featureGamesTitle:
-            "Kürtçe oyunlar",
+        to:
+            "Alıcı",
 
-        featureGames:
-            "Kürtçe dil oyunlarında diğer oyunculara karşı yarış ve becerilerini test et.",
+        public:
+            "Herkese açık",
 
-        featureLearnTitle:
-            "Kürtçe öğren",
+        private:
+            "Özel",
 
-        featureLearn:
-            "Kürtçe öğren, XP kazan ve MyKurda liglerinde yüksel.",
-
-        featureSocialTitle:
-            "Topluluk",
-
-        featureSocial:
-            "Arkadaşlarınla sohbet et ve Kürt topluluğu içinde yeni bağlantılar kur.",
-
-        zerTitle:
+        zer:
             "Zêr",
 
-        zerText:
-            "Etkinliklerin üzerinden Zêr kazan ve MyKurda içinde kullan.",
+        createEyebrow:
+            "SIRA SENDE",
 
-        comingFeature:
-            "Bu sadece başlangıç.",
+        createTitle:
+            "Sen ne söylerdin?",
 
-        bottomTagline:
-            "Kürtçe, Kürtler için.",
+        senderLabel:
+            "Kimden?",
+
+        receiverLabel:
+            "Kimin için?",
+
+        receiverPlaceholder:
+            "Kişinin adı...",
+
+        poemLabel:
+            "Şiirini yaz",
+
+        poemPlaceholder:
+            "Şiirini buraya yaz...",
+
+        visibilityLabel:
+            "Kim görebilir?",
+
+        post:
+            "Paylaş",
+
+        tryPreview:
+            "Kendin dene",
+
+        demoNotice:
+            "Bu bir demodur. Burada kazanılan Zêr yalnızca gösterim amaçlıdır.",
+
+        featureOneTitle:
+            "Yaz",
+
+        featureOneText:
+            "Sesini paylaş.",
+
+        featureTwoTitle:
+            "Oy ver",
+
+        featureTwoText:
+            "Beğendiğin şiirleri destekle.",
+
+        featureThreeTitle:
+            "Zêr kazan",
+
+        featureThreeText:
+            "Oyların ve etkinliklerin için ödüller kazan.",
 
         footer:
             "© 2026 MyKurda. Tüm hakları saklıdır."
@@ -650,146 +852,240 @@ const translations = {
 
 
 // =========================================
-// CHANGE LANGUAGE
+// LANGUAGE MENU
+// =========================================
+
+if (
+    languageButton &&
+    languageSelector
+) {
+
+    languageButton.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+            const isOpen =
+                languageSelector.classList.toggle("open");
+
+            languageButton.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+        }
+    );
+
+
+    document.addEventListener(
+        "click",
+        event => {
+
+            if (
+                !languageSelector.contains(
+                    event.target
+                )
+            ) {
+
+                languageSelector.classList.remove(
+                    "open"
+                );
+
+                languageButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+// =========================================
+// LANGUAGE SWITCHING
 // =========================================
 
 document
     .querySelectorAll(".language-menu button")
     .forEach(button => {
 
-        button.addEventListener("click", () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-            const language =
-                button.dataset.language;
+                const language =
+                    button.dataset.language;
 
-            const translation =
-                translations[language];
+                const translation =
+                    translations[language];
 
-            if (!translation) {
-                return;
-            }
-
-
-            document
-                .querySelectorAll("[data-i18n]")
-                .forEach(element => {
-
-                    const key =
-                        element.dataset.i18n;
-
-                    if (
-                        Object.prototype.hasOwnProperty.call(
-                            translation,
-                            key
-                        )
-                    ) {
-
-                        element.innerHTML =
-                            translation[key];
-
-                    }
-
-                });
+                if (!translation) {
+                    return;
+                }
 
 
-            currentLanguage.textContent =
-                languageNames[language];
+                document
+                    .querySelectorAll("[data-i18n]")
+                    .forEach(element => {
+
+                        const key =
+                            element.dataset.i18n;
+
+                        if (
+                            Object.prototype.hasOwnProperty.call(
+                                translation,
+                                key
+                            )
+                        ) {
+
+                            element.innerHTML =
+                                translation[key];
+
+                        }
+
+                    });
 
 
-            document.documentElement.lang =
-                language;
+                document
+                    .querySelectorAll(
+                        "[data-i18n-placeholder]"
+                    )
+                    .forEach(element => {
+
+                        const key =
+                            element.dataset.i18nPlaceholder;
+
+                        if (
+                            Object.prototype.hasOwnProperty.call(
+                                translation,
+                                key
+                            )
+                        ) {
+
+                            element.placeholder =
+                                translation[key];
+
+                        }
+
+                    });
 
 
-            if (
-                language === "ar" ||
-                language === "ckb"
-            ) {
+                if (currentLanguage) {
+
+                    currentLanguage.textContent =
+                        languageNames[language];
+
+                }
+
+
+                document.documentElement.lang =
+                    language;
+
 
                 document.documentElement.dir =
-                    "rtl";
+                    language === "ar" ||
+                    language === "ckb"
+                        ? "rtl"
+                        : "ltr";
 
-            } else {
 
-                document.documentElement.dir =
-                    "ltr";
+                if (languageSelector) {
+
+                    languageSelector.classList.remove(
+                        "open"
+                    );
+
+                }
+
+
+                if (languageButton) {
+
+                    languageButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
 
             }
-
-
-            languageSelector.classList.remove(
-                "open"
-            );
-
-            languageButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        });
+        );
 
     });
 
 
 // =========================================
-// ABOUT SECTION
+// GLASS LIGHT EFFECT
+// DESKTOP + MOBILE
 // =========================================
 
-const aboutToggle =
-    document.getElementById("aboutToggle");
-
-const aboutSection =
-    document.querySelector(".about-section");
+const lightCards =
+    document.querySelectorAll(".light-card");
 
 
-aboutToggle.addEventListener("click", () => {
+function moveLight(card, x, y) {
 
-    const isOpen =
-        aboutSection.classList.toggle("open");
+    if (!card) {
+        return;
+    }
 
-    aboutToggle.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
+    const rect =
+        card.getBoundingClientRect();
+
+    if (
+        !rect.width ||
+        !rect.height
+    ) {
+        return;
+    }
+
+    const relativeX =
+        ((x - rect.left) / rect.width) * 100;
+
+    const relativeY =
+        ((y - rect.top) / rect.height) * 100;
+
+    card.style.setProperty(
+        "--mouse-x",
+        `${relativeX}%`
     );
 
-});
+    card.style.setProperty(
+        "--mouse-y",
+        `${relativeY}%`
+    );
+
+    card.classList.add(
+        "mouse-active"
+    );
+
+}
 
 
-// =========================================
-// MOUSE-FOLLOWING GLASS LIGHT
-// =========================================
+lightCards.forEach(card => {
 
-const glassCard =
-    document.querySelector(".glass-card");
-
-
-if (glassCard) {
-
-    glassCard.addEventListener(
+    card.addEventListener(
         "mousemove",
-        (event) => {
+        event => {
 
-            const rect =
-                glassCard.getBoundingClientRect();
-
-            const x =
-                ((event.clientX - rect.left) /
-                    rect.width) * 100;
-
-            const y =
-                ((event.clientY - rect.top) /
-                    rect.height) * 100;
-
-            glassCard.style.setProperty(
-                "--mouse-x",
-                `${x}%`
+            moveLight(
+                card,
+                event.clientX,
+                event.clientY
             );
 
-            glassCard.style.setProperty(
-                "--mouse-y",
-                `${y}%`
-            );
+        }
+    );
 
-            glassCard.classList.add(
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.classList.remove(
                 "mouse-active"
             );
 
@@ -797,23 +1093,1366 @@ if (glassCard) {
     );
 
 
-    glassCard.addEventListener(
-        "mouseleave",
+    card.addEventListener(
+        "touchstart",
+        event => {
+
+            const touch =
+                event.touches[0];
+
+            if (!touch) {
+                return;
+            }
+
+            moveLight(
+                card,
+                touch.clientX,
+                touch.clientY
+            );
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    card.addEventListener(
+        "touchmove",
+        event => {
+
+            const touch =
+                event.touches[0];
+
+            if (!touch) {
+                return;
+            }
+
+            moveLight(
+                card,
+                touch.clientX,
+                touch.clientY
+            );
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    card.addEventListener(
+        "touchend",
         () => {
 
-            glassCard.classList.remove(
-                "mouse-active"
+            setTimeout(
+                () => {
+
+                    card.classList.remove(
+                        "mouse-active"
+                    );
+
+                },
+                400
             );
 
-            glassCard.style.setProperty(
-                "--mouse-x",
-                "50%"
+        }
+    );
+
+});
+
+
+// =========================================
+// MOBILE SCROLL LIGHT
+// =========================================
+
+let scrollTimeout;
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        const viewportCenter =
+            window.innerHeight / 2;
+
+
+        lightCards.forEach(card => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            if (
+                rect.top < window.innerHeight &&
+                rect.bottom > 0
+            ) {
+
+                const centerX =
+                    rect.left +
+                    rect.width / 2;
+
+                const centerY =
+                    Math.max(
+                        rect.top,
+                        Math.min(
+                            viewportCenter,
+                            rect.bottom
+                        )
+                    );
+
+
+                moveLight(
+                    card,
+                    centerX,
+                    centerY
+                );
+
+            }
+
+        });
+
+
+        clearTimeout(scrollTimeout);
+
+        scrollTimeout =
+            setTimeout(
+                () => {
+
+                    lightCards.forEach(card => {
+
+                        card.classList.remove(
+                            "mouse-active"
+                        );
+
+                    });
+
+                },
+                500
             );
 
-            glassCard.style.setProperty(
-                "--mouse-y",
-                "50%"
+    },
+    {
+        passive: true
+    }
+);
+
+
+// =========================================
+// ZÊR POPUP
+// =========================================
+
+const zerPopup =
+    document.getElementById("zerPopup");
+
+
+function showZer(amount = 10) {
+
+    if (!zerPopup) {
+        return;
+    }
+
+    const strong =
+        zerPopup.querySelector("strong");
+
+    if (!strong) {
+        return;
+    }
+
+    strong.textContent =
+        `+${amount} Zêr`;
+
+    zerPopup.classList.remove(
+        "show"
+    );
+
+    void zerPopup.offsetWidth;
+
+    zerPopup.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        () => {
+
+            zerPopup.classList.remove(
+                "show"
             );
+
+        },
+        1800
+    );
+
+}
+
+
+// =========================================
+// POEM VOTING
+// =========================================
+
+const upvoteButton =
+    document.querySelector(".upvote");
+
+const downvoteButton =
+    document.querySelector(".downvote");
+
+
+let upvotes = 48;
+let downvotes = 12;
+let userVote = null;
+
+
+function updateVotes() {
+
+    const upvoteCount =
+        document.querySelector(
+            ".upvote .vote-count"
+        );
+
+    const downvoteCount =
+        document.querySelector(
+            ".downvote .vote-count"
+        );
+
+
+    if (upvoteCount) {
+        upvoteCount.textContent =
+            upvotes;
+    }
+
+
+    if (downvoteCount) {
+        downvoteCount.textContent =
+            downvotes;
+    }
+
+}
+
+
+if (
+    upvoteButton &&
+    downvoteButton
+) {
+
+    upvoteButton.addEventListener(
+        "click",
+        () => {
+
+            if (userVote === "up") {
+
+                upvotes--;
+
+                userVote = null;
+
+                upvoteButton.classList.remove(
+                    "selected"
+                );
+
+            } else {
+
+                if (userVote === "down") {
+                    downvotes--;
+                }
+
+                upvotes++;
+
+                userVote = "up";
+
+                upvoteButton.classList.add(
+                    "selected"
+                );
+
+                downvoteButton.classList.remove(
+                    "selected"
+                );
+
+                showZer(1);
+
+            }
+
+            updateVotes();
+
+        }
+    );
+
+
+    downvoteButton.addEventListener(
+        "click",
+        () => {
+
+            if (userVote === "down") {
+
+                downvotes--;
+
+                userVote = null;
+
+                downvoteButton.classList.remove(
+                    "selected"
+                );
+
+            } else {
+
+                if (userVote === "up") {
+                    upvotes--;
+                }
+
+                downvotes++;
+
+                userVote = "down";
+
+                downvoteButton.classList.add(
+                    "selected"
+                );
+
+                upvoteButton.classList.remove(
+                    "selected"
+                );
+
+            }
+
+            updateVotes();
+
+        }
+    );
+
+}
+
+
+updateVotes();
+
+
+// =========================================
+// VISIBILITY
+// =========================================
+
+const visibilityButtons =
+    document.querySelectorAll(
+        ".visibility-option"
+    );
+
+
+let selectedVisibility =
+    "public";
+
+
+visibilityButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            visibilityButtons.forEach(
+                item => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            button.classList.add(
+                "active"
+            );
+
+
+            selectedVisibility =
+                button.dataset.visibility;
+
+        }
+    );
+
+});
+
+
+// =========================================
+// CHARACTER COUNT
+// =========================================
+
+const poemInput =
+    document.getElementById("poemInput");
+
+const characterCount =
+    document.getElementById(
+        "characterCount"
+    );
+
+
+function updateCharacterCount() {
+
+    if (
+        !poemInput ||
+        !characterCount
+    ) {
+        return;
+    }
+
+    characterCount.textContent =
+        poemInput.value.length;
+
+}
+
+
+if (poemInput) {
+
+    poemInput.addEventListener(
+        "input",
+        updateCharacterCount
+    );
+
+    updateCharacterCount();
+
+}
+
+
+// =========================================
+// PREVIEW BUTTON
+// =========================================
+
+const previewButton =
+    document.getElementById(
+        "previewButton"
+    );
+
+
+if (previewButton) {
+
+    previewButton.addEventListener(
+        "click",
+        () => {
+
+            const createCard =
+                document.querySelector(
+                    ".create-card"
+                );
+
+            if (!createCard) {
+                return;
+            }
+
+            createCard.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+
+            setTimeout(
+                () => {
+
+                    if (poemInput) {
+                        poemInput.focus();
+                    }
+
+                },
+                500
+            );
+
+        }
+    );
+
+}
+
+
+// =========================================
+// ESCAPE HTML
+// =========================================
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent =
+        text;
+
+    return div.innerHTML;
+
+}
+
+
+// =========================================
+// NEW POEM VOTING
+// =========================================
+
+function setupNewPoemVoting(poemCard) {
+
+    if (!poemCard) {
+        return;
+    }
+
+    const upButton =
+        poemCard.querySelector(
+            ".new-upvote"
+        );
+
+    const downButton =
+        poemCard.querySelector(
+            ".vote-button:not(.new-upvote)"
+        );
+
+    const upCount =
+        upButton
+            ? upButton.querySelector(
+                ".vote-count"
+            )
+            : null;
+
+    const downCount =
+        downButton
+            ? downButton.querySelector(
+                ".vote-count"
+            )
+            : null;
+
+
+    let localUpvotes = 0;
+    let localDownvotes = 0;
+    let localVote = null;
+
+
+    if (
+        !upButton ||
+        !downButton
+    ) {
+        return;
+    }
+
+
+    upButton.addEventListener(
+        "click",
+        () => {
+
+            if (localVote === "up") {
+
+                localUpvotes--;
+
+                localVote = null;
+
+                upButton.classList.remove(
+                    "selected"
+                );
+
+            } else {
+
+                if (localVote === "down") {
+                    localDownvotes--;
+                }
+
+                localUpvotes++;
+
+                localVote = "up";
+
+                upButton.classList.add(
+                    "selected"
+                );
+
+                downButton.classList.remove(
+                    "selected"
+                );
+
+                showZer(1);
+
+            }
+
+
+            if (upCount) {
+                upCount.textContent =
+                    localUpvotes;
+            }
+
+
+            if (downCount) {
+                downCount.textContent =
+                    localDownvotes;
+            }
+
+        }
+    );
+
+
+    downButton.addEventListener(
+        "click",
+        () => {
+
+            if (localVote === "down") {
+
+                localDownvotes--;
+
+                localVote = null;
+
+                downButton.classList.remove(
+                    "selected"
+                );
+
+            } else {
+
+                if (localVote === "up") {
+                    localUpvotes--;
+                }
+
+                localDownvotes++;
+
+                localVote = "down";
+
+                downButton.classList.add(
+                    "selected"
+                );
+
+                upButton.classList.remove(
+                    "selected"
+                );
+
+            }
+
+
+            if (upCount) {
+                upCount.textContent =
+                    localUpvotes;
+            }
+
+
+            if (downCount) {
+                downCount.textContent =
+                    localDownvotes;
+            }
+
+        }
+    );
+
+}
+
+
+// =========================================
+// CREATE DEMO POEM
+// =========================================
+
+const sender =
+    document.getElementById("sender");
+
+const receiver =
+    document.getElementById("receiver");
+
+const postButton =
+    document.getElementById("postButton");
+
+const poemFeed =
+    document.getElementById("poemFeed");
+
+
+if (
+    postButton &&
+    sender &&
+    receiver &&
+    poemInput &&
+    poemFeed
+) {
+
+    postButton.addEventListener(
+        "click",
+        () => {
+
+            const senderName =
+                sender.value.trim() || "me";
+
+            const receiverName =
+                receiver.value.trim();
+
+            const poem =
+                poemInput.value.trim();
+
+
+            if (
+                !receiverName ||
+                !poem
+            ) {
+
+                if (!receiverName) {
+
+                    receiver.focus();
+
+                } else {
+
+                    poemInput.focus();
+
+                }
+
+                return;
+
+            }
+
+
+            const language =
+                document.documentElement.lang ||
+                "ku";
+
+
+            const translation =
+                translations[language] ||
+                translations.en;
+
+
+            const visibilityText =
+                selectedVisibility === "public"
+                    ? translation.public
+                    : translation.private;
+
+
+            const newPoem =
+                document.createElement(
+                    "article"
+                );
+
+
+            newPoem.className =
+                "poem-card light-card new-poem";
+
+
+            newPoem.innerHTML = `
+
+                <div class="poem-top">
+
+                    <div>
+
+                        <div class="poem-label">
+
+                            <span>
+                                ${translation.from}
+                            </span>
+
+                            <strong>
+                                ${escapeHTML(senderName)}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="poem-label">
+
+                            <span>
+                                ${translation.to}
+                            </span>
+
+                            <strong>
+                                ${escapeHTML(receiverName)}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="visibility-badge">
+
+                        ${visibilityText}
+
+                    </span>
+
+                </div>
+
+
+                <div class="poem-text">
+
+                    ${escapeHTML(poem).replace(
+                        /\n/g,
+                        "<br>"
+                    )}
+
+                </div>
+
+
+                <div class="poem-bottom">
+
+                    <div class="vote-group">
+
+                        <button
+                            class="vote-button"
+                            type="button"
+                        >
+
+                            <span
+                                class="vote-arrow down"
+                            ></span>
+
+                            <span
+                                class="vote-count"
+                            >
+                                0
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="vote-button new-upvote"
+                            type="button"
+                        >
+
+                            <span
+                                class="vote-arrow up"
+                            ></span>
+
+                            <span
+                                class="vote-count"
+                            >
+                                0
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="reward">
+
+                        <span class="reward-plus">
+                            +0
+                        </span>
+
+                        <span>
+                            Zêr
+                        </span>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            poemFeed.after(
+                newPoem
+            );
+
+
+            // Make the new poem interactive.
+            setupNewPoemVoting(
+                newPoem
+            );
+
+
+            // Make the light effect work
+            // on the new card as well.
+            newPoem.addEventListener(
+                "mousemove",
+                event => {
+
+                    moveLight(
+                        newPoem,
+                        event.clientX,
+                        event.clientY
+                    );
+
+                }
+            );
+
+
+            newPoem.addEventListener(
+                "mouseleave",
+                () => {
+
+                    newPoem.classList.remove(
+                        "mouse-active"
+                    );
+
+                }
+            );
+
+
+            showZer(10);
+
+
+            postButton.classList.add(
+                "rewarded"
+            );
+
+
+            setTimeout(
+                () => {
+
+                    postButton.classList.remove(
+                        "rewarded"
+                    );
+
+                },
+                800
+            );
+
+
+            sender.value =
+                "me";
+
+            receiver.value =
+                "MyKurda";
+
+
+            poemInput.value =
+`Kurdî zimanê me ye,
+dengê bav û kalên me ye.
+
+Bila em bi hev re hîn bibin,
+bila dengê me her tim bijî.`;
+
+
+            updateCharacterCount();
+
+
+            newPoem.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+    );
+
+}
+
+
+// =========================================
+// QUIZ GAME
+// =========================================
+
+const quizQuestions = [
+
+    {
+        question:
+            "“Av” çi ye?",
+
+        answers: [
+            ["Nan", "wrong"],
+            ["Water", "correct"],
+            ["Roj", "wrong"],
+            ["Mal", "wrong"]
+        ]
+    },
+
+
+    {
+        question:
+            "“Roj” çi ye?",
+
+        answers: [
+            ["Day", "wrong"],
+            ["House", "wrong"],
+            ["Sun / Day", "correct"],
+            ["Water", "wrong"]
+        ]
+    },
+
+
+    {
+        question:
+            "“Mal” çi ye?",
+
+        answers: [
+            ["House", "correct"],
+            ["Sun", "wrong"],
+            ["Bread", "wrong"],
+            ["Water", "wrong"]
+        ]
+    }
+
+];
+
+
+let quizIndex = 0;
+
+let quizAnswered = false;
+
+
+const quizOptions =
+    document.getElementById(
+        "quizOptions"
+    );
+
+const quizFeedback =
+    document.getElementById(
+        "quizFeedback"
+    );
+
+const nextQuiz =
+    document.getElementById(
+        "nextQuiz"
+    );
+
+const quizQuestion =
+    document.querySelector(
+        ".game-question"
+    );
+
+
+function loadQuiz() {
+
+    if (
+        !quizOptions ||
+        !quizFeedback ||
+        !quizQuestion
+    ) {
+        return;
+    }
+
+
+    const question =
+        quizQuestions[quizIndex];
+
+
+    quizAnswered = false;
+
+
+    quizQuestion.textContent =
+        question.question;
+
+
+    quizFeedback.textContent =
+        "";
+
+
+    quizOptions.innerHTML =
+        "";
+
+
+    question.answers.forEach(
+        answer => {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type =
+                "button";
+
+
+            button.textContent =
+                answer[0];
+
+
+            button.dataset.answer =
+                answer[1];
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    if (quizAnswered) {
+                        return;
+                    }
+
+
+                    quizAnswered =
+                        true;
+
+
+                    if (
+                        button.dataset.answer ===
+                        "correct"
+                    ) {
+
+                        button.classList.add(
+                            "correct"
+                        );
+
+
+                        quizFeedback.textContent =
+                            "Rast e! Tu +1 Zêr wergirt.";
+
+
+                        showZer(1);
+
+                    } else {
+
+                        button.classList.add(
+                            "wrong"
+                        );
+
+
+                        quizFeedback.textContent =
+                            "Ne rast e. Dîsa biceribîne.";
+
+                    }
+
+                }
+            );
+
+
+            quizOptions.appendChild(
+                button
+            );
+
+        }
+    );
+
+}
+
+
+if (nextQuiz) {
+
+    nextQuiz.addEventListener(
+        "click",
+        () => {
+
+            quizIndex++;
+
+
+            if (
+                quizIndex >=
+                quizQuestions.length
+            ) {
+
+                quizIndex =
+                    0;
+
+            }
+
+
+            loadQuiz();
+
+        }
+    );
+
+}
+
+
+loadQuiz();
+
+
+// =========================================
+// WORDLE GAME
+// =========================================
+
+const wordleWords = [
+
+    "avdar",
+    "rojda",
+    "hevî"
+
+];
+
+
+const wordleAnswer =
+    "rojda";
+
+
+let wordleRow =
+    0;
+
+
+const wordleInput =
+    document.getElementById(
+        "wordleInput"
+    );
+
+const wordleButton =
+    document.getElementById(
+        "wordleButton"
+    );
+
+const wordleFeedback =
+    document.getElementById(
+        "wordleFeedback"
+    );
+
+const wordleRows =
+    document.querySelectorAll(
+        ".wordle-row"
+    );
+
+
+function submitWordle() {
+
+    if (
+        !wordleInput ||
+        !wordleButton ||
+        !wordleFeedback
+    ) {
+        return;
+    }
+
+
+    if (
+        wordleRow >=
+        wordleRows.length
+    ) {
+        return;
+    }
+
+
+    const guess =
+        wordleInput.value
+            .trim()
+            .toLowerCase();
+
+
+    if (
+        guess.length !==
+        wordleAnswer.length
+    ) {
+
+        wordleFeedback.textContent =
+            "Ji kerema xwe peyvekî 5 tîpan binivîse.";
+
+        return;
+
+    }
+
+
+    const row =
+        wordleRows[wordleRow];
+
+
+    if (!row) {
+        return;
+    }
+
+
+    const letters =
+        row.querySelectorAll(
+            "span"
+        );
+
+
+    if (
+        letters.length <
+        wordleAnswer.length
+    ) {
+        return;
+    }
+
+
+    for (
+        let i = 0;
+        i < wordleAnswer.length;
+        i++
+    ) {
+
+        letters[i].textContent =
+            guess[i];
+
+
+        letters[i].className =
+            "";
+
+
+        if (
+            guess[i] ===
+            wordleAnswer[i]
+        ) {
+
+            letters[i].classList.add(
+                "correct"
+            );
+
+        } else if (
+            wordleAnswer.includes(
+                guess[i]
+            )
+        ) {
+
+            letters[i].classList.add(
+                "present"
+            );
+
+        } else {
+
+            letters[i].classList.add(
+                "absent"
+            );
+
+        }
+
+    }
+
+
+    wordleRow++;
+
+
+    if (
+        guess ===
+        wordleAnswer
+    ) {
+
+        wordleFeedback.textContent =
+            "Serkeftin! +5 Zêr 🎉";
+
+
+        showZer(5);
+
+
+        wordleButton.disabled =
+            true;
+
+
+        wordleInput.disabled =
+            true;
+
+
+        return;
+
+    }
+
+
+    if (
+        wordleRow >=
+        wordleRows.length
+    ) {
+
+        wordleFeedback.textContent =
+            `Game over. Peyv: ${wordleAnswer}`;
+
+
+        wordleButton.disabled =
+            true;
+
+
+        wordleInput.disabled =
+            true;
+
+    } else {
+
+        wordleFeedback.textContent =
+            "Dîsa biceribîne.";
+
+
+        wordleInput.value =
+            "";
+
+
+        wordleInput.focus();
+
+    }
+
+}
+
+
+if (wordleButton) {
+
+    wordleButton.addEventListener(
+        "click",
+        submitWordle
+    );
+
+}
+
+
+if (wordleInput) {
+
+    wordleInput.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key ===
+                "Enter"
+            ) {
+
+                event.preventDefault();
+
+                submitWordle();
+
+            }
 
         }
     );
