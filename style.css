@@ -3295,3 +3295,697 @@ html[dir="rtl"] .founder-lines {
   .main-navigation a{flex:1 0 auto;text-align:center;padding:.5rem .35rem;font-size:.68rem;white-space:normal}
   .page{padding-top:178px}.theme-button,.language-button{padding:.45rem .55rem;font-size:.75rem}.theme-button span:not(.arrow){display:none}
 }
+
+/* =========================================
+   SOFT LIGHT THEME
+   ========================================= */
+
+html[data-theme="light"] {
+    --accent: #6b9fe8;
+    --accent-ink: #172a46;
+
+    --surface: rgba(255, 255, 255, 0.52);
+    --surface-strong: rgba(255, 255, 255, 0.72);
+
+    --text: #172338;
+    --muted: rgba(23, 35, 56, 0.68);
+
+    background: #e7edf5;
+}
+
+
+/* =========================================
+   LIGHT BACKGROUND
+   ========================================= */
+
+html[data-theme="light"] body {
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(255,255,255,.75),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(185,215,255,.35),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #edf2f8,
+            #e2e9f2 50%,
+            #e8eef6
+        );
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+html[data-theme="light"] .site-header {
+    background: rgba(239,244,250,.78);
+    border-bottom-color: rgba(23,35,56,.10);
+
+    box-shadow:
+        0 10px 40px rgba(40,60,90,.08);
+}
+
+html[data-theme="light"] .nav-logo {
+    color: #172338;
+}
+
+html[data-theme="light"] .nav-logo span {
+    color: rgba(23,35,56,.42);
+}
+
+html[data-theme="light"] .main-navigation a {
+    color: rgba(23,35,56,.55);
+}
+
+html[data-theme="light"] .main-navigation a:hover {
+    color: #172338;
+    background: rgba(23,35,56,.055);
+    border-color: rgba(23,35,56,.08);
+}
+
+html[data-theme="light"] .main-navigation a.active {
+    color: #172338;
+    background: rgba(23,35,56,.08);
+    border-color: rgba(23,35,56,.12);
+}
+
+
+/* =========================================
+   LANGUAGE + THEME BUTTONS
+   ========================================= */
+
+html[data-theme="light"] .language-button,
+html[data-theme="light"] .theme-button {
+    color: #172338;
+
+    background: rgba(255,255,255,.48);
+
+    border-color: rgba(23,35,56,.13);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.7),
+        0 8px 30px rgba(40,60,90,.08);
+}
+
+html[data-theme="light"] .language-button:hover,
+html[data-theme="light"] .theme-button:hover {
+    background: rgba(255,255,255,.68);
+    border-color: rgba(23,35,56,.20);
+}
+
+html[data-theme="light"] .language-symbol {
+    opacity: .65;
+}
+
+html[data-theme="light"] .arrow {
+    border-color: rgba(23,35,56,.6);
+}
+
+html[data-theme="light"] .language-menu {
+    background: rgba(245,248,252,.94);
+
+    border-color: rgba(23,35,56,.12);
+
+    box-shadow:
+        0 20px 50px rgba(40,60,90,.16);
+}
+
+html[data-theme="light"] .language-menu button {
+    color: rgba(23,35,56,.75);
+}
+
+html[data-theme="light"] .language-menu button:hover {
+    color: #172338;
+    background: rgba(23,35,56,.07);
+}
+
+
+/* =========================================
+   THEME MENU
+   ========================================= */
+
+html[data-theme="light"] .theme-menu {
+    background: rgba(245,248,252,.97);
+    border-color: rgba(23,35,56,.12);
+
+    box-shadow:
+        0 14px 30px rgba(40,60,90,.16);
+}
+
+html[data-theme="light"] .theme-menu button {
+    color: #172338;
+}
+
+html[data-theme="light"] .theme-menu button:hover {
+    background: rgba(23,35,56,.07);
+}
+
+
+/* =========================================
+   MAIN TEXT
+   ========================================= */
+
+html[data-theme="light"] body,
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] p,
+html[data-theme="light"] label {
+    color: var(--text);
+}
+
+html[data-theme="light"] .logo {
+    color: #172338;
+    text-shadow: 0 8px 30px rgba(60,90,130,.10);
+}
+
+html[data-theme="light"] .logo span {
+    color: rgba(23,35,56,.40);
+}
+
+html[data-theme="light"] .eyebrow {
+    color: rgba(23,35,56,.50);
+}
+
+html[data-theme="light"] .description {
+    color: rgba(23,35,56,.68);
+}
+
+html[data-theme="light"] .tagline {
+    color: rgba(23,35,56,.88);
+}
+
+html[data-theme="light"] .section-heading p,
+html[data-theme="light"] .preview-heading p {
+    color: rgba(23,35,56,.58);
+}
+
+html[data-theme="light"] .preview-eyebrow,
+html[data-theme="light"] .create-eyebrow,
+html[data-theme="light"] .section-eyebrow {
+    color: rgba(23,35,56,.45);
+}
+
+
+/* =========================================
+   GLASS CARDS
+   ========================================= */
+
+html[data-theme="light"] .glass-card,
+html[data-theme="light"] .story-card,
+html[data-theme="light"] .create-card,
+html[data-theme="light"] .game-card,
+html[data-theme="light"] .motivation-card,
+html[data-theme="light"] .zer-balance,
+html[data-theme="light"] .zer-item,
+html[data-theme="light"] .founder-story-card,
+html[data-theme="light"] .flashcard-front,
+html[data-theme="light"] .flashcard-back {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.62),
+            rgba(255,255,255,.36)
+        );
+
+    border-color: rgba(23,35,56,.11);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.75),
+        0 25px 70px rgba(45,65,95,.12);
+}
+
+
+/* =========================================
+   STORY
+   ========================================= */
+
+html[data-theme="light"] .story-label {
+    color: rgba(23,35,56,.52);
+}
+
+html[data-theme="light"] .story-label strong {
+    color: rgba(23,35,56,.88);
+}
+
+html[data-theme="light"] .visibility-badge {
+    color: rgba(23,35,56,.58);
+    background: rgba(23,35,56,.045);
+    border-color: rgba(23,35,56,.10);
+}
+
+html[data-theme="light"] .story-title {
+    color: #172338;
+}
+
+html[data-theme="light"] .story-text {
+    color: rgba(23,35,56,.74);
+}
+
+html[data-theme="light"] .story-bottom {
+    border-top-color: rgba(23,35,56,.09);
+}
+
+html[data-theme="light"] .vote-button {
+    background: rgba(23,35,56,.045);
+    border-color: rgba(23,35,56,.10);
+    color: rgba(23,35,56,.62);
+}
+
+html[data-theme="light"] .vote-button:hover {
+    background: rgba(23,35,56,.08);
+    color: #172338;
+}
+
+html[data-theme="light"] .vote-button.selected {
+    background: rgba(23,35,56,.10);
+    border-color: rgba(23,35,56,.20);
+    color: #172338;
+}
+
+html[data-theme="light"] .reward {
+    color: rgba(23,35,56,.62);
+}
+
+html[data-theme="light"] .reward-plus {
+    color: rgba(23,35,56,.9);
+}
+
+
+/* =========================================
+   ADD STORY
+   ========================================= */
+
+html[data-theme="light"] .story-add-area {
+    color: rgba(23,35,56,.48);
+}
+
+html[data-theme="light"] .round-add-button {
+    background: rgba(255,255,255,.48);
+    color: #172338;
+    border-color: rgba(23,35,56,.14);
+
+    box-shadow:
+        0 10px 30px rgba(40,60,90,.10);
+}
+
+html[data-theme="light"] .round-add-button:hover {
+    background: rgba(255,255,255,.70);
+    border-color: rgba(23,35,56,.22);
+}
+
+
+/* =========================================
+   PREVIEW BUTTON
+   ========================================= */
+
+html[data-theme="light"] .preview-button {
+    background: rgba(255,255,255,.45);
+    color: rgba(23,35,56,.78);
+    border-color: rgba(23,35,56,.11);
+}
+
+html[data-theme="light"] .preview-button:hover {
+    background: rgba(255,255,255,.68);
+    border-color: rgba(23,35,56,.20);
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+html[data-theme="light"] .field-label {
+    color: rgba(23,35,56,.62);
+}
+
+html[data-theme="light"] .glass-input {
+    background: rgba(255,255,255,.48);
+    color: #172338;
+    border-color: rgba(23,35,56,.12);
+}
+
+html[data-theme="light"] .glass-input::placeholder {
+    color: rgba(23,35,56,.38);
+}
+
+html[data-theme="light"] .glass-input:focus {
+    background: rgba(255,255,255,.65);
+    border-color: rgba(23,35,56,.25);
+
+    box-shadow:
+        0 0 0 3px rgba(80,130,200,.10);
+}
+
+html[data-theme="light"] .character-count {
+    color: rgba(23,35,56,.38);
+}
+
+
+/* =========================================
+   VISIBILITY
+   ========================================= */
+
+html[data-theme="light"] .visibility-option {
+    color: rgba(23,35,56,.55);
+    border-color: rgba(23,35,56,.10);
+}
+
+html[data-theme="light"] .visibility-option.active,
+html[data-theme="light"] .visibility-option:hover {
+    color: #172338;
+    background: rgba(23,35,56,.07);
+    border-color: rgba(23,35,56,.18);
+}
+
+
+/* =========================================
+   POST BUTTON
+   ========================================= */
+
+html[data-theme="light"] .post-button {
+    background: rgba(23,35,56,.075);
+    color: #172338;
+    border-color: rgba(23,35,56,.14);
+}
+
+html[data-theme="light"] .post-button:hover {
+    background: rgba(23,35,56,.11);
+    border-color: rgba(23,35,56,.22);
+}
+
+html[data-theme="light"] .demo-notice {
+    color: rgba(23,35,56,.38);
+}
+
+
+/* =========================================
+   GAMES
+   ========================================= */
+
+html[data-theme="light"] .game-number {
+    color: rgba(23,35,56,.32);
+}
+
+html[data-theme="light"] .game-type {
+    color: rgba(23,35,56,.48);
+}
+
+html[data-theme="light"] .game-question,
+html[data-theme="light"] .wordle-description {
+    color: rgba(23,35,56,.62);
+}
+
+html[data-theme="light"] .quiz-options button {
+    background: rgba(255,255,255,.42);
+    color: rgba(23,35,56,.75);
+    border-color: rgba(23,35,56,.10);
+}
+
+html[data-theme="light"] .quiz-options button:hover {
+    background: rgba(255,255,255,.65);
+    border-color: rgba(23,35,56,.20);
+}
+
+html[data-theme="light"] .game-feedback {
+    color: rgba(23,35,56,.65);
+}
+
+html[data-theme="light"] .game-action {
+    background: linear-gradient(
+        135deg,
+        #b9d7ff,
+        #dcecff
+    );
+
+    color: #172a46;
+
+    border-color: rgba(100,145,205,.35);
+}
+
+html[data-theme="light"] .game-action:hover {
+    background: #dbeaff;
+    color: #172a46;
+}
+
+html[data-theme="light"] .game-action.secondary {
+    background: rgba(23,35,56,.045);
+    color: rgba(23,35,56,.62);
+}
+
+
+/* =========================================
+   WORDLE
+   ========================================= */
+
+html[data-theme="light"] .wordle-row span {
+    background: rgba(255,255,255,.42);
+    color: #172338;
+    border-color: rgba(23,35,56,.12);
+}
+
+html[data-theme="light"] .wordle-row span.absent {
+    background: rgba(23,35,56,.10);
+    border-color: rgba(23,35,56,.13);
+}
+
+
+/* =========================================
+   FLASHCARDS
+   ========================================= */
+
+html[data-theme="light"] .flashcard-label {
+    color: rgba(23,35,56,.42);
+}
+
+html[data-theme="light"] .flashcard-hint {
+    color: rgba(23,35,56,.40);
+}
+
+
+/* =========================================
+   MOTIVATION
+   ========================================= */
+
+html[data-theme="light"] .motivation-content p {
+    color: rgba(23,35,56,.64);
+}
+
+html[data-theme="light"] .motivation-video video {
+    background: #dbe3ed;
+    border-color: rgba(23,35,56,.10);
+    box-shadow: 0 20px 50px rgba(40,60,90,.15);
+}
+
+
+/* =========================================
+   ZÊR
+   ========================================= */
+
+html[data-theme="light"] .zer-label {
+    color: rgba(23,35,56,.40);
+}
+
+html[data-theme="light"] .zer-item-icon {
+    background: rgba(23,35,56,.05);
+    color: rgba(23,35,56,.75);
+    border-color: rgba(23,35,56,.11);
+}
+
+html[data-theme="light"] .zer-item p {
+    color: rgba(23,35,56,.56);
+}
+
+
+/* =========================================
+   FOUNDER STORY
+   ========================================= */
+
+html[data-theme="light"] .founder-intro {
+    border-bottom-color: rgba(23,35,56,.10);
+}
+
+html[data-theme="light"] .founder-intro-text {
+    color: rgba(23,35,56,.52);
+}
+
+html[data-theme="light"] .founder-story-content p {
+    color: rgba(23,35,56,.70);
+}
+
+html[data-theme="light"] .founder-story-content strong {
+    color: rgba(23,35,56,.92);
+}
+
+html[data-theme="light"] .founder-emphasis {
+    color: rgba(23,35,56,.90) !important;
+}
+
+html[data-theme="light"] .founder-lines {
+    border-left-color: rgba(23,35,56,.18);
+}
+
+html[data-theme="light"] .founder-lines p {
+    color: rgba(23,35,56,.55);
+}
+
+html[data-theme="light"] .founder-short-line {
+    color: rgba(23,35,56,.82) !important;
+}
+
+html[data-theme="light"] .founder-divider {
+    background: rgba(23,35,56,.20);
+}
+
+html[data-theme="light"] .founder-final {
+    color: rgba(23,35,56,.86) !important;
+}
+
+html[data-theme="light"] .founder-ending {
+    border-top-color: rgba(23,35,56,.10);
+}
+
+html[data-theme="light"] .founder-ending span {
+    color: rgba(23,35,56,.42);
+}
+
+
+/* =========================================
+   FEATURE STRIP
+   ========================================= */
+
+html[data-theme="light"] .feature-strip {
+    background: rgba(255,255,255,.38);
+    border-color: rgba(23,35,56,.10);
+}
+
+html[data-theme="light"] .feature-item {
+    border-right-color: rgba(23,35,56,.08);
+    border-bottom-color: rgba(23,35,56,.08);
+}
+
+html[data-theme="light"] .feature-number {
+    color: rgba(23,35,56,.30);
+}
+
+html[data-theme="light"] .feature-item div span {
+    color: rgba(23,35,56,.46);
+}
+
+
+/* =========================================
+   EXPLORE / DISCOVERY
+   ========================================= */
+
+html[data-theme="light"] .place-card.live-result-card {
+    border-color: rgba(23,35,56,.11);
+
+    box-shadow:
+        0 18px 44px rgba(40,60,90,.10);
+}
+
+html[data-theme="light"] .place-card.live-result-card p {
+    color: rgba(23,35,56,.68);
+}
+
+html[data-theme="light"] .explore-controls {
+    border-color: rgba(23,35,56,.11);
+
+    box-shadow:
+        0 18px 44px rgba(40,60,90,.10);
+}
+
+html[data-theme="light"] .explore-tabs {
+    background: rgba(255,255,255,.35);
+    border-color: rgba(23,35,56,.09);
+}
+
+html[data-theme="light"] .explore-tabs button {
+    color: rgba(23,35,56,.72);
+    background: rgba(23,35,56,.055);
+}
+
+html[data-theme="light"] .explore-tabs button.active {
+    background: var(--accent);
+    color: var(--accent-ink);
+}
+
+
+/* =========================================
+   ACCENT COLORS
+   ========================================= */
+
+html[data-theme="light"] .learning-progress,
+html[data-theme="light"] .wordle-answer,
+html[data-theme="light"] .event-date {
+    color: #527fbf;
+}
+
+html[data-theme="light"] .event-date {
+    background: rgba(107,159,232,.14);
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+html[data-theme="light"] .button {
+    background: linear-gradient(
+        135deg,
+        #b9d7ff,
+        #dcecff
+    );
+
+    color: #172a46;
+
+    border-color: rgba(100,145,205,.35);
+}
+
+html[data-theme="light"] .button:hover {
+    background: #dbeaff;
+    color: #172a46;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+html[data-theme="light"] footer {
+    color: rgba(23,35,56,.40);
+}
+
+
+/* =========================================
+   LIGHT MODE FILE INPUT
+   ========================================= */
+
+html[data-theme="light"] #storyImage {
+    background: rgba(255,255,255,.40);
+    color: #172338;
+    border-color: rgba(107,159,232,.50);
+}
+
+
+/* =========================================
+   LIGHT MODE FINGER
+   ========================================= */
+
+html[data-theme="light"] .finger-hand-1,
+html[data-theme="light"] .finger-hand-2 {
+    color: #172338;
+
+    filter:
+        drop-shadow(
+            0 5px 10px rgba(40,60,90,.25)
+        );
+}
