@@ -1,1 +1,960 @@
-<!doctype html><html lang="ku"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stories — MyKurda</title><link rel="stylesheet" href="style.css"></head><body data-page="stories"><header class="site-header"></header><main class="page"><section class="section-heading"><span class="section-eyebrow" data-i18n="storyEyebrow"></span><h1 data-i18n="storiesTitle"></h1><p data-i18n="storiesLead"></p></section><section class="traditional-stories"><h2 data-i18n="builtIn"></h2><div class="stories-list built-in-stories"><article class="story-card light-card"><img class="story-cover" src="img/siyabend-u-xece.png" onerror="this.onerror=null;this.src='img/roj.png'" alt="Siyabend û Xecê"><h2 data-i18n="siyabend"></h2><p class="story-text">Siyabend, lawikekî belengaz, û Xecê, keça mîrekî, hevdu hez dikin. Ev çîroka evîna wan, azadiyê û berxwedanê ye.</p><details><summary data-i18n="read"></summary><p class="story-text">Xecê dilê xwe bi Siyabend ve girêda, lê malbata wê ev evîn qebûl nekir. Her du ji bo ku bi hev re bimînin şertên dijwar derbas kirin. Çîrok bû nîşana evîna rastîn di çanda Kurdî de.</p></details></article><article class="story-card light-card"><img class="story-cover" src="img/mem-u-zin.png" onerror="this.onerror=null;this.src='img/roj.png'" alt="Mem û Zîn"><h2 data-i18n="memzin"></h2><p class="story-text">Mem û Zîn çîroka evîna navdar a Ehmedê Xanî ye: evînek ku dijberî û çavnebariyê lêk da.</p><details><summary data-i18n="read"></summary><p class="story-text">Mem û Zîn di cejna Newrozê de hevdu dîtin. Beko, kesekî çavnebar, rê li ber evîna wan girt. Helbest ev çîrokê bi xwestina azadî, hêvî û yekîtiya Kurdan girêdide.</p></details></article></div></section><section class="story-compose light-card"><h2 data-i18n="addStory"></h2><form id="storyForm"><label><span data-i18n="yourName"></span><input id="storyName" class="glass-input" maxlength="50"></label><label><span data-i18n="title"></span><input id="storyTitle" class="glass-input" required maxlength="100"></label><label><span data-i18n="storyText"></span><textarea id="storyBody" class="glass-input" required maxlength="2000"></textarea></label><label><span data-i18n="image"></span><input id="storyImage" type="file" accept="image/*"></label><button class="game-action" type="submit" data-i18n="publish"></button></form></section><section id="storyFeed" class="stories-list" aria-live="polite"></section></main><footer data-i18n="footer"></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="ku">
+
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Stories — MyKurda</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="stories">
+
+<header class="site-header"></header>
+
+<main class="page">
+
+    <section class="section-heading">
+        <span
+            class="section-eyebrow"
+            data-i18n="storyEyebrow"
+        ></span>
+
+        <h1 data-i18n="storiesTitle"></h1>
+
+        <p data-i18n="storiesLead"></p>
+    </section>
+
+
+    <!-- =========================================
+         TRADITIONAL STORIES
+         ========================================= -->
+
+    <section class="traditional-stories">
+
+        <h2 data-i18n="builtIn"></h2>
+
+        <div class="stories-list built-in-stories">
+
+
+            <!-- =====================================
+                 SIYABEND Û XECÊ
+                 ===================================== -->
+
+            <article class="story-card light-card">
+
+                <img
+                    class="story-cover"
+                    src="img/siyabend-u-xece.png"
+                    onerror="this.onerror=null;this.src='img/roj.png'"
+                    alt="Siyabend û Xecê"
+                >
+
+                <h2 data-i18n="siyabend">
+                    Siyabend û Xecê
+                </h2>
+
+                <p class="story-text">
+                    Siyabend di malbateke xizan de ji dayik bû. Di
+                    zarokatiya xwe de dayîk û bavê xwe winda kir û
+                    piştî mirina wan neçar ma ku bi apê xwe re bijî.
+                    Lê apê wî bi tundî lê digirt û wî wek şivanê
+                    pezê xwe bikar dianî.
+                </p>
+
+                <details>
+
+                    <summary data-i18n="read">
+                        Read
+                    </summary>
+
+                    <div class="story-text">
+
+                        <h3>Zarokatiya Siyabend</h3>
+
+                        <p>
+                            Siyabend di malbateke xizan de ji dayik bû.
+                            Ew di zarokatiya xwe de dayîk û bavê xwe
+                            winda kir û bi tenê ma.
+                        </p>
+
+                        <p>
+                            Piştî mirina dayîk û bavê wî, apê wî neçar
+                            bû ku Siyabend bibe mala xwe. Piştî demekê,
+                            Siyabend wek şivanê gundê pez diçêrî.
+                        </p>
+
+                        <p>
+                            Jiyana wî li mala apê wî dijwar bû.
+                            Hem apê wî û hem jî endamên din ên malbatê
+                            bi wî re bi tundî tevdigeriyan.
+                        </p>
+
+                        <p>
+                            Rojekê, dema Siyabend pez li çiyê
+                            diçêrîn, ji ber kevirên ku ji çiyê
+                            dikevin xwarê, kevirêk li lingê mêşinekê
+                            ket û lingê mêşinê şikest.
+                        </p>
+
+                        <p>
+                            Siyabend ditirsî ku apê wî ji ber vê yekê
+                            lê bide. Ji xwediyê mêşinê re got:
+                            "Ger tu ji apê min re nebêjî ku lingê
+                            mêşinê şikestî ye, ez ê li hemberî vê
+                            yekê lingê xwe bişkînim."
+                        </p>
+
+                        <p>
+                            Lê xwediyê mêşinê peymanê neparast û
+                            bi lez çû cem apê Siyabend û jê re got
+                            ku lingê mêşinê şikestî ye.
+                        </p>
+
+                        <p>
+                            Dema apê Siyabend vê yekê bihîst,
+                            bê ku bipirse ka çi qewimî ye, li
+                            Siyabend da û heqaret li wî kir.
+                        </p>
+
+                        <p>
+                            Siyabend êdî nikarî vê jiyanê berdewam
+                            bike. Ew pezê xwe hişt, ji gund derket
+                            û biryar da ku careke din venegere mala
+                            apê xwe.
+                        </p>
+
+
+                        <h3>Jiyana li çiyayan</h3>
+
+                        <p>
+                            Şeva ewil, Siyabend difikirî ku li
+                            derveyî gund, di bin darekê de, şevê
+                            derbas bike.
+                        </p>
+
+                        <p>
+                            Dema apê wî dît ku Siyabend êvarê
+                            venegeriyaye, li dû wî çû. Ew dixwest
+                            wî bitirsîne da ku vegere malê.
+                        </p>
+
+                        <p>
+                            Lê dema Siyabend apê xwe dît, direvî.
+                            Ew êdî naxwest vegere.
+                        </p>
+
+                        <p>
+                            Di demekê kurt de, Siyabend fêrî jiyana
+                            li çiyayan bû. Ew bi xwarina ku ji
+                            xwezayê peyda dikir, bi giya û heywanên
+                            ku nêçîra wan dikir, jiyana xwe berdewam
+                            kir.
+                        </p>
+
+
+                        <h3>Xewna Siyabend</h3>
+
+                        <p>
+                            Rojekê, dema ku li çiyayan digeriya,
+                            li bin darekê razan û xewnek dît.
+                        </p>
+
+                        <p>
+                            Di xewna xwe de, Siyabend dît ku bi
+                            ciwanekî re pehlewaniyê dike. Ew
+                            pehlewanê dixe erdê û bi ser dikeve.
+                            Piştî vê pêşbirka, her du dibin
+                            dostên pir baş.
+                        </p>
+
+                        <p>
+                            Piştî demekê, xewna wî bi awayekî
+                            balkêş rast tê.
+                        </p>
+
+                        <p>
+                            Siyabend dema ku li çiya û gundan digeriya,
+                            rastî gundekî hat ku li wir ciwan
+                            pehlewaniyê dikirin.
+                        </p>
+
+                        <p>
+                            Gundî ji Siyabend xwestin ku bi
+                            pehlewanê herî bihêz re pehlewaniyê bike.
+                            Hemû kes bawer dikirin ku Siyabend
+                            dê winda bike.
+                        </p>
+
+                        <p>
+                            Lê Siyabend dijberê xwe dixe erdê û
+                            di pehlewaniyê de bi ser dikeve.
+                        </p>
+
+                        <p>
+                            Piştî pêşbirka, pehlewanê têkçûyî ji
+                            Siyabend re dibêje ku ew jî demek berê
+                            xewnek dîtiye ku dişibe xewna Siyabend.
+                        </p>
+
+                        <p>
+                            Her du xewnên xwe wek tiştekî bi xêr
+                            şîrove dikin û dibin dostên nêzîk.
+                        </p>
+
+                        <p>
+                            Siyabend û hevalê wî bi hev re li
+                            çiyayan dijîn. Kesên ku ji zilm û
+                            zordariya axa û begên herêmê direviyan,
+                            li cem wan digihîştin.
+                        </p>
+
+                        <p>
+                            Ew mirov pêşwazî dikirin, ji dewlemendan
+                            mal û milk distandin û li feqîr û
+                            belengazan belav dikirin.
+                        </p>
+
+
+                        <h3>Dîtina Xecê</h3>
+
+                        <p>
+                            Rojekê, Siyabend û hevalê wî li dora
+                            <strong>Çiyayê Sîpanê Xelatê</strong>
+                            digeriyan.
+                        </p>
+
+                        <p>
+                            Li cihekî dûr, wan konekî dît ku ji bo
+                            demekê li wir hatiye danîn.
+                        </p>
+
+                        <p>
+                            Siyabend nêzî konê bû da ku bizane ka
+                            kî li wir dijî.
+                        </p>
+
+                        <p>
+                            Dema ku nêzîk bû, keçek bedew dît ku
+                            bi heft birayên xwe re li konê dijî.
+                            Navê keçê <strong>Xecê</strong> bû.
+                        </p>
+
+                        <p>
+                            Dema Siyabend Xecê dît, dilê wî bi
+                            lez dest bi lêdanê kir.
+                        </p>
+
+                        <p>
+                            Siyabend ji Xecê pirsî:
+                            "Tu kî yî? Ji ku têyî?"
+                        </p>
+
+                        <p>
+                            Xecê çîroka xwe ji wî re vegot.
+                            Axa gundê dixwest bi zorê wê ji xwe
+                            re bixwaze, lê Xecê daxwaza wî red
+                            kiribû.
+                        </p>
+
+                        <p>
+                            Ji ber vê yekê axa wê û heft birayên
+                            wê ji gund sirgûn kiribûn û ew neçar
+                            mabûn ku li çiyayan bijîn.
+                        </p>
+
+                        <p>
+                            Siyabend jî çîroka xwe ji Xecê re vegot:
+                            apê wî lê dabû û ji ber vê yekê ew ji
+                            gund reviyabû û xwe li çiyayan girtibû.
+                        </p>
+
+                        <p>
+                            Xecê ji roja ewil ve ji Siyabend hez
+                            kiribû. Ew evîn û hezkirina di çavên
+                            Siyabend de dît.
+                        </p>
+
+                        <p>
+                            Siyabend evîna xwe ji Xecê re eşkere kir
+                            û ji birayên wê re jî got ku dixwaze
+                            bi Xecê re bizewice.
+                        </p>
+
+                        <p>
+                            Xecê û heft birayên wê vê têkiliyê
+                            qebûl kirin.
+                        </p>
+
+
+                        <h3>Revandina Xecê</h3>
+
+                        <p>
+                            Siyabend ji bo amadekirina zewacê çû
+                            gundekî da ku hin tiştên pêwîst bistîne.
+                        </p>
+
+                        <p>
+                            Lê axayê ku Xecê ji gund sirgûn kiribû,
+                            bihîst ku Siyabend û Xecê dê bi hev re
+                            bizewicin.
+                        </p>
+
+                        <p>
+                            Axa bi mirovên xwe ket ser konê wan.
+                            Di êrîşê de hevalê Siyabend birîndar kir
+                            û Xecê revand.
+                        </p>
+
+                        <p>
+                            Dema Siyabend vegeriya û dît ka çi
+                            qewimîye, pir xemgîn bû.
+                        </p>
+
+                        <p>
+                            Hevalê wî ji ber birînên xwe mir.
+                            Siyabend li wir rawesta nake û bi dizî
+                            çû gundê ku Xecê lê hatibû birin.
+                        </p>
+
+                        <p>
+                            Li gundê, ew bû mêvanê kal û pîrekê.
+                            Dema dengê dahol û muzîkê bihîst,
+                            ji wan pirsî:
+                        </p>
+
+                        <p>
+                            "Ev dengên dahol û muzîkê ji bo çi ne?"
+                        </p>
+
+                        <p>
+                            Kal û pîr jê re gotin:
+                            "Axa dê bi keça bedew a bi navê Xecê
+                            re bizewice."
+                        </p>
+
+                        <p>
+                            Siyabend gustîla xwe ji tiliyê xwe derxist
+                            û da pîrê.
+                        </p>
+
+                        <p>
+                            Jê re got:
+                            "Vê bibe mala ku Xecê lê hatiye girtin
+                            û bide wê. Bila Xecê bizane ku ez li vir
+                            im û ew piştrast be ku ez ê wê xilas bikim."
+                        </p>
+
+
+                        <h3>Rizgarkirina Xecê</h3>
+
+                        <p>
+                            Dema merasîma dawetê berdewam dikir,
+                            Siyabend rêyek dît û bi tîrê li dilê
+                            axa xist.
+                        </p>
+
+                        <p>
+                            Ew Xecê ji cihê ku lê hatiye girtin
+                            xilas kir û her du ber bi çiyayan ve
+                            reviyan.
+                        </p>
+
+                        <p>
+                            Ew dîsa li çiyayan bi hev re dest bi
+                            jiyanê kirin.
+                        </p>
+
+
+                        <h3>Dawiya Siyabend û Xecê</h3>
+
+                        <p>
+                            Rojekê Siyabend di hembêza Xecê de
+                            radizê.
+                        </p>
+
+                        <p>
+                            Xecê keriyek ji xezalan dibîne û dest
+                            bi girînê dike.
+                        </p>
+
+                        <p>
+                            Dilopek ji hêsirên wê li ser çavên
+                            girtî yên Siyabend dikeve û ew ji xewê
+                            şiyar dibe.
+                        </p>
+
+                        <p>
+                            Siyabend dipirse:
+                            "Çima digirî?"
+                        </p>
+
+                        <p>
+                            Xecê dibêje:
+                            "Ne tiştek e. Çend kêliyek berê
+                            keriyek ji xezalan ji vir derbas bû.
+                            Gava min ew dîtin, ez giriyam."
+                        </p>
+
+                        <p>
+                            Siyabend difikire ku belkî Xecê ji ber
+                            birçîbûnê xemgîn e û jê dipirse:
+                            "Xezal ber bi kîjan aliyî ve çûn?"
+                        </p>
+
+                        <p>
+                            Ew li pey xezalan diçe.
+                        </p>
+
+                        <p>
+                            Li ber zinaran rastî xezalekî mezin û
+                            pîr tê û tîrê davêje.
+                        </p>
+
+                        <p>
+                            Dema ku hewl dide xezalê bigire,
+                            xezal bi qiloçên xwe li Siyabend dide.
+                            Siyabend hevsengiya xwe winda dike û
+                            ji zinarê dikeve xwarê.
+                        </p>
+
+                        <p>
+                            Dema ku dikeve, şaxek darekê li singa
+                            wî dikeve û wî li wir daliqandî dihêle.
+                        </p>
+
+                        <p>
+                            Xecê dema dibîne ku Siyabend venegeriyaye,
+                            li pey wî diçe.
+                        </p>
+
+                        <p>
+                            Ew dengê nalîna wî ji nav zinaran dibihîze
+                            û nêzîk dibe.
+                        </p>
+
+                        <p>
+                            Dema Xecê dibîne ku Siyabend li ser şaxê
+                            darê daliqandî ye, dest bi girînê dike
+                            û hewl dide wî xilas bike.
+                        </p>
+
+                        <p>
+                            Siyabend jê re dibêje ku wî li wir bihêle
+                            û jiyana xwe bidomîne.
+                        </p>
+
+                        <p>
+                            Lê Xecê qebûl nake.
+                        </p>
+
+                        <p>
+                            Ew naxwaze Siyabend bi tenê bimîne.
+                            Di dawiyê de, xwe dide ber vala û dikeve
+                            cihê ku Siyabend ketibû.
+                        </p>
+
+                        <p>
+                            Her du li heman cihî, li nav
+                            <strong>Çiyayê Sîpanê Xelatê</strong>,
+                            jiyana xwe ji dest didin.
+                        </p>
+
+                        <p>
+                            Çîroka Siyabend û Xecê ji wê rojê ve
+                            di nav zargotina Kurdî de ji nifşekê
+                            bo nifşekî din hatiye veguhestin.
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </article>
+
+
+            <!-- =====================================
+                 MEM Û ZÎN
+                 ===================================== -->
+
+            <article class="story-card light-card">
+
+                <img
+                    class="story-cover"
+                    src="img/mem-u-zin.png"
+                    onerror="this.onerror=null;this.src='img/roj.png'"
+                    alt="Mem û Zîn"
+                >
+
+                <h2 data-i18n="memzin">
+                    Mem û Zîn
+                </h2>
+
+                <p class="story-text">
+                    Mem û Zîn çîroka evîna navdar a Ehmedê Xanî ye.
+                    Di Cizîra Botanê de, di şahiyên Newrozê de,
+                    Mem û Zîn hevdu dibînin û ji wê kêliyê ve
+                    jiyana wan diguhere.
+                </p>
+
+                <details>
+
+                    <summary data-i18n="read">
+                        Read
+                    </summary>
+
+                    <div class="story-text">
+
+                        <h3>Newroz li Cizîra Botan</h3>
+
+                        <p>
+                            Li Cizîra Botan, rojên Newrozê bi şahî
+                            û civîna mezin tên pîrozkirin.
+                        </p>
+
+                        <p>
+                            Ciwan û keç ji her derê tên. Stran û
+                            muzîk têne gotin, gel kom dibin û
+                            şahiyek mezin çêdibe.
+                        </p>
+
+                        <p>
+                            Di nav wan de du hevalên nêzîk hene:
+                            <strong>Mem</strong> û
+                            <strong>Tacdîn</strong>.
+                        </p>
+
+                        <p>
+                            Mem ciwanekî ji eşîra Alan e.
+                            Ew bi aqil, mêrxasî, dilpakî û
+                            bedewiya xwe tê nasîn.
+                        </p>
+
+                        <p>
+                            Li aliyê din, du xwişkên Mirê Botan,
+                            <strong>Zîn</strong> û
+                            <strong>Sitî</strong>, jî li şahiyê ne.
+                        </p>
+
+                        <p>
+                            Her du cilên mêran li xwe dikin da ku
+                            di nav gel de bi awayekî azad bigerin.
+                        </p>
+
+
+                        <h3>Dîtina Mem û Zîn</h3>
+
+                        <p>
+                            Di nav şahiyê de, çavên Mem û Zîn li
+                            hev dikevin.
+                        </p>
+
+                        <p>
+                            Di wê kêliyê de, her du ji bedewiya
+                            hev matmayî dimînin.
+                        </p>
+
+                        <p>
+                            Ji wê rojê ve, dilê Mem bi Zîn ve
+                            girêdayî dibe.
+                        </p>
+
+                        <p>
+                            Zîn jî ji Mem hez dike.
+                        </p>
+
+                        <p>
+                            Tacdîn jî Sitî dibîne û dilê wî bi
+                            heman awayî diguhere.
+                        </p>
+
+                        <p>
+                            Evîn di nav çar ciwanan de dest pê dike.
+                            Lê evînên wan hîn veşartî ne.
+                        </p>
+
+
+                        <h3>Evîna Mem û Zîn</h3>
+
+                        <p>
+                            Piştî Newrozê, Mem û Tacdîn behsa keçên
+                            ku dîtine dikin.
+                        </p>
+
+                        <p>
+                            Zîn û Sitî jî nikarin Mem û Tacdîn ji
+                            bîr bikin.
+                        </p>
+
+                        <p>
+                            Di dawiyê de, evînên wan têne fêmkirin
+                            û daxwaza zewacê tê kirin.
+                        </p>
+
+                        <p>
+                            Mirê Botan daxwaza Tacdîn qebûl dike
+                            û <strong>Sitî</strong> dide wî.
+                        </p>
+
+                        <p>
+                            Daweta Tacdîn û Sitî bi şahî û
+                            merasîmên mezin tê lidarxistin.
+                        </p>
+
+                        <p>
+                            Lê ji bo Mem û Zîn hîn asteng hene.
+                        </p>
+
+
+                        <h3>Beko</h3>
+
+                        <p>
+                            Di nav mirovên Mirê Botan de zilamekî
+                            bi navê <strong>Beko</strong> heye.
+                        </p>
+
+                        <p>
+                            Beko ji eşîra Bakran e û li cem Mirê
+                            Botan wek xizmetkar û dergehvan dixebite.
+                        </p>
+
+                        <p>
+                            Tacdîn ji Beko hez nake û ji Mir re
+                            behsa wî dike.
+                        </p>
+
+                        <p>
+                            Beko ji evîna Mem û Zîn agahdar dibe.
+                            Ew dibîne ku ev du ciwan hevdu dixwazin.
+                        </p>
+
+                        <p>
+                            Beko ji vê yekê aciz dibe û dest bi
+                            fitneyê dike.
+                        </p>
+
+                        <p>
+                            Ew diçe cem Mir û gotinên ku Mem û Zîn
+                            dixwazin bêyî destûra wî bizewicin
+                            dibêje.
+                        </p>
+
+                        <p>
+                            Mir hêrs dibe û qaseman dixe ku
+                            <strong>Zîn dê tu carî bûka Mem nebe.</strong>
+                        </p>
+
+
+                        <h3>Mem û Zîn li baxçeyê</h3>
+
+                        <p>
+                            Rojekê Mir ji bajêr derdikeve da ku
+                            biçin nêçîrê.
+                        </p>
+
+                        <p>
+                            Mem ji vê yekê sûd werdigire û bi
+                            dizî dikeve baxçeyê ku Zîn lê ye.
+                        </p>
+
+                        <p>
+                            Dema Zîn Mem dibîne, ew ji heyecanê
+                            dikeve erdê.
+                        </p>
+
+                        <p>
+                            Mem jî li cem wê dimîne.
+                        </p>
+
+                        <p>
+                            Lê dema Mir ji nêçîrê vedigere,
+                            ew Mem li baxçeyê dibîne.
+                        </p>
+
+                        <p>
+                            Tacdîn jî li wir e û hewl dide ku Mir
+                            tiştê rast nebinîne.
+                        </p>
+
+                        <p>
+                            Piştî vê bûyerê, Tacdîn fêm dike ku
+                            rewş pir dijwar e.
+                        </p>
+
+                        <p>
+                            Ji bo ku Mem û Zîn ji xeterê xilas bike,
+                            Tacdîn mala xwe bişewitîne.
+                        </p>
+
+                        <p>
+                            Dema ku agir li malê dikeve, hemû kes
+                            ber bi wir ve diçin û bi vî awayî
+                            Tacdîn dikare hevalê xwe xilas bike.
+                        </p>
+
+
+                        <h3>Lîstika şetrencê</h3>
+
+                        <p>
+                            Beko ji planên xwe dev bernade.
+                        </p>
+
+                        <p>
+                            Mem tê vexwendin ku bi Mir re
+                            <strong>şetrencê</strong> bilîze.
+                        </p>
+
+                        <p>
+                            Mem di destpêkê de gelek baş dileyze
+                            û sê caran li hemberî Mir bi ser dikeve.
+                        </p>
+
+                        <p>
+                            Lê di dema lîstikê de, bala Mem ber bi
+                            Zîn ve tê kişandin.
+                        </p>
+
+                        <p>
+                            Mem dikeve nav xeyalên evînê û
+                            bala xwe ji lîstikê dûr dixe.
+                        </p>
+
+                        <p>
+                            Di dawiyê de, Mem lîstikê winda dike.
+                        </p>
+
+                        <p>
+                            Mir fêm dike ku sedema vê bêserûberiya
+                            Mem evîna wî ji Zîn re ye.
+                        </p>
+
+                        <p>
+                            Mem neçar dibe ku evîna xwe eşkere bike.
+                        </p>
+
+                        <p>
+                            Mir bi hêrs dibe û Mem dixe zindanê.
+                        </p>
+
+
+                        <h3>Mem di zindanê de</h3>
+
+                        <p>
+                            Mem di zindana tarî de tê girtin.
+                        </p>
+
+                        <p>
+                            Roj û şev derbas dibin.
+                            Mem tenê li ser Zîn difikire.
+                        </p>
+
+                        <p>
+                            Zîn jî ji dûriya Mem diêşe.
+                        </p>
+
+                        <p>
+                            Mem hêdî hêdî hêza xwe winda dike.
+                            Evîn û hasreta Zînê wî ji hundir ve
+                            tune dikin.
+                        </p>
+
+                        <p>
+                            Rojên zindanê dibin meh û mehên wî
+                            dibin demek dirêj.
+                        </p>
+
+                        <p>
+                            Di dawiyê de, Mem nikare êşa xwe
+                            hilgire û <strong>di zindanê de dimire.</strong>
+                        </p>
+
+
+                        <h3>Mirina Mem</h3>
+
+                        <p>
+                            Dema Zîn dibihîze ku Mem mir,
+                            dilê wê dişkê.
+                        </p>
+
+                        <p>
+                            Ew nikare bawer bike ku evîndarê wê
+                            êdî tune ye.
+                        </p>
+
+                        <p>
+                            Zîn ber bi gora Mem ve diçe.
+                            Ew li ser gora wî digirî û navê wî dibêje.
+                        </p>
+
+                        <p>
+                            Ew ji jiyana bê Mem re tu hêvî nabîne.
+                        </p>
+
+                        <p>
+                            Di dawiyê de, êşa dilê wê ew qas mezin
+                            dibe ku <strong>Zîn jî jiyana xwe ji
+                            dest dide.</strong>
+                        </p>
+
+                        <p>
+                            Mirê Botan ji mirina xwişka xwe re
+                            gelek xemgîn dibe.
+                        </p>
+
+                        <p>
+                            Zîn li nêzîkî Mem tê definkirin.
+                            Her du evîndar di dawiyê de li
+                            kêleka hev razan.
+                        </p>
+
+
+                        <h3>Beko û dawiyê</h3>
+
+                        <p>
+                            Piştî ku Beko tê kuştin, ew jî li
+                            nêzîkî gora Mem û Zîn tê veşartin.
+                        </p>
+
+                        <p>
+                            Di çîrokê de, ji gora Beko riwekî
+                            diken û stirî derdikeve.
+                        </p>
+
+                        <p>
+                            Rihên wê di navbera gora Mem û Zîn de
+                            belav dibin.
+                        </p>
+
+                        <p>
+                            Bi vî awayî, heta piştî mirinê jî
+                            sembola Beko dikeve navbera her du
+                            evîndaran.
+                        </p>
+
+                        <p>
+                            Mem û Zîn di jiyanê de nikaribûn
+                            bibin yek.
+                        </p>
+
+                        <p>
+                            Di mirinê de ew li kêleka hev razan,
+                            lê çîrok jî nîşan dide ku astengên
+                            ku li ber evîna wan hatibûn danîn,
+                            heta dawiyê li pey wan man.
+                        </p>
+
+                        <p>
+                            Çîroka Mem û Zîn, ku ji aliyê
+                            <strong>Ehmedê Xanî</strong> ve di
+                            edebiyata Kurdî de bi awayekî mezin
+                            hatiye nivîsandin, ji bo çanda Kurdî
+                            yek ji berhemên herî girîng e.
+                        </p>
+
+                        <p>
+                            Ew ne tenê çîroka du evîndaran e;
+                            ew jî çîroka hêvî, evîn, asteng,
+                            zordarî û mirovekî ye ku li dijî
+                            şertên ku evîna wî asteng dikin
+                            radiweste.
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         USER STORIES
+         ========================================= -->
+
+    <section class="story-compose light-card">
+
+        <h2 data-i18n="addStory"></h2>
+
+        <form id="storyForm">
+
+            <label>
+                <span data-i18n="yourName"></span>
+
+                <input
+                    id="storyName"
+                    class="glass-input"
+                    maxlength="50"
+                >
+            </label>
+
+
+            <label>
+                <span data-i18n="title"></span>
+
+                <input
+                    id="storyTitle"
+                    class="glass-input"
+                    required
+                    maxlength="100"
+                >
+            </label>
+
+
+            <label>
+                <span data-i18n="storyText"></span>
+
+                <textarea
+                    id="storyBody"
+                    class="glass-input"
+                    required
+                    maxlength="2000"
+                ></textarea>
+            </label>
+
+
+            <label>
+                <span data-i18n="image"></span>
+
+                <input
+                    id="storyImage"
+                    type="file"
+                    accept="image/*"
+                >
+            </label>
+
+
+            <button
+                class="game-action"
+                type="submit"
+                data-i18n="publish"
+            ></button>
+
+        </form>
+
+    </section>
+
+
+    <section
+        id="storyFeed"
+        class="stories-list"
+        aria-live="polite"
+    ></section>
+
+</main>
+
+
+<footer data-i18n="footer"></footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
